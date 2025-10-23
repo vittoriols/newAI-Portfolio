@@ -27,17 +27,17 @@ function Navbar(props) {
   },
     React.createElement('div', { className: 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' },
       React.createElement('div', { className: 'flex justify-between items-center h-16' },
-        // Logo con immagine - DIMENSIONE CORRETTA
+        // Logo con immagine - PATH CORRETTO CON PUBLIC_URL
         React.createElement('button', {
           onClick: function() { handleNavClick('bio'); },
           className: 'signature-logo'
         },
           React.createElement('img', {
-            src: '/images/signature.png', 
+            src: process.env.PUBLIC_URL + '/images/signature.png',  // ← FIX: aggiunto PUBLIC_URL
             alt: 'Vittorio Signature',
             className: 'signature-image',
             style: {
-              height: '40px',  // ← FIX: da 100px a 40px
+              height: '40px',
               width: 'auto',
               filter: 'brightness(0) invert(1)'
             }
