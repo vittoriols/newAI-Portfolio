@@ -5,6 +5,7 @@ import ParticlesBackground from '../UI/ParticlesBackground';
 
 function AuthoredSection() {
   const [hoveredCard, setHoveredCard] = useState(null);
+  const [flippedCard, setFlippedCard] = useState(null); // Per mobile touch
 
   const books = publications.filter(p => p.type === 'Book');
   const patents = publications.filter(p => p.type === 'Patent');
@@ -38,19 +39,28 @@ function AuthoredSection() {
     const colors = typeColors[pub.type];
     const Icon = colors.icon;
     const isHovered = hoveredCard === `pub-${index}`;
+    const isFlipped = flippedCard === `pub-${index}`; // Mobile
 
     return React.createElement('div', {
       key: index,
+      className: 'publication-card-wrapper',
       style: {
         opacity: 0,
         animation: `fadeInUp 0.6s ease-out ${index * 0.05}s forwards`,
         height: '320px'
       },
       onMouseEnter: () => setHoveredCard(`pub-${index}`),
-      onMouseLeave: () => setHoveredCard(null)
+      onMouseLeave: () => setHoveredCard(null),
+      onClick: () => {
+        // Toggle flip su mobile (touch)
+        if (window.innerWidth <= 768) {
+          setFlippedCard(isFlipped ? null : `pub-${index}`);
+        }
+      }
     },
       // Flip container
       React.createElement('div', {
+        className: 'card-flip-perspective',
         style: {
           perspective: '1000px',
           height: '100%',
@@ -58,22 +68,25 @@ function AuthoredSection() {
         }
       },
         React.createElement('div', {
+          className: `card-flip-inner ${(isHovered || isFlipped) ? 'flipped' : ''}`,
           style: {
             position: 'relative',
             width: '100%',
             height: '100%',
             transformStyle: 'preserve-3d',
-            transform: isHovered ? 'rotateY(180deg)' : 'rotateY(0deg)',
+            transform: (isHovered || isFlipped) ? 'rotateY(180deg)' : 'rotateY(0deg)',
             transition: 'transform 0.7s'
           }
         },
           // ========== FRONT FACE ==========
           React.createElement('div', {
+            className: 'card-face card-front',
             style: {
               position: 'absolute',
               width: '100%',
               height: '100%',
               backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden',
               background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
               border: `2px solid ${colors.accent}40`,
               borderRadius: '16px',
@@ -211,12 +224,13 @@ function AuthoredSection() {
 
           // ========== BACK FACE ==========
           React.createElement('div', {
+            className: 'card-face card-back',
             style: {
               position: 'absolute',
               width: '100%',
               height: '100%',
               backfaceVisibility: 'hidden',
-              transform: 'rotateY(180deg)',
+              WebkitBackfaceVisibility: 'hidden',
               background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
               border: `2px solid ${colors.accent}`,
               borderRadius: '16px',
@@ -236,88 +250,62 @@ function AuthoredSection() {
               // Titolo sezione
               React.createElement('h4', {
                 style: {
-                  fontSize: '16px',
-                  fontWeight: 'bold',
+                  fontSize: '14px',
+                  fontWeight: '700',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
                   color: colors.accent,
                   marginBottom: '16px'
                 }
               }, 'Details'),
 
-              // Descrizione
+              // Abstract/Description
               React.createElement('div', {
                 style: {
                   flexGrow: 1,
-                  marginBottom: '24px'
+                  marginBottom: '16px',
+                  overflowY: 'auto'
                 }
               },
-                pub.description ? React.createElement('p', {
+                React.createElement('p', {
                   style: {
                     fontSize: '14px',
-                    color: '#cbd5e1',
-                    lineHeight: '1.7',
-                    display: '-webkit-box',
-                    WebkitLineClamp: '6',
-                    WebkitBoxOrient: 'vertical',
-                    overflow: 'hidden'
+                    lineHeight: '1.6',
+                    color: '#e2e8f0'
                   }
-                }, pub.description) : React.createElement('p', {
-                  style: {
-                    fontSize: '14px',
-                    color: '#64748b',
-                    fontStyle: 'italic'
-                  }
-                }, 'No description available')
+                }, pub.description || pub.abstract || 'Innovative contribution to the field.')
               ),
 
-              // CTA Button o Status
-              pub.link ? React.createElement('a', {
+              // Link se disponibile
+              pub.link && React.createElement('a', {
                 href: pub.link,
                 target: '_blank',
                 rel: 'noopener noreferrer',
-                onClick: (e) => e.stopPropagation(),
                 style: {
-                  display: 'flex',
+                  display: 'inline-flex',
                   alignItems: 'center',
-                  justifyContent: 'center',
                   gap: '8px',
-                  padding: '12px 24px',
-                  borderRadius: '12px',
-                  background: `linear-gradient(135deg, ${colors.accent}, ${colors.accent}dd)`,
+                  padding: '12px 20px',
+                  borderRadius: '8px',
+                  background: `${colors.accent}`,
                   color: '#fff',
                   fontSize: '14px',
                   fontWeight: 'bold',
                   textDecoration: 'none',
-                  boxShadow: `0 4px 16px ${colors.glow}`,
+                  alignSelf: 'flex-start',
                   transition: 'all 0.3s'
+                },
+                onMouseEnter: (e) => {
+                  e.target.style.transform = 'translateY(-2px)';
+                  e.target.style.boxShadow = `0 8px 20px ${colors.glow}`;
+                },
+                onMouseLeave: (e) => {
+                  e.target.style.transform = 'translateY(0)';
+                  e.target.style.boxShadow = 'none';
                 }
               },
                 React.createElement(ExternalLink, { size: 16 }),
                 React.createElement('span', null, 'View Publication')
-              ) : React.createElement('div', {
-                style: {
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '8px',
-                  padding: '12px 24px',
-                  borderRadius: '12px',
-                  background: `${colors.accent}15`,
-                  border: `1px solid ${colors.accent}40`,
-                  color: colors.accent,
-                  fontSize: '14px',
-                  fontWeight: 'bold'
-                }
-              },
-                React.createElement('span', {
-                  style: {
-                    width: '8px',
-                    height: '8px',
-                    borderRadius: '50%',
-                    background: colors.accent,
-                    animation: 'pulse 2s ease-in-out infinite'
-                  }
-                }),
-                React.createElement('span', null, 'Patent Pending')
               )
             )
           )
@@ -536,7 +524,7 @@ function AuthoredSection() {
       )
     ),
 
-    // CSS Animations
+    // CSS Animations + MOBILE FIX
     React.createElement('style', null, `
       @keyframes fadeInUp {
         from {
@@ -557,6 +545,87 @@ function AuthoredSection() {
         50% {
           opacity: 0.7;
           transform: scale(1.2);
+        }
+      }
+
+      /* CRITICAL FIX: Backface visibility per mobile */
+      .card-face {
+        -webkit-backface-visibility: hidden !important;
+        backface-visibility: hidden !important;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+
+      .card-front {
+        transform: rotateY(0deg);
+        z-index: 2;
+      }
+
+      .card-back {
+        transform: rotateY(180deg);
+        z-index: 1;
+      }
+
+      /* Mobile: SLIDE invece di FLIP per evitare backface-visibility issues */
+      @media (max-width: 768px) {
+        .publication-card-wrapper {
+          cursor: pointer;
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Disabilita 3D su mobile */
+        .card-flip-inner {
+          transform-style: flat !important;
+          -webkit-transform-style: flat !important;
+          transform: none !important;
+        }
+
+        .card-face {
+          transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+          backface-visibility: visible !important;
+        }
+
+        .card-front,
+        .card-back {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          transform: none !important; /* Reset rotateY per mobile */
+        }
+
+        /* Stato iniziale: front visibile */
+        .card-flip-inner:not(.flipped) .card-front {
+          transform: translateX(0) !important;
+          opacity: 1;
+          z-index: 2;
+        }
+
+        .card-flip-inner:not(.flipped) .card-back {
+          transform: translateX(100%) !important;
+          opacity: 0;
+          z-index: 1;
+        }
+
+        /* Stato flipped: back visibile */
+        .card-flip-inner.flipped .card-front {
+          transform: translateX(-100%) !important;
+          opacity: 0;
+          z-index: 1;
+        }
+
+        .card-flip-inner.flipped .card-back {
+          transform: translateX(0) !important;
+          opacity: 1;
+          z-index: 2;
+        }
+      }
+
+      /* Desktop: mantieni hover normale */
+      @media (min-width: 769px) {
+        .publication-card-wrapper {
+          cursor: default;
         }
       }
     `)

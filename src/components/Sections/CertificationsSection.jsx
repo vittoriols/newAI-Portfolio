@@ -163,9 +163,9 @@ const CertificationsSection = () => {
           </div>
         </div>
 
-        {/* FILTRI SEMPLICI E PULITI - RISCRITTA DA ZERO */}
-        <div className="flex justify-center mb-16 mt-16">
-          <div className="inline-flex rounded-full p-1.5" style={{
+        {/* FILTRI - DESKTOP CENTERED, MOBILE SCROLLABLE */}
+        <div className="filters-wrapper flex justify-center mb-16 mt-16">
+          <div className="filters-container inline-flex rounded-full p-1.5" style={{
             background: 'rgba(15, 23, 42, 0.6)',
             border: '1px solid rgba(71, 85, 105, 0.3)',
             backdropFilter: 'blur(10px)'
@@ -174,7 +174,7 @@ const CertificationsSection = () => {
               <button
                 key={category}
                 onClick={() => setFilter(category)}
-                className="relative px-8 py-3.5 rounded-full font-bold text-base transition-all duration-300 whitespace-nowrap"
+                className="filter-btn relative px-8 py-3.5 rounded-full font-bold text-base transition-all duration-300 whitespace-nowrap"
                 style={{
                   color: filter === category ? '#ffffff' : '#94a3b8',
                   background: filter === category 
@@ -193,7 +193,7 @@ const CertificationsSection = () => {
           className="grid"
           style={{
             gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
-            gap: '24px' // ← Aumentato da 20px (gap-5) a 24px
+            gap: '24px'
           }}
         >
           {filteredCerts.map((cert, index) => {
@@ -351,6 +351,55 @@ const CertificationsSection = () => {
           to {
             opacity: 1;
             transform: translateY(0);
+          }
+        }
+
+        /* DESKTOP: tutto come prima */
+        @media (min-width: 769px) {
+          .filters-wrapper {
+            overflow: visible;
+          }
+
+          .filters-container {
+            overflow: visible;
+          }
+
+          .filter-btn {
+            /* Stile desktop originale */
+          }
+        }
+
+        /* MOBILE: scroll orizzontale mantenendo grafica */
+        @media (max-width: 768px) {
+          .filters-wrapper {
+            justify-content: flex-start;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            padding: 0 16px;
+            
+            /* Nascondi scrollbar */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+          }
+
+          .filters-wrapper::-webkit-scrollbar {
+            display: none;
+          }
+
+          .filters-container {
+            /* Mantiene sfondo e stile originale */
+            flex-shrink: 0;
+            min-width: min-content;
+          }
+
+          .filter-btn {
+            /* Impedisce compressione bottoni */
+            flex-shrink: 0;
+            min-width: fit-content;
+            padding: 12px 20px;
+            font-size: 14px;
           }
         }
       `}</style>
