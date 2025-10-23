@@ -25,6 +25,7 @@ function AskMeSection() {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [error, setError] = useState(null);
+  const [audioError, setAudioError] = useState(null);
   const messagesEndRef = useRef(null);
   const audioRef = useRef(null);
   
@@ -41,8 +42,11 @@ function AskMeSection() {
 
   // Setup audio player
   useEffect(function() {
+    // Path assoluto per GitHub Pages
+    const audioPath = process.env.PUBLIC_URL + '/audio/AI_Audio_3_Short.mp3';
+    
     // Crea elemento audio
-    audioRef.current = new Audio('/audio/AI_Audio_3_Short.mp3');
+    audioRef.current = new Audio(audioPath);
     
     // Event listeners per l'audio
     const audio = audioRef.current;
@@ -57,6 +61,8 @@ function AskMeSection() {
     
     const handleLoadedMetadata = function() {
       setDuration(audio.duration);
+      setAudioError(null);
+      console.log('Audio loaded successfully:', audioPath);
     };
     
     const handleEnded = function() {
@@ -67,7 +73,8 @@ function AskMeSection() {
     
     const handleError = function(e) {
       console.error('Audio error:', e);
-      setError('Audio file could not be loaded');
+      console.error('Audio path:', audioPath);
+      setAudioError('Audio file not found. Please check if the file exists in public/audio/');
       setIsPlaying(false);
     };
     
@@ -75,6 +82,9 @@ function AskMeSection() {
     audio.addEventListener('loadedmetadata', handleLoadedMetadata);
     audio.addEventListener('ended', handleEnded);
     audio.addEventListener('error', handleError);
+    
+    // Test caricamento
+    audio.load();
     
     // Cleanup
     return function() {
@@ -148,12 +158,10 @@ ${askMeContext.certifications.slice(0, 6).map(c =>
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
       
-      // Gestisci rate limit
       if (response.status === 429) {
         throw new Error('Too many requests. Please wait a moment and try again.');
       }
       
-      // Gestisci errori di autenticazione
       if (response.status === 401) {
         throw new Error('Invalid Groq API token. Please check your configuration.');
       }
@@ -185,7 +193,6 @@ ${askMeContext.certifications.slice(0, 6).map(c =>
     setError(null);
 
     try {
-      // Chiama Groq API
       const aiResponseText = await callGroqAPI(currentQuestion);
       
       const aiResponse = {
@@ -223,7 +230,15 @@ ${askMeContext.certifications.slice(0, 6).map(c =>
   };
 
   const toggleAudio = function() {
-    if (!audioRef.current) return;
+    if (!audioRef.current) {
+      setAudioError('Audio player not initialized');
+      return;
+    }
+    
+    if (audioError) {
+      setAudioError('Cannot play audio: file not found');
+      return;
+    }
     
     if (isPlaying) {
       audioRef.current.pause();
@@ -231,7 +246,7 @@ ${askMeContext.certifications.slice(0, 6).map(c =>
     } else {
       audioRef.current.play().catch(function(err) {
         console.error('Audio play error:', err);
-        setError('Could not play audio');
+        setAudioError('Could not play audio: ' + err.message);
       });
       setIsPlaying(true);
     }
@@ -268,7 +283,7 @@ ${askMeContext.certifications.slice(0, 6).map(c =>
     ),
 
     // Error banner (se presente)
-    error && React.createElement('div', {
+    (error || audioError) && React.createElement('div', {
       className: 'p-4 rounded-xl flex items-start gap-3',
       style: {
         background: 'rgba(239, 68, 68, 0.1)',
@@ -282,10 +297,10 @@ ${askMeContext.certifications.slice(0, 6).map(c =>
       React.createElement('div', null,
         React.createElement('p', { 
           className: 'text-sm font-semibold text-red-400 mb-1' 
-        }, 'Connection Issue'),
+        }, audioError ? 'Audio Issue' : 'Connection Issue'),
         React.createElement('p', { 
           className: 'text-xs text-slate-300' 
-        }, error)
+        }, audioError || error)
       )
     ),
 
@@ -469,12 +484,13 @@ ${askMeContext.certifications.slice(0, 6).map(c =>
               
               React.createElement('button', {
                 onClick: toggleAudio,
-                className: 'relative rounded-full flex items-center justify-center transition-all duration-300',
+                disabled: !!audioError,
+                className: 'relative rounded-full flex items-center justify-center transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed',
                 style: {
                   width: '64px',
                   height: '64px',
                   aspectRatio: '1 / 1',
-                  background: 'linear-gradient(135deg, #06b6d4, #3b82f6)',
+                  background: audioError ? 'linear-gradient(135deg, #ef4444, #dc2626)' : 'linear-gradient(135deg, #06b6d4, #3b82f6)',
                   boxShadow: isPlaying 
                     ? '0 0 30px rgba(6, 182, 212, 0.6)' 
                     : '0 6px 20px rgba(6, 182, 212, 0.4)',
@@ -539,7 +555,7 @@ ${askMeContext.certifications.slice(0, 6).map(c =>
             className: 'flex items-center justify-center gap-2 text-xs text-slate-400 pt-3 border-t border-slate-600/50'
           },
             React.createElement(Volume2, { size: 12 }),
-            React.createElement('span', null, 'Generated with Google AI')
+            React.createElement('span', null, audioError ? 'Audio unavailable' : 'Generated with Google AI')
           )
         )
       )

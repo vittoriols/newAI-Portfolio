@@ -27,7 +27,7 @@ function Navbar(props) {
   },
     React.createElement('div', { className: 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' },
       React.createElement('div', { className: 'flex justify-between items-center h-16' },
-        // Logo con immagine
+        // Logo con immagine - DIMENSIONE CORRETTA
         React.createElement('button', {
           onClick: function() { handleNavClick('bio'); },
           className: 'signature-logo'
@@ -37,13 +37,11 @@ function Navbar(props) {
             alt: 'Vittorio Signature',
             className: 'signature-image',
             style: {
-              height: '100px',
+              height: '40px',  // ← FIX: da 100px a 40px
               width: 'auto',
               filter: 'brightness(0) invert(1)'
             }
           })
-
-
         ),
         
         // Desktop Menu
@@ -131,7 +129,7 @@ function Navbar(props) {
     
     // Styles
     React.createElement('style', null, `
-      /* Signature Logo - SOLO GLOW INTENSO, NO TRANSFORM */
+      /* Signature Logo - DIMENSIONE CORRETTA */
       .signature-logo {
         background: none !important;
         border: none !important;
@@ -144,7 +142,7 @@ function Navbar(props) {
       }
       
       .signature-image {
-        height: 100px !important;
+        height: 40px !important;  /* FIX: dimensione navbar-friendly */
         width: auto;
         filter: brightness(0) invert(1);
         transition: filter 0.3s ease;
