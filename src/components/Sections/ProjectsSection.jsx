@@ -1,6 +1,6 @@
 import React from 'react';
 import { projects } from '../../data/projects';
-import { ExternalLink, Github, Play } from 'lucide-react';
+import { Github, Play } from 'lucide-react';
 
 function ProjectsSection() {
   return (
