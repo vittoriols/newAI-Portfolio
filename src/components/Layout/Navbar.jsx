@@ -37,7 +37,7 @@ function Navbar(props) {
             alt: 'Vittorio Signature',
             className: 'signature-image',
             style: {
-              height: '40px',
+              height: '100px',
               width: 'auto',
               filter: 'brightness(0) invert(1)'
             }
@@ -142,7 +142,7 @@ function Navbar(props) {
       }
       
       .signature-image {
-        height: 40px !important;  /* FIX: dimensione navbar-friendly */
+        height: 100px !important;  /* FIX: dimensione navbar-friendly */
         width: auto;
         filter: brightness(0) invert(1);
         transition: filter 0.3s ease;
