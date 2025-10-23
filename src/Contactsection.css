@@ -1,0 +1,144 @@
+/* ========================================
+   CONTACT SECTION - FIXED STYLES
+   ========================================
+   CSS corretto che non interferisce con il layout
+   ======================================== */
+
+/* Fix per le animazioni hover sulle card */
+.contact-card {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-card:hover {
+  z-index: 10;
+}
+
+.contact-card-inner {
+  will-change: transform, box-shadow, border-color;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Migliora le performance delle animazioni */
+.contact-card,
+.contact-card-inner,
+.group {
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Assicura che le transizioni siano smooth */
+.transition-all,
+.transition-opacity,
+.transition-transform {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fix per i bordi colorati nei form */
+input:focus,
+textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Migliora l'effetto hover sul bottone del form */
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.5);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Animazione per i messaggi di successo/errore */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(to right, #60a5fa, #06b6d4, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+/* Fix per Safari e iOS */
+@supports (-webkit-touch-callout: none) {
+  .contact-card-inner {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* ========================================
+   RESPONSIVE - NON SOVRASCRIVE IL LAYOUT
+   ======================================== */
+
+/* Mobile: torna a layout verticale */
+@media (max-width: 1023px) {
+  /* Su mobile tutto in verticale */
+  .contact-grid-mobile {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Desktop: mantieni il layout personalizzato */
+@media (min-width: 1024px) {
+  /* NON sovrascrivere lg:grid-cols-[400px_1fr] */
+  /* Il layout viene gestito direttamente nel componente */
+}
+
+/* Animazioni smooth per tutti gli elementi transform */
+* {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Input e textarea */
+input, textarea {
+  font-family: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+/* Assicura overflow visible per icone */
+.contact-card-inner > div {
+  overflow: visible !important;
+}
+
+/* Scrollbar personalizzata per il form */
+.contact-form-scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+.contact-form-scrollable::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 3px;
+}
+
+.contact-form-scrollable::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 3px;
+}
+
+.contact-form-scrollable::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}

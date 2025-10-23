@@ -68,3 +68,63 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+```
+c_portfolio_silo_v1
+├─ --force
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.js
+├─ public
+│  ├─ favicon.ico
+│  ├─ images
+│  │  └─ signature.png
+│  ├─ index.html
+│  ├─ logo192.png
+│  ├─ logo512.png
+│  ├─ manifest.json
+│  └─ robots.txt
+├─ README.md
+├─ src
+│  ├─ App.css
+│  ├─ App.js
+│  ├─ App.test.js
+│  ├─ components
+│  │  ├─ Layout
+│  │  │  └─ Navbar.jsx
+│  │  ├─ Sections
+│  │  │  ├─ AskMeSection.jsx
+│  │  │  ├─ AuthoredSection.jsx
+│  │  │  ├─ BioSection.jsx
+│  │  │  ├─ CertificationsSection.jsx
+│  │  │  ├─ ContactSection.jsx
+│  │  │  ├─ ExperienceSection.jsx
+│  │  │  ├─ ProjectsSection.jsx
+│  │  │  └─ SkillsSection.jsx
+│  │  └─ UI
+│  │     ├─ AnimatedBackground.jsx
+│  │     ├─ Button.jsx
+│  │     ├─ Card.jsx
+│  │     └─ ParticlesBackground.jsx
+│  ├─ Contactsection.css
+│  ├─ data
+│  │  ├─ certifications.js
+│  │  ├─ experience.js
+│  │  ├─ personalInfo.js
+│  │  ├─ projects.js
+│  │  └─ skills.js
+│  ├─ index.css
+│  ├─ index.js
+│  ├─ logo.svg
+│  ├─ reportWebVitals.js
+│  ├─ setupTests.js
+│  ├─ styles
+│  │  └─ animations.css
+│  ├─ tailwind.config.js
+│  └─ utils
+│     └─ visitorTracking.js
+└─ tailwind.config.js
+
+```
