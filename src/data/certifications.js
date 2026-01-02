@@ -73,11 +73,11 @@ export const certifications = [
   },
   {
     id: 9,
-    title: "SAP Certified Development Associate - SAP BTP Extension Developer",
+    title: "SAP Certified Associate - Backend Developer - SAP Cloud Application Programming Model",
     provider: "SAP",
     date: "2023",
-    image: "https://images.credly.com/size/340x340/images/6a26918e-9cf4-4a6a-ae5b-ecdf843893ec/image.png",
-    credlyUrl: "https://www.credly.com/badges/0244ae25-2f06-4ed5-814d-c96d25e84e6e/public_url",
+    image: "https://images.credly.com/size/680x680/images/852e3e88-a0d3-4805-8ad9-6c2490ca2e20/image.png",
+    credlyUrl: "https://www.credly.com/badges/4a4a7631-1215-4dcd-9c02-7c09e0f214e9/public_url",
     category: "SAP"
   },
   {
