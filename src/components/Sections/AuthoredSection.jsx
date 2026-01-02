@@ -47,10 +47,15 @@ function AuthoredSection() {
       style: {
         opacity: 0,
         animation: `fadeInUp 0.6s ease-out ${index * 0.05}s forwards`,
-        height: '320px'
+        height: '320px',
+        position: 'relative'
       },
-      onMouseEnter: () => setHoveredCard(`pub-${index}`),
-      onMouseLeave: () => setHoveredCard(null),
+      onMouseEnter: () => {
+        if (window.innerWidth > 768) setHoveredCard(`pub-${index}`);
+      },
+      onMouseLeave: () => {
+        if (window.innerWidth > 768) setHoveredCard(null);
+      },
       onClick: () => {
         // Toggle flip su mobile (touch)
         if (window.innerWidth <= 768) {
@@ -64,7 +69,8 @@ function AuthoredSection() {
         style: {
           perspective: '1000px',
           height: '100%',
-          width: '100%'
+          width: '100%',
+          position: 'relative'
         }
       },
         React.createElement('div', {
@@ -72,10 +78,7 @@ function AuthoredSection() {
           style: {
             position: 'relative',
             width: '100%',
-            height: '100%',
-            transformStyle: 'preserve-3d',
-            transform: (isHovered || isFlipped) ? 'rotateY(180deg)' : 'rotateY(0deg)',
-            transition: 'transform 0.7s'
+            height: '100%'
           }
         },
           // ========== FRONT FACE ==========
@@ -85,8 +88,6 @@ function AuthoredSection() {
               position: 'absolute',
               width: '100%',
               height: '100%',
-              backfaceVisibility: 'hidden',
-              WebkitBackfaceVisibility: 'hidden',
               background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
               border: `2px solid ${colors.accent}40`,
               borderRadius: '16px',
@@ -229,8 +230,6 @@ function AuthoredSection() {
               position: 'absolute',
               width: '100%',
               height: '100%',
-              backfaceVisibility: 'hidden',
-              WebkitBackfaceVisibility: 'hidden',
               background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
               border: `2px solid ${colors.accent}`,
               borderRadius: '16px',
@@ -281,6 +280,9 @@ function AuthoredSection() {
                 href: pub.link,
                 target: '_blank',
                 rel: 'noopener noreferrer',
+                onClick: (e) => {
+                  e.stopPropagation(); // Previene il flip quando si clicca il link
+                },
                 style: {
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -550,79 +552,62 @@ function AuthoredSection() {
 
       /* CRITICAL FIX: Backface visibility per mobile */
       .card-face {
-        -webkit-backface-visibility: hidden !important;
-        backface-visibility: hidden !important;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
       }
 
       .card-front {
-        transform: rotateY(0deg);
         z-index: 2;
       }
 
       .card-back {
-        transform: rotateY(180deg);
         z-index: 1;
       }
 
-      /* Mobile: SLIDE invece di FLIP per evitare backface-visibility issues */
+      /* Animazione SLIDE per tutte le risoluzioni */
+      .card-front,
+      .card-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      /* Stato iniziale: front visibile */
+      .card-flip-inner:not(.flipped) .card-front {
+        transform: translateX(0);
+        opacity: 1;
+        z-index: 2;
+      }
+
+      .card-flip-inner:not(.flipped) .card-back {
+        transform: translateX(100%);
+        opacity: 0;
+        z-index: 1;
+      }
+
+      /* Stato flipped: back visibile */
+      .card-flip-inner.flipped .card-front {
+        transform: translateX(-100%);
+        opacity: 0;
+        z-index: 1;
+      }
+
+      .card-flip-inner.flipped .card-back {
+        transform: translateX(0);
+        opacity: 1;
+        z-index: 2;
+      }
+
+      /* Mobile: touch friendly */
       @media (max-width: 768px) {
         .publication-card-wrapper {
           cursor: pointer;
           -webkit-tap-highlight-color: transparent;
         }
-
-        /* Disabilita 3D su mobile */
-        .card-flip-inner {
-          transform-style: flat !important;
-          -webkit-transform-style: flat !important;
-          transform: none !important;
-        }
-
-        .card-face {
-          transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-          backface-visibility: visible !important;
-        }
-
-        .card-front,
-        .card-back {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          transform: none !important; /* Reset rotateY per mobile */
-        }
-
-        /* Stato iniziale: front visibile */
-        .card-flip-inner:not(.flipped) .card-front {
-          transform: translateX(0) !important;
-          opacity: 1;
-          z-index: 2;
-        }
-
-        .card-flip-inner:not(.flipped) .card-back {
-          transform: translateX(100%) !important;
-          opacity: 0;
-          z-index: 1;
-        }
-
-        /* Stato flipped: back visibile */
-        .card-flip-inner.flipped .card-front {
-          transform: translateX(-100%) !important;
-          opacity: 0;
-          z-index: 1;
-        }
-
-        .card-flip-inner.flipped .card-back {
-          transform: translateX(0) !important;
-          opacity: 1;
-          z-index: 2;
-        }
       }
 
-      /* Desktop: mantieni hover normale */
+      /* Desktop: hover */
       @media (min-width: 769px) {
         .publication-card-wrapper {
           cursor: default;

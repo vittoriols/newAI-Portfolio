@@ -4,7 +4,7 @@ export const certifications = [
     title: "IBM Generative AI Expert - Architect",
     provider: "IBM",
     date: "2025",
-    image: "https://images.credly.com/size/220x220/images/406394b6-6732-49c0-b206-59bc43adf793/IBM-Generative-AI-Expert---Architect.png",
+    image: "https://images.credly.com/size/680x680/images/7e53e903-a29c-462b-ac05-08074c9100ea/IBM-Generative-Agentic-AI-Expert---Architect.png",
     credlyUrl: "https://www.credly.com/badges/fbd8a312-c9c5-470a-9df2-3d3cfed7a960/public_url",
     category: "IBM"
   },
@@ -91,11 +91,11 @@ export const certifications = [
   },
   {
     id: 11,
-    title: "SAP Certified Technology Specialist - SAP S/4HANA Conversion and SAP System Upgrade 2022",
+    title: "SAP Certified Specialist - SAP S/4HANA Conversion and SAP System Upgrade",
     provider: "SAP",
     date: "2022",
-    image: "https://images.credly.com/size/340x340/images/75d7e19f-4987-4db1-b6a6-7b7eaa915ce9/E_S4HCON2022.png",
-    credlyUrl: "https://www.credly.com/badges/93510548-9d4a-4bcf-8fc1-903543b04822/public_url",
+    image: "https://images.credly.com/size/680x680/images/063cad5a-3eff-4b41-92d3-1eded26c73ef/image.png",
+    credlyUrl: "https://www.credly.com/badges/7f027174-3237-4a5d-8b8b-35d3e8f456c5/public_url",
     category: "SAP"
   },
   {
@@ -145,11 +145,11 @@ export const certifications = [
   },
   {
     id: 17,
-    title: "SAP Certified Associate - SAP Activate Project Manager",
+    title: "SAP Certified Associate - Project Manager - SAP Activate",
     provider: "SAP",
     date: "2021",
-    image: "https://images.credly.com/size/340x340/images/034a0102-9b43-4331-8941-a7a6ec62fb1a/C_ACTIVATE05.png",
-    credlyUrl: "https://www.credly.com/badges/5d8f3acf-d1c9-4e22-a7e4-61487b0a776c",
+    image: "https://images.credly.com/size/680x680/images/d7829924-abbe-42be-bb46-34df2ac777dd/image.png",
+    credlyUrl: "https://www.credly.com/badges/ec409781-21a0-4d58-8e18-4a38a889331d/public_url",
     category: "SAP"
   },
   {
@@ -163,20 +163,20 @@ export const certifications = [
   },
   {
     id: 19,
-    title: "SAP Certified Development Associate - SAP Fiori Application Developer",
+    title: "SAP Certified Associate - SAP Fiori Application Developer",
     provider: "SAP",
     date: "2021",
-    image: "https://images.credly.com/size/340x340/images/844e0d1e-45e7-4818-8640-df588b002d8d/C_FIORDEV_21.png",
-    credlyUrl: "https://www.credly.com/badges/cf08a317-0a60-45a5-9f3d-bbc84b143be4/public_url",
+    image: "https://images.credly.com/size/680x680/images/8cd2f15f-9865-43fe-9a33-722e175c1b17/image.png",
+    credlyUrl: "https://www.credly.com/badges/d7fe2635-9e8b-4dd9-9fcb-7ae44b320ed9/public_url",
     category: "SAP"
   },
   {
     id: 20,
-    title: "SAP Certified Application Associate - SAP S/4HANA Sourcing and Procurement",
+    title: "SAP Certified Associate - SAP S/4HANA Cloud Private Edition, Sourcing and Procurement",
     provider: "SAP",
     date: "2020",
-    image: "https://images.credly.com/size/340x340/images/03b9f921-960b-4ca8-9e48-dacc64cada98/C_TS452_1909.png",
-    credlyUrl: "https://www.credly.com/badges/ea6e428b-3312-4139-a408-3bc0143297bd/public_url",
+    image: "https://images.credly.com/size/680x680/images/d72c87e0-3af8-4336-b603-085bb98dc649/blob",
+    credlyUrl: "https://www.credly.com/badges/aa9ff411-0731-42fe-8e96-d1bf96242842/public_url",
     category: "SAP"
   },
   {
