@@ -25,6 +25,31 @@ worker/                     proxy di AskMe su Cloudflare Workers
 **Regola d'oro:** tutto quello che sta in `content/` è pubblico. Va online e AskMe può ripeterlo a
 chiunque. Niente nomi di clienti, telefono, indirizzo o date personali.
 
+## Aggiornare tutto in un colpo
+
+Dalla cartella `site/`:
+
+```bash
+npm run update
+```
+
+Importa le badge da Credly e confronta l'ultimo export LinkedIn trovato in Download. Poi esegue i
+test del Worker, le domande di prova ad AskMe (se `GROQ_API_KEY` è impostata) e la build, mostra
+cosa è cambiato e apre l'anteprima su http://localhost:4321/newAI-Portfolio/. Non pubblica niente.
+
+Se il risultato ti convince:
+
+```bash
+npm run update:publish
+```
+
+Rifà gli stessi controlli e, dopo una tua conferma, fa commit e push su `master`: GitHub Actions
+pubblica in circa un minuto. Funziona solo dal branch `master`, e si ferma se un test o la build
+falliscono.
+
+Opzioni: `--linkedin <file.zip>` per indicare un export preciso, `--apply` per scrivere le modifiche
+di LinkedIn in `experience.yaml`, `--worker` (con `update:publish`) per ripubblicare anche il Worker.
+
 ## Comandi
 
 Dalla cartella `site/`:

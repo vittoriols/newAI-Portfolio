@@ -11,7 +11,9 @@
     "askme:check": "node scripts/askme-check.mjs",
     "audio:script": "node scripts/audio-script.mjs",
     "audio:voice": "node scripts/audio-voice.mjs",
-    "test": "node --test worker/test.mjs"
+    "test": "node --test worker/test.mjs",
+    "update": "node scripts/update.mjs",
+    "update:publish": "node scripts/update.mjs --publish"
   },
   "type": "module",
   "dependencies": {
