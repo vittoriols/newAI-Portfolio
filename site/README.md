@@ -71,6 +71,7 @@ Apre il sito su http://localhost:4321/newAI-Portfolio/ e si aggiorna a ogni modi
 | `npm run import:credly` | Scarica le badge dal profilo Credly pubblico |
 | `npm run import:linkedin -- <zip>` | Confronta l'export LinkedIn con i contenuti |
 | `npm run askme:check` | Fa ad AskMe le domande di prova (serve `GROQ_API_KEY`) |
+| `npm run context:notebooklm` | Salva in Download tutti i contenuti in un file `.txt` per NotebookLM |
 | `npm run audio:script` | Scrive il copione dell'audio (serve `GROQ_API_KEY`) |
 | `npm run audio:voice` | Trasforma il copione approvato in mp3 (serve `GEMINI_API_KEY`) |
 
@@ -124,8 +125,9 @@ dell'ultimo cambio di ruolo. Per rifarlo:
    npm run audio:voice
    ```
 
-Con NotebookLM a mano: carica `askme/context.json` come fonte, scarica l'mp3, poi comprimilo
-nel sito.
+Con NotebookLM a mano: carica come fonti il CV in PDF e `VLS_Portfolio_context_NotebookLM.txt`, che
+`npm run update` salva in Download (o da solo: `npm run context:notebooklm`). Poi scarica l'audio e
+comprimilo nel sito.
 ```bash
 npm run audio:voice -- --compress ~/Downloads/overview.mp3
 ```

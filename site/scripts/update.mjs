@@ -5,6 +5,8 @@
 //   npm run update:publish             same checks, then commit and push to master (= deploy)
 //   npm run update:publish -- --worker also redeploys the AskMe Worker
 //
+// Both modes also write the content as a .txt file for NotebookLM in Downloads.
+//
 // Nothing is published without your confirmation. A failing test or build
 // stops everything before the commit.
 
@@ -123,6 +125,10 @@ async function main() {
   record('Build', buildOk ? 'ok' : 'fail');
   if (!buildOk) { summary(); process.exit(1); }
 
+  // 6. Plain-text context for NotebookLM, in Downloads
+  step('Context file for NotebookLM');
+  record('NotebookLM file', run('npm', ['run', '--silent', 'context:notebooklm']) ? 'ok' : 'warn', 'in your Downloads folder');
+
   // What changed in the content since the last commit.
   const changes = capture('git', ['status', '--porcelain', '--', 'site']);
   const changed = changes ? changes.split('\n') : [];
@@ -139,7 +145,7 @@ async function main() {
     return;
   }
 
-  // 6. Publish: commit and push to master
+  // 7. Publish: commit and push to master
   step('Publish');
   const branch = capture('git', ['branch', '--show-current']);
   if (branch !== 'master') {
@@ -174,7 +180,7 @@ async function main() {
     if (!ok) { summary(); process.exit(1); }
   }
 
-  // 7. Worker (only on request)
+  // 8. Worker (only on request)
   if (withWorker) {
     step('AskMe Worker deploy');
     record('Worker deploy', run('npx', ['wrangler', 'deploy'], { cwd: path.resolve('worker') }) ? 'ok' : 'fail');
