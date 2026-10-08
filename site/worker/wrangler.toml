@@ -9,4 +9,6 @@ compatibility_date = "2026-10-01"
 [vars]
 CONTEXT_URL = "https://vittoriols.github.io/newAI-Portfolio/askme/context.json"
 ALLOWED_ORIGINS = "https://vittoriols.github.io,http://localhost:4321"
-MODEL = "llama-3.1-8b-instant"
+# Groq retires models: if AskMe reports "model_not_found", pick another one
+# from https://console.groq.com/docs/models and run "npx wrangler deploy".
+MODEL = "openai/gpt-oss-120b"

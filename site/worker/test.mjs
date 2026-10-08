@@ -75,8 +75,39 @@ test('rejects a conversation that does not end with a question', async () => {
   assert.equal(res.status, 400);
 });
 
+test('reports why Groq refused, without the key', async () => {
+  const realFetch = globalThis.fetch;
+  globalThis.fetch = async (url, init) => String(url).includes('groq')
+    ? new Response(JSON.stringify({ error: { message: 'Invalid API Key', code: 'invalid_api_key' } }), { status: 401 })
+    : realFetch(url, init);
+  try {
+    const res = await post({ messages: [{ role: 'user', content: 'Hi' }] }, undefined, '4.4.4.4');
+    assert.equal(res.status, 502);
+    const body = await res.json();
+    assert.equal(body.upstream.status, 401);
+    assert.equal(body.upstream.code, 'invalid_api_key');
+    assert.equal(body.upstream.keySet, true);
+    assert.doesNotMatch(JSON.stringify(body), /secret-key/);
+  } finally {
+    globalThis.fetch = realFetch;
+  }
+});
+
 test('limits requests per visitor', async () => {
   let last;
   for (let i = 0; i < 21; i++) last = await post({ messages: [{ role: 'user', content: 'q' }] }, undefined, '9.9.9.9');
   assert.equal(last.status, 429);
+});
+
+test('gives reasoning models low effort and room to answer', async () => {
+  calls.length = 0;
+  await worker.fetch(new Request('https://askme.test/', {
+    method: 'POST',
+    headers: { Origin: 'https://example.github.io', 'Content-Type': 'application/json', 'CF-Connecting-IP': '5.5.5.5' },
+    body: JSON.stringify({ messages: [{ role: 'user', content: 'Hi' }] }),
+  }), { ...env, MODEL: 'openai/gpt-oss-120b' }, ctx);
+  const sent = JSON.parse(calls.find((c) => c.url.includes('groq')).init.body);
+  assert.equal(sent.model, 'openai/gpt-oss-120b');
+  assert.equal(sent.reasoning_effort, 'low');
+  assert.ok(sent.max_tokens > 600);
 });

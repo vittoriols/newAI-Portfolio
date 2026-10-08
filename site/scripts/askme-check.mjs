@@ -7,8 +7,9 @@
 
 import { loadAll, loadAskMeChecks } from '../src/lib/content.mjs';
 import { buildContextFromContent, systemPrompt } from '../src/lib/askme.mjs';
+import { completionOptions, DEFAULT_MODEL } from '../src/lib/askme-prompt.mjs';
 
-const MODEL = process.env.ASKME_MODEL ?? 'llama-3.1-8b-instant';
+const MODEL = process.env.ASKME_MODEL ?? DEFAULT_MODEL;
 const key = process.env.GROQ_API_KEY;
 
 async function ask(system, question) {
@@ -16,7 +17,7 @@ async function ask(system, question) {
     const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
       headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model: MODEL, temperature: 0, max_tokens: 600, messages: [{ role: 'system', content: system }, { role: 'user', content: question }] }),
+      body: JSON.stringify({ ...completionOptions(MODEL, { temperature: 0 }), messages: [{ role: 'system', content: system }, { role: 'user', content: question }] }),
     });
     if (res.status === 429) {
       const wait = Number(res.headers.get('retry-after') ?? 20);

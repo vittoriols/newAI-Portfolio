@@ -10,8 +10,9 @@ import { writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { ROOT, loadAll } from '../src/lib/content.mjs';
 import { buildContextFromContent } from '../src/lib/askme.mjs';
+import { completionOptions, DEFAULT_MODEL } from '../src/lib/askme-prompt.mjs';
 
-const MODEL = process.env.AUDIO_SCRIPT_MODEL ?? 'llama-3.3-70b-versatile';
+const MODEL = process.env.AUDIO_SCRIPT_MODEL ?? DEFAULT_MODEL;
 const OUT = path.join(ROOT, 'content/askme/audio-script.md');
 const HOSTS = ['Alex', 'Sam'];
 
@@ -32,9 +33,7 @@ async function main() {
     method: 'POST',
     headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      model: MODEL,
-      temperature: 0.6,
-      max_tokens: 1500,
+      ...completionOptions(MODEL, { maxTokens: 1500, temperature: 0.6 }),
       messages: [{ role: 'system', content: instructions }, { role: 'user', content: profileText }],
     }),
   });

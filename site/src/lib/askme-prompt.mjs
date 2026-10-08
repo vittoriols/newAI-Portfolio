@@ -28,3 +28,21 @@ export function sanitizeMessages(messages) {
     .slice(-LIMITS.maxTurns)
     .map((m) => ({ role: m.role, content: m.content.slice(0, LIMITS.maxChars) }));
 }
+
+// Groq model used when none is configured. Groq retires models over time: if
+// AskMe answers "model_not_found", change MODEL in worker/wrangler.toml (and
+// ASKME_MODEL for the scripts) to one listed at console.groq.com/docs/models.
+export const DEFAULT_MODEL = 'openai/gpt-oss-120b';
+
+// Request options for a model. Reasoning models (gpt-oss) spend part of
+// max_tokens thinking before they answer: they get low reasoning effort and
+// extra room, so the answer is never cut off.
+export function completionOptions(model = DEFAULT_MODEL, { maxTokens = 600, temperature = 0.3 } = {}) {
+  const reasoning = /^openai\/gpt-oss/.test(model);
+  return {
+    model,
+    temperature,
+    max_tokens: reasoning ? maxTokens + 800 : maxTokens,
+    ...(reasoning && { reasoning_effort: 'low' }),
+  };
+}

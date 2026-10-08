@@ -8,9 +8,9 @@
 //   GROQ_API_KEY     secret, set with "npx wrangler secret put GROQ_API_KEY"
 //   CONTEXT_URL      https://<site>/askme/context.json
 //   ALLOWED_ORIGINS  comma-separated origins allowed to call the Worker
-//   MODEL            Groq model id
+//   MODEL            Groq model id (default in askme-prompt.mjs)
 
-import { systemPrompt, sanitizeMessages } from '../../src/lib/askme-prompt.mjs';
+import { systemPrompt, sanitizeMessages, completionOptions, DEFAULT_MODEL } from '../../src/lib/askme-prompt.mjs';
 
 const GROQ_URL = 'https://api.groq.com/openai/v1/chat/completions';
 const CONTEXT_TTL = 3600;
@@ -90,16 +90,30 @@ export default {
       method: 'POST',
       headers: { Authorization: `Bearer ${env.GROQ_API_KEY}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: env.MODEL,
+        ...completionOptions(env.MODEL || DEFAULT_MODEL),
         stream: true,
-        temperature: 0.3,
-        max_tokens: 600,
         messages: [{ role: 'system', content: systemPrompt(context) }, ...messages],
       }),
     });
 
     if (upstream.status === 429) return json(429, { error: 'The assistant is busy. Try again in a minute.' }, headers);
-    if (!upstream.ok || !upstream.body) return json(502, { error: 'The assistant could not answer.' }, headers);
+    if (!upstream.ok || !upstream.body) {
+      // Groq's own reason (e.g. "Invalid API Key", "model not found") never
+      // contains the key: it is logged ("npx wrangler tail") and returned, so
+      // a failure can be diagnosed without guessing.
+      const raw = await upstream.text().catch(() => '');
+      let detail = {};
+      try { detail = JSON.parse(raw).error ?? {}; } catch { detail = { message: raw }; }
+      const upstreamError = {
+        status: upstream.status,
+        code: detail.code ?? detail.type ?? null,
+        message: String(detail.message ?? '').slice(0, 200),
+        model: env.MODEL || DEFAULT_MODEL,
+        keySet: Boolean(env.GROQ_API_KEY),
+      };
+      console.error('Groq request failed', JSON.stringify(upstreamError));
+      return json(502, { error: 'The assistant could not answer.', upstream: upstreamError }, headers);
+    }
 
     return new Response(upstream.body, {
       headers: { ...headers, 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-store' },
