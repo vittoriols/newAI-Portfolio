@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+
+# Never commit a LinkedIn export: it contains messages, contacts and your address.
+*.zip
+*LinkedInDataExport*

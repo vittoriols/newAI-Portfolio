@@ -1,0 +1,34 @@
+# Which Credly badges appear on the site.
+# Everything not selected here stays reachable through the link to the Credly profile.
+#
+# A badge is shown when it matches at least one rule in "show".
+# "include" and "exclude" take badge ids (the last part of the Credly badge URL)
+# and always win over the rules.
+
+show:
+  # Certifications from third parties: The Open Group, SAP, Anthropic, Microsoft...
+  - excludeIssuers: [IBM, IBM SkillsBuild, Coursera / IBM, Credly]
+    nameMatches: ['certif']
+
+  # IBM credentials on AI and agentic AI, at practitioner level or above.
+  # Foundations, essentials, sales tracks and challenges stay on Credly.
+  - issuers: [IBM]
+    types: [Validation, Certification, null]
+    nameMatches: ['generative', 'agentic', 'watsonx', 'orchestrate', '\bAI\b', 'IBM Bob', 'forward deployed']
+    levelMatches: ['expert', 'architect', 'practitioner', 'advanced', 'intermediate']
+
+# Expired badges are hidden. When a "Level 1" and a "Level 2" of the same
+# certification are both present, only the higher level is shown.
+hideExpired: true
+
+include: []
+exclude: []
+
+# Order of the issuer groups in the credentials section.
+issuerOrder:
+  - The Open Group
+  - SAP
+  - Anthropic
+  - IBM
+  - PeopleCert
+  - Microsoft

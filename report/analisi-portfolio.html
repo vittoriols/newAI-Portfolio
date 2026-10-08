@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio VLS: errata e revisione tecnica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F8FA;
+    --sheet: #FFFFFF;
+    --ink: #17202B;
+    --ink-soft: #4A5563;
+    --rule: #CDD3DB;
+    --rule-soft: #E6E9EE;
+    --blue: #1D4E9E;
+    --blue-wash: #E8EEF8;
+    --red: #B3261E;
+    --red-wash: #FBEDEC;
+    --amber: #9A6200;
+    --amber-wash: #FBF3E3;
+    --green: #2E6B47;
+    --green-wash: #E9F3ED;
+
+    --f: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --step--1: 0.875rem;
+    --step-0: 1.0625rem;
+    --step-1: 1.25rem;
+    --step-2: 1.5625rem;
+    --step-3: 2.125rem;
+    --step-4: 3.25rem;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--f);
+    font-size: var(--step-0);
+    line-height: 1.55;
+    font-variation-settings: "wdth" 100;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--blue); text-underline-offset: 0.18em; }
+  a:focus-visible, button:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  code {
+    font-family: inherit;
+    font-variation-settings: "wdth" 75;
+    font-weight: 600;
+    background: var(--rule-soft);
+    padding: 0.05em 0.35em;
+    border-radius: 3px;
+    font-size: 0.94em;
+    white-space: nowrap;
+  }
+
+  /* ---------- Title block ---------- */
+  .masthead {
+    background: var(--sheet);
+    border-bottom: 1px solid var(--rule);
+  }
+  .masthead-band {
+    background: var(--blue);
+    color: #fff;
+    font-size: var(--step--1);
+    font-variation-settings: "wdth" 80;
+    font-weight: 500;
+  }
+  .masthead-band .wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 0.45rem;
+  }
+  .wrap {
+    max-width: 78rem;
+    margin-inline: auto;
+    padding-inline: clamp(1.25rem, 4vw, 3rem);
+  }
+  .masthead-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 2rem 3rem;
+    align-items: end;
+    padding-block: clamp(2.5rem, 6vw, 4.5rem) 2.25rem;
+  }
+  .masthead h1 {
+    margin: 0;
+    font-size: clamp(2.4rem, 6.4vw, 4.6rem);
+    line-height: 0.98;
+    font-weight: 800;
+    font-variation-settings: "wdth" 118;
+    letter-spacing: -0.02em;
+    max-width: 14ch;
+  }
+  .masthead .lede {
+    margin: 1.25rem 0 0;
+    font-size: var(--step-1);
+    color: var(--ink-soft);
+    max-width: 38rem;
+    line-height: 1.45;
+  }
+  .doc-meta {
+    border-collapse: collapse;
+    font-size: var(--step--1);
+    min-width: 17rem;
+  }
+  .doc-meta th, .doc-meta td {
+    text-align: left;
+    padding: 0.4rem 0.75rem;
+    border: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  .doc-meta th {
+    font-weight: 500;
+    color: var(--ink-soft);
+    font-variation-settings: "wdth" 80;
+    background: var(--paper);
+    width: 7.5rem;
+  }
+  .doc-meta td { font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  /* ---------- Layout ---------- */
+  .layout {
+    display: grid;
+    grid-template-columns: 13.5rem minmax(0, 1fr);
+    gap: 3.5rem;
+    padding-block: 3rem 6rem;
+  }
+  .toc {
+    position: sticky;
+    top: 1.5rem;
+    align-self: start;
+    font-size: var(--step--1);
+  }
+  .toc p {
+    margin: 0 0 0.6rem;
+    font-weight: 700;
+    font-variation-settings: "wdth" 80;
+    color: var(--ink-soft);
+  }
+  .toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid var(--rule);
+    counter-reset: toc;
+  }
+  .toc li { counter-increment: toc; }
+  .toc a {
+    display: grid;
+    grid-template-columns: 1.6rem 1fr;
+    padding: 0.32rem 0 0.32rem 0.85rem;
+    color: var(--ink);
+    text-decoration: none;
+    margin-left: -1px;
+    border-left: 2px solid transparent;
+  }
+  .toc a::before {
+    content: counter(toc);
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+  .toc a:hover { color: var(--blue); border-left-color: var(--blue); }
+
+  main > section {
+    padding-top: 3.25rem;
+    margin-top: 3.25rem;
+    border-top: 1px solid var(--rule);
+  }
+  main > section:first-child { padding-top: 0; margin-top: 0; border-top: 0; }
+
+  .sec-head {
+    display: grid;
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+    align-items: baseline;
+    margin-bottom: 1.25rem;
+  }
+  .sec-num {
+    font-size: var(--step-3);
+    font-weight: 300;
+    font-variation-settings: "wdth" 62;
+    color: var(--blue);
+    font-variant-numeric: tabular-nums;
+  }
+  h2 {
+    margin: 0;
+    font-size: var(--step-3);
+    line-height: 1.1;
+    font-weight: 750;
+    font-variation-settings: "wdth" 112;
+    letter-spacing: -0.012em;
+  }
+  h3 {
+    font-size: var(--step-1);
+    font-weight: 700;
+    font-variation-settings: "wdth" 105;
+    margin: 2.25rem 0 0.6rem;
+    line-height: 1.25;
+  }
+  .prose { max-width: 41rem; }
+  .prose p, .prose ul, .prose ol { margin: 0 0 1rem; }
+  .prose li { margin-bottom: 0.4rem; }
+  .prose li::marker { color: var(--ink-soft); }
+  .indent { padding-left: 3.25rem; }
+
+  /* ---------- Verdict ---------- */
+  .verdict {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border: 1px solid var(--rule);
+    background: var(--sheet);
+    margin: 1.75rem 0 0;
+  }
+  .verdict > div {
+    padding: 1.25rem 1.35rem 1.4rem;
+    border-right: 1px solid var(--rule);
+  }
+  .verdict > div:last-child { border-right: 0; }
+  .verdict h3 { margin: 0 0 0.5rem; font-size: var(--step-0); }
+  .verdict p { margin: 0; font-size: var(--step--1); color: var(--ink-soft); line-height: 1.5; }
+  .verdict .tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-variation-settings: "wdth" 80;
+    padding: 0.1rem 0.5rem;
+    border-radius: 2px;
+    margin-bottom: 0.7rem;
+  }
+  .tag.red { background: var(--red-wash); color: var(--red); }
+  .tag.amber { background: var(--amber-wash); color: var(--amber); }
+  .tag.green { background: var(--green-wash); color: var(--green); }
+
+  /* ---------- Diagrams ---------- */
+  figure.schematic {
+    margin: 1.75rem 0 0;
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    padding: 1.5rem 1.25rem 1rem;
+    background-image:
+      linear-gradient(var(--rule-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--rule-soft) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: -1px -1px;
+  }
+  figure.schematic svg { display: block; width: 100%; height: auto; }
+  figure.schematic figcaption {
+    margin-top: 1rem;
+    font-size: var(--step--1);
+    color: var(--ink-soft);
+    background: var(--sheet);
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .schematic text { font-family: var(--f); }
+
+  /* ---------- Errata ---------- */
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.5rem 0 1rem;
+    align-items: center;
+  }
+  .filters span { font-size: var(--step--1); color: var(--ink-soft); margin-right: 0.35rem; }
+  .filters button {
+    font: inherit;
+    font-size: var(--step--1);
+    font-weight: 600;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid var(--rule);
+    background: var(--sheet);
+    color: var(--ink);
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  .filters button[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .filters .count { font-variant-numeric: tabular-nums; opacity: 0.7; margin-left: 0.25rem; }
+
+  .errata { border-top: 2px solid var(--ink); }
+  .erratum {
+    border-bottom: 1px solid var(--rule);
+    background: var(--sheet);
+  }
+  .erratum summary {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 3.4rem 5.6rem minmax(0, 1fr) 1.25rem;
+    gap: 0.9rem;
+    align-items: baseline;
+    padding: 0.95rem 1rem;
+    cursor: pointer;
+  }
+  .erratum summary::-webkit-details-marker { display: none; }
+  .erratum summary:hover { background: var(--paper); }
+  .erratum .id {
+    font-weight: 700;
+    font-variation-settings: "wdth" 75;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-soft);
+  }
+  .sev {
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-variation-settings: "wdth" 80;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .sev::before {
+    content: "";
+    width: 0.6rem; height: 0.6rem;
+    border-radius: 50%;
+    background: currentColor;
+    flex: none;
+  }
+  .sev.critico { color: var(--red); }
+  .sev.alto { color: var(--red); }
+  .sev.alto::before { background: transparent; border: 2px solid currentColor; }
+  .sev.medio { color: var(--amber); }
+  .sev.basso { color: var(--ink-soft); }
+  .sev.basso::before { background: transparent; border: 2px solid currentColor; width: 0.55rem; height: 0.55rem; }
+  .erratum .title { font-weight: 650; line-height: 1.35; }
+  .erratum .chev {
+    width: 0.6rem; height: 0.6rem;
+    border-right: 2px solid var(--ink-soft);
+    border-bottom: 2px solid var(--ink-soft);
+    transform: rotate(45deg) translateY(-3px);
+    transition: transform 160ms ease;
+    justify-self: end;
+  }
+  .erratum[open] .chev { transform: rotate(225deg) translate(-2px, -2px); }
+  @media (prefers-reduced-motion: reduce) { .erratum .chev { transition: none; } }
+  .erratum .body {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: 0.65rem 1.25rem;
+    padding: 0.25rem 1rem 1.4rem calc(3.4rem + 5.6rem + 2.8rem);
+    font-size: 0.98rem;
+  }
+  .erratum dt {
+    font-weight: 600;
+    color: var(--ink-soft);
+    font-variation-settings: "wdth" 85;
+  }
+  .erratum dd { margin: 0; max-width: 40rem; }
+  .erratum dd.fix { color: var(--green); font-weight: 500; }
+  .erratum[hidden] { display: none; }
+
+  /* ---------- Tables ---------- */
+  .table-scroll { overflow-x: auto; margin: 1.5rem 0 0; }
+  table.spec {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--sheet);
+    font-size: 0.95rem;
+    min-width: 40rem;
+  }
+  table.spec caption {
+    text-align: left;
+    font-weight: 700;
+    font-variation-settings: "wdth" 90;
+    padding-bottom: 0.6rem;
+  }
+  table.spec th, table.spec td {
+    border: 1px solid var(--rule);
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  table.spec thead th {
+    background: var(--ink);
+    color: #fff;
+    font-weight: 600;
+    font-variation-settings: "wdth" 85;
+    border-color: var(--ink);
+  }
+  table.spec tbody th { font-weight: 600; background: var(--paper); width: 11rem; }
+  table.spec td.num { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; font-weight: 600; }
+  table.spec .rec { background: var(--blue-wash); }
+  table.spec .rec th { background: var(--blue-wash); }
+  .good { color: var(--green); font-weight: 600; }
+  .bad { color: var(--red); font-weight: 600; }
+  .meh { color: var(--amber); font-weight: 600; }
+
+  /* ---------- Design critique ---------- */
+  .critique {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    border: 1px solid var(--rule);
+    background: var(--sheet);
+    margin-top: 1.5rem;
+  }
+  .critique > div { padding: 1.25rem 1.4rem; }
+  .critique > div + div { border-left: 1px solid var(--rule); }
+  .critique h3 { margin-top: 0; }
+  .critique ul { margin: 0; padding-left: 1.1rem; }
+  .critique li { margin-bottom: 0.65rem; }
+
+  /* ---------- Directions ---------- */
+  .directions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+  .direction {
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+  }
+  .direction .swatch { height: 7.5rem; position: relative; overflow: hidden; border-bottom: 1px solid var(--rule); }
+  .direction .content { padding: 1.1rem 1.2rem 1.3rem; }
+  .direction h3 { margin: 0 0 0.25rem; }
+  .direction .who { margin: 0 0 0.75rem; font-size: var(--step--1); color: var(--ink-soft); }
+  .direction p { margin: 0 0 0.75rem; font-size: 0.97rem; }
+  .direction .risk { font-size: var(--step--1); color: var(--ink-soft); margin: 0; }
+
+  .sw-a { background: #fff; }
+  .sw-a .band { position: absolute; inset: 0 0 auto 0; height: 14px; background: #1D4E9E; }
+  .sw-a .t {
+    position: absolute; left: 16px; top: 30px;
+    font-weight: 800; font-variation-settings: "wdth" 120; font-size: 1.55rem; color: #17202B; line-height: 1;
+  }
+  .sw-a .grid {
+    position: absolute; left: 16px; right: 16px; bottom: 14px; height: 34px;
+    background:
+      linear-gradient(90deg, #CDD3DB 1px, transparent 1px) 0 0 / 25% 100%,
+      linear-gradient(#CDD3DB 1px, transparent 1px) 0 0 / 100% 50%;
+    border: 1px solid #CDD3DB;
+  }
+
+  .sw-b { background: #EFF1EC; }
+  .sw-b .t {
+    position: absolute; left: 18px; top: 22px; right: 18px;
+    font-family: Georgia, "Times New Roman", serif; font-style: italic;
+    font-size: 1.45rem; color: #20301F; line-height: 1.15;
+  }
+  .sw-b .rule { position: absolute; left: 18px; width: 54px; bottom: 22px; height: 3px; background: #4F6B3A; }
+
+  .sw-c { background: #142B3A; }
+  .sw-c .bubble {
+    position: absolute; border-radius: 14px; padding: 7px 11px; font-size: 0.8rem; line-height: 1.3;
+  }
+  .sw-c .q { right: 16px; top: 18px; background: #E9F0F4; color: #142B3A; }
+  .sw-c .a { left: 16px; top: 54px; right: 44px; background: #1F4459; color: #E9F0F4; }
+
+  /* ---------- Roadmap ---------- */
+  .roadmap { list-style: none; margin: 1.5rem 0 0; padding: 0; counter-reset: phase -1; }
+  .roadmap > li {
+    counter-increment: phase;
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .roadmap > li:last-child { border-bottom: 1px solid var(--rule); }
+  .roadmap .when { font-size: var(--step--1); color: var(--ink-soft); }
+  .roadmap .when strong {
+    display: block;
+    font-size: var(--step-1);
+    color: var(--ink);
+    font-variation-settings: "wdth" 90;
+  }
+  .roadmap .when strong::before { content: "Fase " counter(phase); }
+  .roadmap h3 { margin: 0 0 0.4rem; }
+  .roadmap ul { margin: 0; padding-left: 1.1rem; max-width: 42rem; }
+  .roadmap li li { margin-bottom: 0.3rem; }
+
+  /* ---------- Decisions ---------- */
+  .decisions { margin: 1.5rem 0 0; padding: 0; list-style: none; counter-reset: dec; max-width: 48rem; }
+  .decisions li {
+    counter-increment: dec;
+    display: grid;
+    grid-template-columns: 2.25rem minmax(0, 1fr);
+    padding: 1rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .decisions li::before {
+    content: counter(dec);
+    font-weight: 300;
+    font-size: var(--step-2);
+    line-height: 1;
+    font-variation-settings: "wdth" 62;
+    color: var(--blue);
+  }
+  .decisions strong { display: block; margin-bottom: 0.2rem; }
+  .decisions .opt { color: var(--ink-soft); font-size: 0.97rem; }
+  .decisions .opt b { color: var(--blue); font-weight: 650; }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    font-size: var(--step--1);
+    color: var(--ink-soft);
+    padding-block: 1.5rem 3rem;
+  }
+
+  /* ---------- Sources / procedure ---------- */
+  .toc-rev { margin-top: 1rem !important; font-weight: 400 !important; font-size: 0.8rem; }
+  .sources { display: grid; gap: 1.25rem; margin: 1.75rem 0 1.75rem; }
+  .source { background: var(--sheet); border: 1px solid var(--rule); }
+  .source-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.25rem 1rem;
+    align-items: baseline;
+    padding: 1.1rem 1.35rem 1rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .source-head h3 { margin: 0; }
+  .source-head .tag {
+    font-size: 0.8rem; font-weight: 700; font-variation-settings: "wdth" 80;
+    padding: 0.1rem 0.5rem; border-radius: 2px;
+  }
+  .source-head p { grid-column: 1 / -1; margin: 0; font-size: var(--step--1); color: var(--ink-soft); }
+  ol.steps { list-style: none; margin: 0; padding: 0.5rem 1.35rem 0.25rem; counter-reset: st; }
+  ol.steps > li {
+    counter-increment: st;
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  ol.steps > li:last-child { border-bottom: 0; }
+  ol.steps > li::before {
+    content: counter(st);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--blue);
+  }
+  ol.steps > li > * { grid-column: 2; }
+  ol.steps p { margin: 0 0 0.5rem; max-width: 44rem; }
+  ol.steps p:last-child { margin-bottom: 0; }
+  pre.cmd {
+    margin: 0.25rem 0 0.6rem;
+    padding: 0.6rem 0.85rem;
+    background: var(--ink);
+    color: #fff;
+    font-family: inherit;
+    font-variation-settings: "wdth" 80;
+    font-weight: 500;
+    font-size: 0.92rem;
+    overflow-x: auto;
+    border-radius: 2px;
+    max-width: 44rem;
+  }
+  .source-note {
+    margin: 0;
+    padding: 0.9rem 1.35rem 1.1rem;
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+  .source-note strong { color: var(--ink); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 960px) {
+    .layout { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+    .toc { position: static; }
+    .toc ol { display: flex; flex-wrap: wrap; border-left: 0; gap: 0.25rem 1rem; }
+    .toc a { padding: 0.2rem 0; border-left: 0; grid-template-columns: 1.3rem 1fr; }
+    .directions { grid-template-columns: minmax(0, 1fr); }
+    .direction { flex-direction: row; }
+    .direction .swatch { width: 38%; height: auto; min-height: 9rem; border-bottom: 0; border-right: 1px solid var(--rule); flex: none; }
+  }
+  @media (max-width: 760px) {
+    .masthead-main { grid-template-columns: minmax(0, 1fr); }
+    .doc-meta { min-width: 0; width: 100%; }
+    .verdict { grid-template-columns: minmax(0, 1fr); }
+    .verdict > div { border-right: 0; border-bottom: 1px solid var(--rule); }
+    .verdict > div:last-child { border-bottom: 0; }
+    .critique { grid-template-columns: minmax(0, 1fr); }
+    .critique > div + div { border-left: 0; border-top: 1px solid var(--rule); }
+    .indent { padding-left: 0; }
+    .sec-head { grid-template-columns: 2.5rem minmax(0, 1fr); }
+    .erratum summary { grid-template-columns: 2.6rem minmax(0, 1fr) 1rem; row-gap: 0.15rem; }
+    .erratum summary .sev { grid-column: 2; grid-row: 1; }
+    .erratum summary .title { grid-column: 2; grid-row: 2; }
+    .erratum summary .chev { grid-column: 3; grid-row: 1 / span 2; align-self: center; }
+    .erratum .body { grid-template-columns: minmax(0, 1fr); padding: 0.25rem 1rem 1.25rem; gap: 0.15rem; }
+    .erratum dd { margin-bottom: 0.7rem; }
+    .roadmap > li { grid-template-columns: minmax(0, 1fr); gap: 0.4rem; }
+    .direction { flex-direction: column; }
+    .direction .swatch { width: auto; min-height: 7rem; border-right: 0; border-bottom: 1px solid var(--rule); }
+    .masthead-band .wrap span:last-child { display: none; }
+  }
+
+  @media print {
+    body { background: #fff; }
+    .toc, .filters { display: none; }
+    .layout { grid-template-columns: minmax(0, 1fr); }
+    .erratum .body { display: grid !important; }
+    figure.schematic { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-band">
+    <div class="wrap">
+      <span>Documento interno, non pubblicato</span>
+      <span>Repo vittoriols/newAI-Portfolio, branch master, commit 73d2aa4</span>
+    </div>
+  </div>
+  <div class="wrap masthead-main">
+    <div>
+      <h1>Errata del portfolio, e cosa farne</h1>
+      <p class="lede">Una revisione del sito come la si farebbe su un componente: cosa non funziona, perché, come si corregge. In fondo, le decisioni che servono per ripartire.</p>
+    </div>
+    <table class="doc-meta">
+      <tr><th>Revisione</th><td>D, 7 ottobre 2026</td></tr>
+      <tr><th>Oggetto</th><td>vittoriols.github.io/newAI-Portfolio</td></tr>
+      <tr><th>Stack</th><td>Create React App 5, React 19, Tailwind 3.4</td></tr>
+      <tr><th>Errata</th><td>15 (1 critico, 4 alti)</td></tr>
+    </table>
+  </div>
+</header>
+
+<div class="wrap layout">
+  <nav class="toc" aria-label="Indice">
+    <p>Indice</p>
+    <ol>
+      <li><a href="#sintesi">Sintesi</a></li>
+      <li><a href="#schema">Come funziona oggi</a></li>
+      <li><a href="#errata">Errata</a></li>
+      <li><a href="#design">Perché sembra datato</a></li>
+      <li><a href="#aggiornamenti">Il problema degli aggiornamenti</a></li>
+      <li><a href="#architettura">Architettura proposta</a></li>
+      <li><a href="#pages">Vincoli di GitHub Pages</a></li>
+      <li><a href="#procedura">Aggiornare dalle fonti</a></li>
+      <li><a href="#dati">Cosa dicono i dati</a></li>
+      <li><a href="#direzioni">Direzioni di design</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#decisioni">Decisioni da prendere</a></li>
+      <li><a href="#misure">Misure</a></li>
+    </ol>
+    <p class="toc-rev">Rev. B aggiunge le sezioni 7 e 8, rev. C l'audio di AskMe, rev. D la sezione 9 con i dati reali.</p>
+  </nav>
+
+  <main>
+
+    <!-- 1 -->
+    <section id="sintesi">
+      <div class="sec-head"><span class="sec-num">1</span><h2>Sintesi</h2></div>
+      <div class="prose indent">
+        <p>Il sito ha contenuti forti (un libro SAP Press, un brevetto, oltre 20 badge Credly, un assistente AI) ma li presenta con un kit visivo generico e su una base tecnica che lavora contro di te. Tre problemi spiegano quasi tutto quello che hai notato:</p>
+        <ul>
+          <li><strong>Il deploy automatico non è mai partito.</strong> Il workflow ascolta il branch <code>main</code>, il repo usa <code>master</code>. Ogni pubblicazione l'hai lanciata a mano.</li>
+          <li><strong>Tailwind non genera quasi nulla in produzione.</strong> Il config letto dalla build ha <code>content: []</code>; per tamponare, <code>index.css</code> reimplementa a mano centinaia di classi. Ogni classe nuova sparisce in silenzio.</li>
+          <li><strong>Gli stessi dati vivono in tre posti.</strong> Aggiungere una certificazione vuol dire toccare due o tre file, e infatti oggi si contraddicono.</li>
+        </ul>
+        <p>In più c'è un problema di sicurezza da chiudere subito, indipendentemente da cosa decidi: la chiave API di Groq è leggibile da chiunque visiti il sito.</p>
+        <p><strong>Raccomandazione:</strong> non restaurare questo codice. Rifare il sito su una base statica (Astro) con i contenuti in file di dati unici, deploy automatico al push e AskMe dietro un piccolo proxy. Il lavoro sui contenuti che hai già fatto si recupera quasi tutto.</p>
+        <p>Restare su GitHub Pages va bene e non cambia questa scelta: l'unico pezzo che deve vivere fuori dal sito è il proxy di AskMe (sezione 7). Per gli aggiornamenti futuri, le badge arrivano da Credly in automatico, le posizioni da un export LinkedIn rivisto da te, e il contesto di AskMe si genera da entrambi (sezione 8).</p>
+      </div>
+
+      <div class="verdict">
+        <div>
+          <span class="tag red">Da chiudere oggi</span>
+          <h3>Chiave Groq esposta</h3>
+          <p>Ruotare la chiave e spostare la chiamata su un proxy. Mezz'ora di lavoro, a prescindere dal redesign.</p>
+        </div>
+        <div>
+          <span class="tag amber">Da rifare</span>
+          <h3>Base tecnica e aspetto</h3>
+          <p>CRA è deprecato, il CSS è un patchwork, il design è il template "AI dark" del 2023. Sistemarlo costa quasi quanto rifarlo.</p>
+        </div>
+        <div>
+          <span class="tag green">Da tenere</span>
+          <h3>Contenuti e AskMe</h3>
+          <p>Esperienze, pubblicazioni, badge e l'idea dell'assistente sono il vero valore. Vanno messi in primo piano, non sepolti in tab.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section id="schema">
+      <div class="sec-head"><span class="sec-num">2</span><h2>Come funziona oggi</h2></div>
+      <div class="prose indent">
+        <p>Il percorso dalla modifica al sito pubblicato, e da un visitatore all'assistente AI. I punti rossi sono quelli che si rompono.</p>
+      </div>
+      <figure class="schematic">
+        <svg viewBox="0 0 960 330" role="img" aria-labelledby="sch1t sch1d">
+          <title id="sch1t">Schema del flusso attuale</title>
+          <desc id="sch1d">La modifica dei contenuti tocca tre file; il push su master non avvia il workflow, che ascolta main; il deploy è manuale. Nel browser, AskMe chiama Groq direttamente con la chiave incorporata nel bundle.</desc>
+          <defs>
+            <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="#17202B"/>
+            </marker>
+            <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="#B3261E"/>
+            </marker>
+          </defs>
+          <g font-size="13" fill="#17202B">
+            <!-- row 1: content -->
+            <text x="20" y="22" font-size="12" fill="#4A5563">Pubblicazione</text>
+            <rect x="20" y="36" width="150" height="56" fill="#fff" stroke="#17202B"/>
+            <text x="34" y="60" font-weight="600">Tu modifichi</text>
+            <text x="34" y="78" fill="#4A5563" font-size="12">una certificazione</text>
+
+            <rect x="220" y="30" width="190" height="22" fill="#fff" stroke="#17202B"/>
+            <text x="230" y="46" font-size="12">data/certifications.js</text>
+            <rect x="220" y="54" width="190" height="22" fill="#FBEDEC" stroke="#B3261E"/>
+            <text x="230" y="70" font-size="12">data/askme-context.js</text>
+            <rect x="220" y="78" width="190" height="22" fill="#FBEDEC" stroke="#B3261E"/>
+            <text x="230" y="94" font-size="12">BioSection.jsx (stats fisse)</text>
+            <line x1="170" y1="64" x2="214" y2="64" stroke="#17202B" marker-end="url(#ar)"/>
+
+            <rect x="460" y="36" width="130" height="56" fill="#fff" stroke="#17202B"/>
+            <text x="474" y="60" font-weight="600">git push</text>
+            <text x="474" y="78" fill="#4A5563" font-size="12">su master</text>
+            <line x1="410" y1="64" x2="454" y2="64" stroke="#17202B" marker-end="url(#ar)"/>
+
+            <rect x="640" y="36" width="150" height="56" fill="#fff" stroke="#B3261E" stroke-width="1.5"/>
+            <text x="654" y="60" font-weight="600">deploy.yml</text>
+            <text x="654" y="78" fill="#B3261E" font-size="12">ascolta solo main</text>
+            <line x1="590" y1="64" x2="634" y2="64" stroke="#B3261E" stroke-dasharray="4 4" marker-end="url(#arr)"/>
+            <g transform="translate(612,64)"><circle r="11" fill="#B3261E"/><path d="M-4,-4 L4,4 M4,-4 L-4,4" stroke="#fff" stroke-width="2"/></g>
+
+            <rect x="830" y="36" width="110" height="56" fill="#fff" stroke="#17202B"/>
+            <text x="844" y="60" font-weight="600">GitHub</text>
+            <text x="844" y="78" font-weight="600">Pages</text>
+
+            <path d="M715,92 L715,140 L885,140 L885,98" fill="none" stroke="#17202B" marker-end="url(#ar)"/>
+            <rect x="735" y="128" width="130" height="24" fill="#FBF3E3" stroke="#9A6200"/>
+            <text x="745" y="145" font-size="12" fill="#9A6200">Run manuale in Actions</text>
+
+            <text x="220" y="124" font-size="12" fill="#B3261E">Tre copie degli stessi dati, già divergenti</text>
+
+            <!-- row 2: runtime -->
+            <line x1="20" y1="180" x2="940" y2="180" stroke="#CDD3DB"/>
+            <text x="20" y="206" font-size="12" fill="#4A5563">Visita</text>
+            <rect x="20" y="220" width="150" height="70" fill="#fff" stroke="#17202B"/>
+            <text x="34" y="246" font-weight="600">Browser</text>
+            <text x="34" y="264" fill="#4A5563" font-size="12">scarica main.js</text>
+            <text x="34" y="280" fill="#4A5563" font-size="12">93 kB gzip</text>
+
+            <rect x="220" y="220" width="250" height="70" fill="#FBEDEC" stroke="#B3261E" stroke-width="1.5"/>
+            <text x="234" y="246" font-weight="600">Bundle JS pubblico</text>
+            <text x="234" y="264" font-size="12" fill="#B3261E">contiene REACT_APP_GROQ_TOKEN</text>
+            <text x="234" y="280" font-size="12" fill="#B3261E">data di nascita, telefono</text>
+            <line x1="170" y1="255" x2="214" y2="255" stroke="#17202B" marker-end="url(#ar)"/>
+
+            <rect x="640" y="220" width="150" height="70" fill="#fff" stroke="#17202B"/>
+            <text x="654" y="246" font-weight="600">api.groq.com</text>
+            <text x="654" y="264" fill="#4A5563" font-size="12">llama-3.1-8b</text>
+            <text x="654" y="280" fill="#4A5563" font-size="12">una domanda per volta</text>
+            <line x1="470" y1="255" x2="634" y2="255" stroke="#B3261E" marker-end="url(#arr)"/>
+            <text x="486" y="246" font-size="12" fill="#B3261E">Authorization: Bearer</text>
+            <text x="486" y="276" font-size="12" fill="#B3261E">chiunque può copiarla</text>
+
+            <rect x="830" y="220" width="110" height="70" fill="#fff" stroke="#17202B"/>
+            <text x="844" y="246" font-weight="600">5 canvas</text>
+            <text x="844" y="264" fill="#4A5563" font-size="12">particelle che</text>
+            <text x="844" y="280" fill="#4A5563" font-size="12">non si fermano</text>
+          </g>
+        </svg>
+        <figcaption>Figura 1. Flusso attuale. Ogni aggiornamento richiede di modificare più file e di avviare il deploy a mano; ogni visita espone la chiave dell'assistente.</figcaption>
+      </figure>
+    </section>
+
+    <!-- 3 -->
+    <section id="errata">
+      <div class="sec-head"><span class="sec-num">3</span><h2>Errata</h2></div>
+      <div class="prose indent">
+        <p>Bug e difetti trovati leggendo il codice e compilando la build di produzione. Clicca una riga per vedere causa e correzione. I riferimenti sono a file e righe del repo.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filtra per gravità">
+        <span>Mostra</span>
+        <button type="button" data-filter="all" aria-pressed="true">Tutti<span class="count">15</span></button>
+        <button type="button" data-filter="critico" aria-pressed="false">Critico<span class="count">1</span></button>
+        <button type="button" data-filter="alto" aria-pressed="false">Alto<span class="count">4</span></button>
+        <button type="button" data-filter="medio" aria-pressed="false">Medio<span class="count">5</span></button>
+        <button type="button" data-filter="basso" aria-pressed="false">Basso<span class="count">5</span></button>
+      </div>
+
+      <div class="errata">
+
+        <details class="erratum" data-sev="critico" open>
+          <summary><span class="id">E01</span><span class="sev critico">Critico</span><span class="title">La chiave API di Groq è pubblica</span><span class="chev" aria-hidden="true"></span></summary>
+          <dl class="body">
+            <dt>Sintomo</dt><dd>Chiunque apra gli strumenti per sviluppatori sul sito può leggere la chiave e usarla a tuo nome: consuma la tua quota, può generare costi o farti bloccare l'account.</dd>
+            <dt>Causa</dt><dd>Create React App incorpora nel JavaScript pubblico ogni variabile <code>REACT_APP_*</code>. I secret di GitHub proteggono il repository, non il sito compilato. <code>AskMeSection.jsx:33</code> legge la chiave e la manda dal browser nell'header <code>Authorization</code> (riga 136).</dd>
+            <dt>Correzione</dt><dd class="fix">Ruotare subito la chiave su console.groq.com. Spostare la chiamata in un proxy serverless (Cloudflare Worker, piano gratuito) che conserva la chiave, limita le richieste per IP e accetta solo il tuo dominio come origine.</dd>
+          </dl>
+        </details>
+
+        <details class="erratum" data-sev="alto">
+          <summary><span class="id">E02</span><span class="sev alto">Alto</span><span class="title">Il deploy automatico non parte mai</span><span class="chev" aria-hidden="true"></span></summary>
+          <dl class="body">
+            <dt>Sintomo</dt><dd>Dopo il push non succede nulla; bisogna aprire Actions e lanciare il workflow a mano. Tutte le ultime esecuzioni risultano <code>workflow_dispatch</code>.</dd>
+            <dt>Causa</dt><dd><code>.github/workflows/deploy.yml:6</code> ascolta <code>main</code>, ma il branch del repo è <code>master</code>.</dd>
+            <dt>Correzione</dt><dd class="fix">Cambiare in <code>branches: [master]</code>. È una riga, ed è probabilmente metà del "devo ricaricare tutto".</dd>
+          </dl>
+        </details>
+
+        <details class="erratum" data-sev="alto">
+          <summary><span class="id">E03</span><span class="sev alto">Alto</span><span class="title">Tailwind scarta quasi tutte le classi in produzione</span><span class="chev" aria-hidden="true"></span></summary>
+          <dl class="body">
+            <dt>Sintomo</dt><dd>Stili che in sviluppo sembrano funzionare spariscono online. Esempi: lo sfondo della navbar (<code>bg-slate-950/80</code>) e l'altezza fissa della chat (<code>h-[350px]</code>) non esistono nel CSS finale, quindi la chat si allunga e fa scorrere tutta la pagina a ogni messaggio. Il CSS compilato pesa 6,6 kB.</dd>
+            <dt>Causa</dt><dd>La build legge <code>tailwind.config.js</code> in root, che ha <code>content: []</code> (la build lo segnala con un warning). Il config corretto è <code>src/tailwind.config.js</code>, che nessuno legge. Per compensare, <code>index.css</code> (1177 righe) riscrive a mano centinaia di utility, con commenti come "Missing utility classes" e "Medium screen breakpoint fix". I commit "fix mobile" e "fix deploy tailwind" inseguivano questo.</dd>
+            <dt>Correzione</dt><dd class="fix">Se si tiene il codice: un solo config in root con <code>content: ["./src/**/*.{js,jsx}", "./public/index.html"]</code>, poi eliminare le utility scritte a mano. Se si rifà il sito, il problema sparisce con la nuova base.</dd>
+          </dl>
+        </details>
+
+        <details class="erratum" data-sev="alto">
+          <summary><span class="id">E04</span><span class="sev alto">Alto</span><span class="title">Le animazioni a particelle non si fermano mai</span><span class="chev" aria-hidden="true"></span></summary>
+          <dl class="body">
+            <dt>Sintomo</dt><dd>Più sezioni apri, più il sito rallenta e la batteria del telefono scende. Ventole accese su laptop dopo qualche minuto.</dd>
+            <dt>Causa</dt><dd><code>ParticlesBackground.jsx:101</code> chiama <code>requestAnimationFrame</code> senza mai cancellarlo nel cleanup. Il componente è montato in 5 sezioni: ogni cambio di sezione lascia un ciclo vivo su un canvas staccato. Ogni ciclo confronta tutte le coppie di particelle (fino a 100, circa 5.000 distanze per frame). Si sommano i tre blob sfocati in <code>AnimatedBackground</code>.</dd>
+            <dt>Correzione</dt><dd class="fix">Salvare l'id e chiamare <code>cancelAnimationFrame</code> nel cleanup. Meglio: togliere le particelle, non aggiungono informazioni.</dd>
+          </dl>
+        </details>
+
+        <details class="erratum" data-sev="alto">
+          <summary><span class="id">E05</span><span class="sev alto">Alto</span><span class="title">Dati duplicati e già in contraddizione tra loro</span><span class="chev" aria-hidden="true"></span></summary>
+          <dl class="body">
+            <dt>Sintomo</dt><dd>AskMe e le pagine raccontano versioni diverse. Il visitatore attento lo nota; un recruiter che chiede all'assistente il tuo LinkedIn riceve un link sbagliato.</dd>
+            <dt>Causa</dt><dd><code>askme-context.js</code> (768 righe, "ultimo aggiornamento settembre 2025") ripete esperienze, progetti e certificazioni già in <code>data/</code>. Divergenze trovate:
+              <br>LinkedIn e GitHub nel contesto AI puntano a profili diversi da quelli reali (<code>askme-context.js:14-15</code>).
+              <br>Ruolo Ariba "May 2024 – Current" nel contesto, "May 2024 – March 2025" in <code>experience.js</code>.
+              <br><code>BioSection.jsx:9</code> ha statistiche scritte a mano (5+ anni, 10+ Happy Clients, 3 contenuti), mentre <code>personalInfo.stats</code> (20+ certificazioni, 2 pubblicazioni) non è usato da nessuno.
+              <br>Il link della defensive publication porta alla home di ip.com, non alla pubblicazione.</dd>
+            <dt>Correzione</dt><dd class="fix">Una sola fonte per ogni contenuto. Il contesto di AskMe e i numeri della home si generano da quella fonte al momento della build. Vedi sezione 5.</dd>
+          </dl>
+        </details>
+
+        <details class="erratum" data-sev="medio">
+          <summary><span class="id">E06</span><span class="sev medio">Medio</span><span class="title">Dati personali nel codice pubblico</span><span class="chev" aria-hidden="true"></span></summary>
+          <dl class="body">
+            <dt>Sintomo</dt><dd>Data di nascita e numero di cellulare sono scaricati da ogni visitatore, anche quelli automatici che raccolgono numeri.</dd>
+            <dt>Causa</dt><dd><code>askme-context.js:11</code> (data di nascita) e <code>personalInfo.js</code> (telefono, esposto anche come link WhatsApp in <code>ContactSection.jsx:427</code>).</dd>
+            <dt>Correzione</dt><dd class="fix">Rimuovere la data di nascita. Per i contatti bastano form, email e LinkedIn; il telefono si dà a chi scrive.</dd>
+          </dl>
+        </details>
+
+        <details class="erratum" data-sev="medio">
+          <summary><span class="id">E07</span><span class="sev medio">Medio</span><span class="title">Nessun indirizzo per le sezioni, invisibile ai motori di ricerca</span><span class="chev" aria-hidden="true"></span></summary>
+          <dl class="body">
+            <dt>Sintomo</dt><dd>Il tasto Indietro esce dal sito. Non puoi mandare a qualcuno il link diretto alle certificazioni. Condiviso su LinkedIn, il sito appare senza immagine né descrizione.</dd>
+            <dt>Causa</dt><dd><code>App.js:15</code> gestisce le sezioni con uno <code>useState</code>, senza URL. Tutto il contenuto è generato dal JavaScript, quindi la pagina iniziale è vuota per i crawler. <code>index.html</code> ha ancora la descrizione "Web site created using create-react-app" e nessun tag Open Graph.</dd>
+            <dt>Correzione</dt><dd class="fix">Pagine statiche vere (una per sezione, o una home lunga con ancore), meta description, immagine di anteprima, sitemap.</dd>
+          </dl>
+        </details>
+
+        <details class="erratum" data-sev="medio">
+          <summary><span class="id">E08</span><span class="sev medio">Medio</span><span class="title">AskMe dimentica la conversazione e precarica 4,6 MB di audio</span><span class="chev" aria-hidden="true"></span></summary>
+          <dl class="body">
+            <dt>Sintomo</dt><dd>Una domanda di seguito ("e prima di quel ruolo?") riceve una risposta senza contesto. Aprire la sezione su rete mobile scarica l'audio anche se nessuno lo ascolta. Ruotando il telefono il layout non si adatta.</dd>
+            <dt>Causa</dt><dd><code>callGroqAPI</code> invia solo l'ultima domanda, mai la cronologia. Il contesto tronca le descrizioni a 120 caratteri e include solo 4 progetti e 6 certificazioni. L'mp3 viene caricato con <code>audio.load()</code> al montaggio (riga 87). <code>isMobile</code> è calcolato una volta sola (riga 263). <code>setIsPlaying(true)</code> parte prima che <code>play()</code> abbia successo.</dd>
+            <dt>Correzione</dt><dd class="fix">Inviare gli ultimi turni della chat, risposte in streaming, contesto completo generato dai contenuti, audio con <code>preload="none"</code>, layout responsive solo via CSS.</dd>
+          </dl>
+        </details>
+
+        <details class="erratum" data-sev="medio">
+          <summary><span class="id">E09</span><span class="sev medio">Medio</span><span class="title">Accessibilità quasi assente</span><span class="chev" aria-hidden="true"></span></summary>
+          <dl class="body">
+            <dt>Sintomo</dt><dd>Chi naviga da tastiera o con screen reader non riesce a usare buona parte del sito. Per un autore di un brevetto su AI per persone con disabilità, è una nota stonata.</dd>
+            <dt>Causa</dt><dd>Zero attributi <code>aria-*</code> in tutto <code>src</code>; il pulsante del menu mobile non ha etichetta. Le card di pubblicazioni e certificazioni rivelano il contenuto solo al passaggio del mouse. <code>outline: none</code> su logo e campi del form (<code>Navbar.jsx:140</code>, <code>Contactsection.css:41</code>). 35 animazioni, molte infinite, senza rispetto di <code>prefers-reduced-motion</code>.</dd>
+            <dt>Correzione</dt><dd class="fix">HTML semantico, focus visibile, contenuto sempre leggibile senza hover, animazioni ridotte al minimo e disattivabili.</dd>
+          </dl>
+        </details>
+
+        <details class="erratum" data-sev="medio">
+          <summary><span class="id">E10</span><span class="sev medio">Medio</span><span class="title">Toolchain deprecata e 104 vulnerabilità note</span><span class="chev" aria-hidden="true"></span></summary>
+          <dl class="body">
+            <dt>Sintomo</dt><dd>Aggiornare qualsiasi pacchetto diventa rischioso; <code>npm audit</code> segnala 104 problemi (3 critici, 80 alti).</dd>
+            <dt>Causa</dt><dd>Create React App è ufficialmente deprecato da febbraio 2025 e trascina dipendenze vecchie (quasi tutte di build, non finiscono nel sito pubblicato). La CI usa Node 18, fuori supporto da aprile 2025.</dd>
+            <dt>Correzione</dt><dd class="fix">Migrare a Astro o Vite; Node 22 nella CI.</dd>
+          </dl>
+        </details>
+
+        <details class="erratum" data-sev="basso">
+          <summary><span class="id">E11</span><span class="sev basso">Basso</span><span class="title">File pesanti per quello che mostrano</span><span class="chev" aria-hidden="true"></span></summary>
+          <dl class="body">
+            <dt>Causa</dt><dd>La favicon <code>logo_ai.svg</code> pesa 332 kB. La firma <code>signature.png</code> pesa 200 kB per essere mostrata alta 100 px e ricolorata di bianco con un filtro CSS. L'audio è 4,6 MB.</dd>
+            <dt>Correzione</dt><dd class="fix">Favicon SVG semplice sotto i 2 kB; firma come SVG vettoriale a colore pieno; audio ricompresso in mono a 64 kbps (circa 1 MB).</dd>
+          </dl>
+        </details>
+
+        <details class="erratum" data-sev="basso">
+          <summary><span class="id">E12</span><span class="sev basso">Basso</span><span class="title">La firma nella navbar è più alta della navbar</span><span class="chev" aria-hidden="true"></span></summary>
+          <dl class="body">
+            <dt>Causa</dt><dd>La barra è alta 64 px (<code>h-16</code>), l'immagine è forzata a 100 px con <code>!important</code> (<code>Navbar.jsx:145</code>). Sborda sopra il contenuto e non ha un'etichetta che dica "torna alla home".</dd>
+            <dt>Correzione</dt><dd class="fix">Nome in testo come logo, firma eventualmente come elemento grafico nella home.</dd>
+          </dl>
+        </details>
+
+        <details class="erratum" data-sev="basso">
+          <summary><span class="id">E13</span><span class="sev basso">Basso</span><span class="title">Tracciamento visitatori finto</span><span class="chev" aria-hidden="true"></span></summary>
+          <dl class="body">
+            <dt>Causa</dt><dd><code>visitorTracking.js</code> raccoglie user agent, risoluzione e fuso orario di ogni visitatore e li stampa in console, senza mandarli da nessuna parte. Non misura nulla e lascia un log visibile a chiunque.</dd>
+            <dt>Correzione</dt><dd class="fix">Togliere, oppure usare un'analytics senza cookie (GoatCounter, Umami, Plausible) se ti interessa sapere chi visita.</dd>
+          </dl>
+        </details>
+
+        <details class="erratum" data-sev="basso">
+          <summary><span class="id">E14</span><span class="sev basso">Basso</span><span class="title">Residui del template e test rotto</span><span class="chev" aria-hidden="true"></span></summary>
+          <dl class="body">
+            <dt>Causa</dt><dd>In root c'è un file chiamato <code>--force</code> (un config Tailwind creato per errore da un comando). <code>src/logo.svg</code>, il README e <code>App.test.js</code> sono quelli di default di CRA; il test cerca il testo "learn react" e fallisce. Il pacchetto si chiama ancora <code>c_portfolio_silo_v1</code>.</dd>
+            <dt>Correzione</dt><dd class="fix">Pulizia, o semplicemente non portarli nel nuovo progetto.</dd>
+          </dl>
+        </details>
+
+        <details class="erratum" data-sev="basso">
+          <summary><span class="id">E15</span><span class="sev basso">Basso</span><span class="title">Codice difficile da toccare</span><span class="chev" aria-hidden="true"></span></summary>
+          <dl class="body">
+            <dt>Causa</dt><dd>Metà dei componenti è scritta con <code>React.createElement</code>, metà in JSX. Gli stili vivono in cinque posti: classi Tailwind, <code>index.css</code>, <code>animations.css</code>, tag <code>&lt;style&gt;</code> dentro i componenti, stili inline. Il titolo con gradiente blu-ciano è copiato in sei sezioni. <code>AuthoredSection</code> sono 620 righe per mostrare 3 pubblicazioni.</dd>
+            <dt>Correzione</dt><dd class="fix">Un sistema di stile unico con pochi token e componenti piccoli che leggono dai dati.</dd>
+          </dl>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section id="design">
+      <div class="sec-head"><span class="sec-num">4</span><h2>Perché sembra datato</h2></div>
+      <div class="prose indent">
+        <p>Il sito usa il kit visivo che nel 2023 accompagnava ogni prodotto "AI": sfondo blu notte con macchie sfocate, gradiente blu-ciano su ogni titolo, card di vetro con alone luminoso, particelle, riflessi che scorrono, un'icona che ruota. Nessuno di questi elementi parla di te. Tolto il nome, potrebbe essere il portfolio di chiunque, e chi recluta o compra consulenza SAP ne ha visti centinaia.</p>
+      </div>
+
+      <div class="critique">
+        <div>
+          <h3>Cosa non funziona</h3>
+          <ul>
+            <li><strong>La home è un job title, non una tesi.</strong> Tre righe di qualifiche e una bio di 90 parole. Manca la frase che dice cosa risolvi per un cliente.</li>
+            <li><strong>Le barre percentuali delle competenze</strong> (Solution Architecture 95%) non sono un dato credibile per chi legge; ABAP compare due volte con lo stesso valore.</li>
+            <li><strong>Emoji come icone</strong> e numeri generici ("10+ Happy Clients") abbassano il tono rispetto al profilo.</li>
+            <li><strong>Contenuti nascosti</strong> dietro card che si girano al passaggio del mouse: sul telefono serve un tocco per leggere ogni pubblicazione.</li>
+            <li><strong>Otto tab con poco contenuto ciascuna.</strong> Chi arriva da LinkedIn fa due click e se ne va. Una pagina lunga e ben ordinata, con pagine di dettaglio, regge meglio.</li>
+            <li><strong>Ogni sezione si presenta allo stesso modo</strong> (titolo gradiente, sottotitolo grigio, griglia di card): niente gerarchia, niente ritmo.</li>
+            <li><strong>Copy non allineato</strong>: "Projects" dice "Open source contributions", ma il primo progetto è un'app interna IBM.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Cosa vale la pena tenere</h3>
+          <ul>
+            <li><strong>Il libro SAP Press e il brevetto.</strong> Sono asset rari per un consulente SAP e oggi stanno nel settimo tab. Dovrebbero comparire nella prima schermata.</li>
+            <li><strong>AskMe.</strong> È l'unica cosa davvero tua nel sito. Con risposte che citano la fonte (il ruolo, il progetto, la badge) diventa una demo delle tue competenze su AI, non un gadget.</li>
+            <li><strong>Le badge Credly</strong>, verificabili da terzi: sono prova, non dichiarazione. Vanno ordinate per rilevanza, non mostrate tutte uguali.</li>
+            <li><strong>La traiettoria</strong> da sviluppatore ABAP a solution advisor in cinque anni: è una storia, raccontala come tale nella sezione esperienza.</li>
+            <li><strong>Il form di contatto</strong> funziona (Web3Forms, chiave pensata per stare nel client): si può tenere così.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section id="aggiornamenti">
+      <div class="sec-head"><span class="sec-num">5</span><h2>Il problema degli aggiornamenti</h2></div>
+      <div class="prose indent">
+        <p>Oggi, per aggiungere una certificazione devi: modificare <code>certifications.js</code> scrivendo a mano id, URL dell'immagine e del badge; ricordarti di aggiornare <code>askme-context.js</code> e forse i numeri in <code>BioSection.jsx</code>; fare commit e push; aprire GitHub Actions e lanciare il deploy. Cinque passaggi, tre dei quali facili da dimenticare.</p>
+        <p>L'obiettivo è arrivare a un passaggio solo, o a zero.</p>
+      </div>
+
+      <div class="table-scroll indent">
+        <table class="spec">
+          <caption>Tabella 1. Cosa serve per ogni tipo di aggiornamento</caption>
+          <thead>
+            <tr><th scope="col">Aggiornamento</th><th scope="col">Oggi</th><th scope="col">Con la nuova base</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Nuova badge Credly</th><td>3 file, deploy manuale</td><td class="good">Nessuno: la build scarica le badge dal profilo Credly pubblico e gira da sola una volta a settimana</td></tr>
+            <tr><th scope="row">Nuovo ruolo</th><td>2 file, deploy manuale</td><td class="good">Un file YAML, push, online in circa un minuto</td></tr>
+            <tr><th scope="row">Nuova pubblicazione</th><td>2 file più le statistiche in home</td><td class="good">Un file Markdown; i conteggi in home si aggiornano da soli</td></tr>
+            <tr><th scope="row">Contesto di AskMe</th><td>Da riscrivere a mano, oggi fermo a settembre 2025</td><td class="good">Generato dagli stessi file a ogni build</td></tr>
+            <tr><th scope="row">Correzione al volo da telefono</th><td>Non praticabile</td><td class="meh">Editor web di GitHub, oppure Pages CMS (interfaccia gratuita sopra il repo)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="prose indent" style="margin-top:1.25rem">
+        <p>Il profilo Credly e quello LinkedIn sono pubblici, quindi entrambe le fonti sono utilizzabili. La procedura passo per passo è nella sezione 8.</p>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section id="architettura">
+      <div class="sec-head"><span class="sec-num">6</span><h2>Architettura proposta</h2></div>
+      <div class="prose indent">
+        <p>Un sito statico generato a partire da file di contenuto, con l'unica parte dinamica (AskMe) isolata dietro un proxy. Il visitatore riceve HTML già pronto; il JavaScript serve solo alla chat.</p>
+      </div>
+
+      <figure class="schematic">
+        <svg viewBox="0 0 960 300" role="img" aria-labelledby="sch2t sch2d">
+          <title id="sch2t">Schema dell'architettura proposta</title>
+          <desc id="sch2d">I contenuti stanno in una cartella content. Il push su master avvia una build Astro che importa le badge Credly e genera il contesto di AskMe, e pubblica su GitHub Pages. Nel browser, la chat chiama un Worker Cloudflare che conserva la chiave e inoltra a Groq.</desc>
+          <defs>
+            <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="#1D4E9E"/>
+            </marker>
+          </defs>
+          <g font-size="13" fill="#17202B">
+            <text x="20" y="22" font-size="12" fill="#4A5563">Pubblicazione</text>
+            <rect x="20" y="36" width="190" height="96" fill="#fff" stroke="#17202B"/>
+            <text x="34" y="58" font-weight="600">content/</text>
+            <text x="34" y="78" font-size="12" fill="#4A5563">experience.yaml</text>
+            <text x="34" y="94" font-size="12" fill="#4A5563">publications/*.md</text>
+            <text x="34" y="110" font-size="12" fill="#4A5563">profile.yaml</text>
+            <text x="34" y="126" font-size="12" fill="#1D4E9E">unica fonte</text>
+
+            <rect x="260" y="56" width="120" height="56" fill="#fff" stroke="#17202B"/>
+            <text x="274" y="80" font-weight="600">git push</text>
+            <text x="274" y="98" fill="#4A5563" font-size="12">su master</text>
+            <line x1="210" y1="84" x2="254" y2="84" stroke="#1D4E9E" marker-end="url(#ab)"/>
+
+            <rect x="430" y="36" width="250" height="96" fill="#E8EEF8" stroke="#1D4E9E" stroke-width="1.5"/>
+            <text x="444" y="58" font-weight="600">Build Astro (GitHub Actions)</text>
+            <text x="444" y="78" font-size="12">importa badge da Credly</text>
+            <text x="444" y="94" font-size="12">genera il contesto di AskMe</text>
+            <text x="444" y="110" font-size="12">genera pagine, sitemap, anteprime</text>
+            <text x="444" y="126" font-size="12" fill="#4A5563">anche ogni lunedì, da sola</text>
+            <line x1="380" y1="84" x2="424" y2="84" stroke="#1D4E9E" marker-end="url(#ab)"/>
+
+            <rect x="730" y="56" width="210" height="56" fill="#fff" stroke="#17202B"/>
+            <text x="744" y="80" font-weight="600">GitHub Pages</text>
+            <text x="744" y="98" fill="#4A5563" font-size="12">HTML statico, quasi zero JS</text>
+            <line x1="680" y1="84" x2="724" y2="84" stroke="#1D4E9E" marker-end="url(#ab)"/>
+
+            <line x1="20" y1="166" x2="940" y2="166" stroke="#CDD3DB"/>
+            <text x="20" y="192" font-size="12" fill="#4A5563">Visita</text>
+            <rect x="20" y="206" width="190" height="70" fill="#fff" stroke="#17202B"/>
+            <text x="34" y="232" font-weight="600">Browser</text>
+            <text x="34" y="250" fill="#4A5563" font-size="12">legge HTML subito</text>
+            <text x="34" y="266" fill="#4A5563" font-size="12">carica JS solo per la chat</text>
+
+            <rect x="430" y="206" width="250" height="70" fill="#E8EEF8" stroke="#1D4E9E" stroke-width="1.5"/>
+            <text x="444" y="232" font-weight="600">Cloudflare Worker</text>
+            <text x="444" y="250" font-size="12">tiene la chiave, limite per IP</text>
+            <text x="444" y="266" font-size="12">accetta solo il tuo dominio</text>
+            <line x1="210" y1="241" x2="424" y2="241" stroke="#1D4E9E" marker-end="url(#ab)"/>
+            <text x="246" y="232" font-size="12" fill="#1D4E9E">domanda + cronologia</text>
+
+            <rect x="730" y="206" width="210" height="70" fill="#fff" stroke="#17202B"/>
+            <text x="744" y="232" font-weight="600">Groq (o altro LLM)</text>
+            <text x="744" y="250" fill="#4A5563" font-size="12">risposta in streaming</text>
+            <text x="744" y="266" fill="#4A5563" font-size="12">con fonte citata</text>
+            <line x1="680" y1="241" x2="724" y2="241" stroke="#1D4E9E" marker-end="url(#ab)"/>
+          </g>
+        </svg>
+        <figcaption>Figura 2. Architettura proposta. Un file da modificare, deploy automatico, chiave mai esposta.</figcaption>
+      </figure>
+
+      <div class="table-scroll">
+        <table class="spec">
+          <caption>Tabella 2. Confronto delle basi possibili</caption>
+          <thead>
+            <tr><th scope="col">Criterio</th><th scope="col">Astro (consigliato)</th><th scope="col">Vite + React</th><th scope="col">Next.js</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">JavaScript inviato</th><td class="good">Solo per la chat</td><td class="bad">Tutto il sito</td><td class="meh">Ridotto, ma runtime React sempre presente</td></tr>
+            <tr><th scope="row">Contenuti da file</th><td class="good">Content collections native, con schema e validazione</td><td class="meh">Da costruire a mano</td><td class="meh">Possibile, con librerie</td></tr>
+            <tr><th scope="row">URL e SEO</th><td class="good">Pagine statiche vere</td><td class="bad">Serve un router e resta client-side</td><td class="good">Pagine vere</td></tr>
+            <tr><th scope="row">Riuso del codice attuale</th><td class="meh">Dati sì, componenti no (si possono tenere in React come isole)</td><td class="good">Quasi tutto</td><td class="meh">Dati sì, componenti in parte</td></tr>
+            <tr><th scope="row">Hosting su GitHub Pages</th><td class="good">Sì</td><td class="good">Sì</td><td class="bad">Solo export statico, perde le funzioni server</td></tr>
+            <tr><th scope="row">Sforzo stimato</th><td class="num">3–4 giornate</td><td class="num">2 giornate, risultato più debole</td><td class="num">4–5 giornate</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="prose indent" style="margin-top:1.25rem">
+        <p>Per il proxy di AskMe, un Cloudflare Worker gratuito è sufficiente e si affianca a GitHub Pages senza spostare nulla. Il sito resta su GitHub Pages; i dettagli di cosa comporta sono nella sezione 7.</p>
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section id="pages">
+      <div class="sec-head"><span class="sec-num">7</span><h2>Vincoli di GitHub Pages</h2></div>
+      <div class="prose indent">
+        <p>Restare su GitHub Pages ha delle conseguenze, ma nessuna cambia la raccomandazione: la rafforza. Astro produce esattamente quello che Pages sa servire, cioè file HTML, CSS e immagini già pronti. Le conseguenze riguardano soprattutto tre cose: dove gira AskMe, quando si leggono i dati esterni e cosa diventa pubblico.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="spec">
+          <caption>Tabella 3. Cosa comporta ogni vincolo e come si gestisce</caption>
+          <thead>
+            <tr><th scope="col">Vincolo</th><th scope="col">Impatto</th><th scope="col">Come si gestisce</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Solo file statici, nessun codice lato server</th><td>AskMe non può conservare una chiave segreta dentro il sito. Next.js perde le sue funzioni server.</td><td class="good">Proxy su Cloudflare Worker, separato dal sito (piano gratuito, 100.000 richieste al giorno). Next.js già escluso.</td></tr>
+            <tr><th scope="row">Tutto quello che è nel sito è pubblico, file JSON compresi</th><td>Un secret usato nella build finisce online se entra in una pagina. Il contesto di AskMe è leggibile da chiunque.</td><td class="good">I secret si usano solo negli script di build e test, mai nei componenti. Regola per i contenuti: dentro <code>content/</code> solo ciò che diresti a uno sconosciuto.</td></tr>
+            <tr><th scope="row">I dati esterni si leggono solo durante la build</th><td>Badge Credly e posizioni non si aggiornano da soli tra un deploy e l'altro.</td><td class="good">Import in GitHub Actions; lo snapshot delle badge viene salvato nel repo, così il sito funziona anche se Credly non risponde.</td></tr>
+            <tr><th scope="row">Pages non ricompila da solo a orari fissi</th><td>Una badge nuova appare solo al prossimo deploy.</td><td class="meh">Build programmata in Actions, ogni lunedì. Attenzione: nei repo pubblici GitHub disattiva i workflow programmati dopo 60 giorni senza attività. Avvisa per email e si riattiva con un clic; un tuo commit ogni due mesi lo evita.</td></tr>
+            <tr><th scope="row">Il sito vive in una sottocartella (<code>/newAI-Portfolio/</code>)</th><td>Link e immagini devono includere quel prefisso; oggi è la causa dei vari <code>PUBLIC_URL</code> nel codice.</td><td class="good">Una riga di configurazione in Astro (<code>base</code>). Sparisce del tutto con un dominio personale.</td></tr>
+            <tr><th scope="row">Nessun header HTTP personalizzabile</th><td>Niente regole di cache, redirect o sicurezza lato server.</td><td class="meh">Policy di sicurezza tramite tag meta, pagina <code>404.html</code> personalizzata. Per un portfolio è sufficiente.</td></tr>
+            <tr><th scope="row">Limiti d'uso: 1 GB di sito, circa 100 GB di traffico al mese, 10 build all'ora</th><td>Nessuno per un portfolio, finché l'audio resta leggero.</td><td class="good">Audio ricompresso (E11), immagini ottimizzate in build.</td></tr>
+            <tr><th scope="row">Form di contatto</th><td>Nessuno.</td><td class="good">Web3Forms viene chiamato dal browser e la sua chiave è pubblica per scelta del servizio: resta così.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 8 -->
+    <section id="procedura">
+      <div class="sec-head"><span class="sec-num">8</span><h2>Aggiornare i contenuti dalle fonti</h2></div>
+      <div class="prose indent">
+        <p>Le fonti sono tre, con tre livelli di automazione diversi. <strong>Credly</strong> pubblica il profilo pubblico in formato JSON, quindi si può automatizzare del tutto. <strong>LinkedIn</strong> invece non offre un'API per leggere i profili personali (quella ufficiale è riservata a partner approvati), e leggere la pagina con uno script viola i termini d'uso e smette di funzionare a ogni loro modifica. Il metodo affidabile è l'export dei dati che LinkedIn ti mette a disposizione. <strong>AskMe</strong> non ha una fonte propria: si costruisce dalle altre due più un file di note che scrivi tu, e lo stesso vale per l'audio di presentazione, oggi fatto con NotebookLM.</p>
+      </div>
+
+      <figure class="schematic">
+        <svg viewBox="0 0 960 290" role="img" aria-labelledby="sch3t sch3d">
+          <title id="sch3t">Flusso di aggiornamento dei contenuti</title>
+          <desc id="sch3d">L'export LinkedIn passa da uno script di import che propone le modifiche a experience.yaml. Credly viene letto ogni lunedì da GitHub Actions e salvato in badges.generated.json. Le note di AskMe sono un file Markdown. La build unisce tutto: produce le pagine e il file di contesto che il Worker di AskMe legge.</desc>
+          <defs>
+            <marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="#1D4E9E"/>
+            </marker>
+          </defs>
+          <g font-size="13" fill="#17202B">
+            <text x="20" y="20" font-size="12" fill="#4A5563">Fonte</text>
+            <text x="250" y="20" font-size="12" fill="#4A5563">Passaggio</text>
+            <text x="490" y="20" font-size="12" fill="#4A5563">File nel repo</text>
+            <text x="730" y="20" font-size="12" fill="#4A5563">Risultato</text>
+
+            <rect x="20" y="34" width="180" height="56" fill="#fff" stroke="#17202B"/>
+            <text x="34" y="58" font-weight="600">LinkedIn</text>
+            <text x="34" y="76" font-size="12" fill="#4A5563">export dati (zip)</text>
+            <rect x="250" y="34" width="190" height="56" fill="#FBF3E3" stroke="#9A6200"/>
+            <text x="264" y="58" font-weight="600">import:linkedin</text>
+            <text x="264" y="76" font-size="12" fill="#9A6200">propone, tu confermi</text>
+            <rect x="490" y="34" width="190" height="56" fill="#fff" stroke="#17202B"/>
+            <text x="504" y="58" font-weight="600">experience.yaml</text>
+            <text x="504" y="76" font-size="12" fill="#4A5563">education.yaml</text>
+            <line x1="200" y1="62" x2="244" y2="62" stroke="#1D4E9E" marker-end="url(#ac)"/>
+            <line x1="440" y1="62" x2="484" y2="62" stroke="#1D4E9E" marker-end="url(#ac)"/>
+
+            <rect x="20" y="114" width="180" height="56" fill="#fff" stroke="#17202B"/>
+            <text x="34" y="138" font-weight="600">Credly</text>
+            <text x="34" y="156" font-size="12" fill="#4A5563">profilo pubblico JSON</text>
+            <rect x="250" y="114" width="190" height="56" fill="#E9F3ED" stroke="#2E6B47"/>
+            <text x="264" y="138" font-weight="600">import:credly</text>
+            <text x="264" y="156" font-size="12" fill="#2E6B47">automatico, ogni lunedì</text>
+            <rect x="490" y="114" width="190" height="56" fill="#fff" stroke="#17202B"/>
+            <text x="504" y="138" font-weight="600">badges.generated.json</text>
+            <text x="504" y="156" font-size="12" fill="#4A5563">+ badges.overrides.yaml</text>
+            <line x1="200" y1="142" x2="244" y2="142" stroke="#1D4E9E" marker-end="url(#ac)"/>
+            <line x1="440" y1="142" x2="484" y2="142" stroke="#1D4E9E" marker-end="url(#ac)"/>
+
+            <rect x="20" y="194" width="180" height="56" fill="#fff" stroke="#17202B"/>
+            <text x="34" y="218" font-weight="600">Tu</text>
+            <text x="34" y="236" font-size="12" fill="#4A5563">note per l'assistente</text>
+            <rect x="250" y="194" width="190" height="56" fill="#fff" stroke="#17202B" stroke-dasharray="4 3"/>
+            <text x="264" y="218" font-weight="600">modifica diretta</text>
+            <text x="264" y="236" font-size="12" fill="#4A5563">editor o GitHub web</text>
+            <rect x="490" y="194" width="190" height="56" fill="#fff" stroke="#17202B"/>
+            <text x="504" y="218" font-weight="600">askme/notes.md</text>
+            <text x="504" y="236" font-size="12" fill="#4A5563">askme/checks.yaml</text>
+            <line x1="200" y1="222" x2="244" y2="222" stroke="#1D4E9E" marker-end="url(#ac)"/>
+            <line x1="440" y1="222" x2="484" y2="222" stroke="#1D4E9E" marker-end="url(#ac)"/>
+
+            <path d="M680,62 L705,62 L705,222 L680,222 M680,142 L724,142" fill="none" stroke="#1D4E9E" marker-end="url(#ac)"/>
+            <rect x="730" y="94" width="210" height="96" fill="#E8EEF8" stroke="#1D4E9E" stroke-width="1.5"/>
+            <text x="744" y="118" font-weight="600">Build e deploy</text>
+            <text x="744" y="138" font-size="12">pagine del sito</text>
+            <text x="744" y="154" font-size="12">askme/context.json</text>
+            <text x="744" y="170" font-size="12" fill="#4A5563">letto dal Worker di AskMe</text>
+          </g>
+        </svg>
+        <figcaption>Figura 3. Ogni fonte arriva in un file del repo; la build fa il resto. Il colore del passaggio indica quanto è automatico: verde da solo, ambra con una tua conferma, tratteggiato a mano.</figcaption>
+      </figure>
+
+      <div class="sources">
+
+        <article class="source">
+          <header class="source-head">
+            <h3>Posizioni lavorative da LinkedIn</h3>
+            <span class="tag amber">Semi-automatico</span>
+            <p>A ogni cambio di ruolo, o una volta ogni tre mesi. Circa 10–15 minuti.</p>
+          </header>
+          <ol class="steps">
+            <li><p>Su LinkedIn apri <strong>Impostazioni e privacy, Privacy dei dati, Ottieni una copia dei tuoi dati</strong>. Scegli i file singoli invece dell'archivio completo: Posizioni, Formazione, Competenze, Licenze e certificazioni. LinkedIn manda il link per email, in genere in pochi minuti (l'archivio completo può richiedere fino a 24 ore).</p></li>
+            <li><p>Dalla cartella del progetto, passa lo zip allo script di import:</p>
+              <pre class="cmd">npm run import:linkedin -- ~/Downloads/Basic_LinkedInDataExport.zip</pre></li>
+            <li><p>Lo script legge <code>Positions.csv</code> (azienda, titolo, descrizione, luogo, date), lo confronta con <code>content/experience.yaml</code> e mostra le differenze: ruoli nuovi, date cambiate, descrizioni diverse. Scrive solo quello che confermi e non tocca i campi che curi a mano: punti chiave, ordine, ruolo in evidenza, testo pensato per il sito.</p></li>
+            <li><p>Rileggi il YAML, completa i punti chiave del ruolo nuovo, poi commit e push. Il sito è online in circa un minuto e AskMe conosce già il nuovo ruolo.</p></li>
+          </ol>
+          <p class="source-note">Senza script: salva il profilo in PDF (dal tuo profilo, <strong>Altro, Salva in PDF</strong>) e chiedi a Claude di aggiornare i file YAML partendo da quello. È anche il modo più rapido per la prima importazione, visto che oggi i contenuti sono fermi a settembre 2025.</p>
+        </article>
+
+        <article class="source">
+          <header class="source-head">
+            <h3>Badge e certificazioni da Credly</h3>
+            <span class="tag green">Automatico</span>
+            <p>Ogni lunedì, oppure su richiesta. Tempo tuo: zero, o due minuti per mettere in evidenza una badge.</p>
+          </header>
+          <ol class="steps">
+            <li><p>Una volta sola: lo username Credly va in <code>content/profile.yaml</code>. Il tuo è <code>vittorio-loris-simonetti</code>.</p></li>
+            <li><p>Il workflow legge <code>credly.com/users/<em>username</em>/badges.json</code>, pagina per pagina, e per ogni badge ricava nome, emittente, data di emissione, eventuale scadenza, immagine e link di verifica. Verificato sul tuo profilo: 48 badge per pagina, con nome, emittente, date, livello, tipo e competenze collegate.</p></li>
+            <li><p>Salva il risultato in <code>content/badges.generated.json</code> e lo committa. Così hai lo storico delle modifiche e il sito resta completo anche se Credly non risponde.</p></li>
+            <li><p>Scarica le immagini delle badge e le ottimizza dentro il sito, invece di caricarle da Credly a ogni visita.</p></li>
+            <li><p>Tu decidi solo la presentazione, in <code>content/badges.overrides.yaml</code>: quali badge in evidenza, quali nascondere, categoria e ordine. Una badge nuova compare da sola, in fondo alla sua categoria. Quelle scadute si possono nascondere o segnare come tali.</p></li>
+          </ol>
+          <p class="source-note">Per vederla online subito, senza aspettare lunedì: <strong>Actions, Deploy, Run workflow</strong>. Le certificazioni che non sono su Credly vanno in <code>content/certifications-extra.yaml</code>, nello stesso formato.</p>
+        </article>
+
+        <article class="source">
+          <header class="source-head">
+            <h3>Contesto di AskMe</h3>
+            <span class="tag green">Automatico</span>
+            <p>Si rigenera a ogni build. Ogni tanto aggiorni le note, in circa 5 minuti.</p>
+          </header>
+          <ol class="steps">
+            <li><p>La build unisce profilo, esperienze, pubblicazioni, progetti, badge e note in un solo documento e lo pubblica come <code>askme/context.json</code>. Non lo scrivi più a mano: oggi <code>askme-context.js</code> è un duplicato di 768 righe.</p></li>
+            <li><p>In <code>content/askme/notes.md</code> metti quello che non sta nelle pagine ma che l'assistente deve sapere: come lavori, aree su cui cerchi progetti, disponibilità, risposte alle domande tipiche dei recruiter, argomenti su cui non rispondere.</p></li>
+            <li><p>Il Worker legge il contesto direttamente dal sito e lo tiene in cache per un'ora. Aggiornare un contenuto aggiorna AskMe senza toccare il Worker.</p></li>
+            <li><p>In <code>content/askme/checks.yaml</code> scrivi alcune domande di prova con i fatti che la risposta deve contenere, per esempio che alla domanda sul ruolo attuale compaia "Sales Solution Advisor". Il comando che segue le esegue tutte:</p>
+              <pre class="cmd">npm run askme:check</pre>
+              <p>La CI può farlo a ogni push, usando una chiave salvata come secret di Actions: viene usata solo dallo script di test e non arriva mai nel sito.</p></li>
+          </ol>
+          <p class="source-note">Due cose da sapere. Il contesto è pubblico: chiunque può leggere il JSON e chiedere all'assistente qualunque cosa ci sia dentro. E per le dimensioni del tuo profilo (qualche migliaio di token) non servono un database vettoriale né una ricerca per pezzi: il contesto intero si manda a ogni domanda. Resta da verificare che stia nei limiti di token al minuto del piano Groq scelto.</p>
+        </article>
+
+        <article class="source" id="audio">
+          <header class="source-head">
+            <h3>Audio di presentazione (oggi fatto con NotebookLM)</h3>
+            <span class="tag amber">Semi-automatico</span>
+            <p>Quando cambia qualcosa di importante: nuovo ruolo, nuovo libro, una o due volte l'anno. Circa 15 minuti, quasi tutti per rileggere il copione.</p>
+          </header>
+          <div class="prose" style="padding: 1rem 1.35rem 0">
+            <p><strong>NotebookLM non si può automatizzare.</strong> La versione per utenti non ha un'API. La versione Enterprise aveva una "Podcast API" che faceva proprio questo (fonti in ingresso, mp3 a due voci in uscita), ma Google la indica come deprecata e non accetta nuovi clienti. Basarsi su quella oggi vorrebbe dire dipendere da qualcosa che sta per sparire.</p>
+            <p>Si può però rifare lo stesso processo in due passaggi, partendo dagli stessi contenuti che alimentano AskMe:</p>
+          </div>
+          <ol class="steps">
+            <li><p><strong>Copione.</strong> Uno script prende <code>askme/context.json</code> e chiede a un modello linguistico di scrivere un dialogo a due voci di 3–4 minuti, nello stile di NotebookLM. Il risultato viene salvato in <code>content/askme/audio-script.md</code>.</p>
+              <pre class="cmd">npm run audio:script</pre></li>
+            <li><p><strong>Revisione.</strong> Rileggi e correggi il copione. Questo passaggio non va saltato: come in NotebookLM, il modello può arrotondare date, inventare dettagli o esagerare i toni, e qui parla a tuo nome.</p></li>
+            <li><p><strong>Voce.</strong> Il copione approvato passa a un servizio di sintesi vocale a più voci (per esempio Gemini TTS, che gestisce dialoghi a due speaker, o ElevenLabs). L'mp3 viene poi compresso in mono a 64 kbps, circa 1–2 MB invece di 4,6.</p>
+              <pre class="cmd">npm run audio:voice</pre></li>
+            <li><p><strong>Pubblicazione.</strong> Commit e push. Il copione diventa anche la trascrizione mostrata sotto il player: serve a chi non può ascoltare, ed è testo che i motori di ricerca leggono.</p></li>
+          </ol>
+          <p class="source-note">Perché non è del tutto automatico: costa qualcosa a ogni generazione (pochi centesimi), e un audio sbagliato a tuo nome fa più danni di uno vecchio. Per questo si lancia a mano, da terminale o da <strong>Actions, Run workflow</strong>, con la chiave del servizio vocale salvata come secret di Actions: viene usata solo in build e non finisce nel sito. La build può invece accorgersi da sola che l'audio è vecchio, cioè precedente all'ultimo cambio di ruolo, e segnalartelo. Se preferisci la resa di NotebookLM, resta valida la via manuale: carichi <code>context.json</code> come fonte in NotebookLM, generi, scarichi l'mp3 nel repo e lo script lo comprime. Circa 10 minuti, e il file di contesto generato è già una fonte più pulita del CV.</p>
+        </article>
+
+      </div>
+
+      <div class="table-scroll indent">
+        <table class="spec">
+          <caption>Tabella 4. Calendario di manutenzione</caption>
+          <thead>
+            <tr><th scope="col">Cosa</th><th scope="col">Quando</th><th scope="col">Come</th><th scope="col">Tempo tuo</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Badge Credly</th><td>Ogni lunedì, o su richiesta</td><td class="good">Automatico</td><td class="num">0–2 min</td></tr>
+            <tr><th scope="row">Posizioni LinkedIn</th><td>A ogni cambio di ruolo, o ogni 3 mesi</td><td class="meh">Export più script, con tua conferma</td><td class="num">10–15 min</td></tr>
+            <tr><th scope="row">Pubblicazioni e progetti</th><td>Quando escono</td><td>Un file Markdown nuovo</td><td class="num">5 min</td></tr>
+            <tr><th scope="row">Note di AskMe</th><td>Quando cambia qualcosa che vuoi raccontare</td><td>Modifica di <code>notes.md</code></td><td class="num">5 min</td></tr>
+            <tr><th scope="row">Audio di presentazione</th><td>A ogni cambio importante, 1–2 volte l'anno; la build segnala quando è vecchio</td><td class="meh">Copione generato, rivisto da te, poi voce sintetica</td><td class="num">15 min</td></tr>
+            <tr><th scope="row">Revisione generale</th><td>Ogni 6 mesi</td><td>Rileggere i testi, aggiornare le domande di prova</td><td class="num">1 ora</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 9 -->
+    <section id="dati">
+      <div class="sec-head"><span class="sec-num">9</span><h2>Cosa dicono i dati</h2></div>
+      <div class="prose indent">
+        <p>Ho confrontato l'export LinkedIn del 6 ottobre 2026 e il profilo Credly pubblico (<code>credly.com/users/vittorio-loris-simonetti</code>) con i contenuti del sito. L'endpoint Credly funziona come previsto: 219 badge su 5 pagine, ciascuna con nome, emittente, data di emissione e di scadenza, livello, tipo e competenze. Il sito è più indietro di quanto sembrasse.</p>
+      </div>
+
+      <div class="verdict">
+        <div>
+          <span class="tag red">Da correggere</span>
+          <h3>Il ruolo attuale è sbagliato ovunque</h3>
+          <p>Da aprile 2026 sei Hybrid Cloud &amp; Data Service Line Leader. Il sito indica tre ruoli attuali diversi in tre file, e nessuno coincide con LinkedIn.</p>
+        </div>
+        <div>
+          <span class="tag amber">Da riorganizzare</span>
+          <h3>21 badge su 219</h3>
+          <p>Mancano le 30 badge arrivate da giugno 2025, comprese le certificazioni più importanti. Alcune di quelle mostrate sono superate o scadute.</p>
+        </div>
+        <div>
+          <span class="tag green">Opportunità</span>
+          <h3>Ruoli in parallelo</h3>
+          <p>Fino a cinque ruoli contemporaneamente. Una timeline verticale li appiattisce; un diagramma a corsie li racconta bene.</p>
+        </div>
+      </div>
+
+      <h3 class="indent">Posizioni lavorative</h3>
+      <figure class="schematic">
+        <svg viewBox="0 0 960 330" role="img" aria-labelledby="sch4t sch4d">
+          <title id="sch4t">Diagramma temporale delle posizioni LinkedIn, 2020–2026</title>
+          <desc id="sch4d">Dieci posizioni in IBM. Dal 2022 i ruoli si sovrappongono: Solution Architect da maggio 2022 a oggi, SAP SRM Team Leader 2022–2024, Project Manager 2023–2024, SAP EHS Team Leader 2023–2026, SAP Ariba Team Leader da maggio 2024 a oggi, First-Line Manager marzo 2025–maggio 2026, Hybrid Cloud and Data Service Line Leader da aprile 2026 a oggi.</desc>
+          <g font-size="12.5" fill="#17202B">
+            <!-- year grid -->
+            <g stroke="#CDD3DB">
+              <line x1="270" y1="22" x2="270" y2="290"/><line x1="365.7" y1="22" x2="365.7" y2="290"/>
+              <line x1="461.4" y1="22" x2="461.4" y2="290"/><line x1="557.1" y1="22" x2="557.1" y2="290"/>
+              <line x1="652.8" y1="22" x2="652.8" y2="290"/><line x1="748.6" y1="22" x2="748.6" y2="290"/>
+              <line x1="844.3" y1="22" x2="844.3" y2="290"/>
+            </g>
+            <g fill="#4A5563" font-size="12">
+              <text x="274" y="310">2020</text><text x="369.7" y="310">2021</text><text x="465.4" y="310">2022</text>
+              <text x="561.1" y="310">2023</text><text x="656.8" y="310">2024</text><text x="752.6" y="310">2025</text>
+              <text x="848.3" y="310">2026</text>
+            </g>
+            <line x1="916" y1="14" x2="916" y2="290" stroke="#1D4E9E" stroke-dasharray="3 3"/>
+            <text x="921" y="310" font-size="12" fill="#1D4E9E">oggi</text>
+
+            <!-- lanes: ended = grey, ongoing = blue -->
+            <text x="20" y="44">SAP Academy</text>
+            <rect x="277.9" y="33" width="47.9" height="14" fill="#CDD3DB" stroke="#4A5563"/>
+            <text x="20" y="68">SAP SRM Consultant</text>
+            <rect x="309.9" y="57" width="71.8" height="14" fill="#CDD3DB" stroke="#4A5563"/>
+            <text x="20" y="92">SAP S/4HANA Application Developer</text>
+            <rect x="389.6" y="81" width="79.8" height="14" fill="#CDD3DB" stroke="#4A5563"/>
+            <text x="20" y="116">SAP SRM Team Leader</text>
+            <rect x="477.4" y="105" width="239.3" height="14" fill="#CDD3DB" stroke="#4A5563"/>
+            <text x="20" y="140" font-weight="600">Solution Architect</text>
+            <rect x="493.3" y="129" width="422.7" height="14" fill="#1D4E9E"/>
+            <text x="20" y="164">Project Manager</text>
+            <rect x="573.1" y="153" width="167.5" height="14" fill="#CDD3DB" stroke="#4A5563"/>
+            <text x="20" y="188">SAP EHS Team Leader</text>
+            <rect x="597" y="177" width="255.2" height="14" fill="#CDD3DB" stroke="#4A5563"/>
+            <text x="20" y="212" font-weight="600">SAP Ariba Up/Downstream Team Leader</text>
+            <rect x="684.7" y="201" width="231.3" height="14" fill="#1D4E9E"/>
+            <text x="20" y="236">First-Line Manager</text>
+            <rect x="764.5" y="225" width="111.6" height="14" fill="#CDD3DB" stroke="#4A5563"/>
+            <text x="20" y="260" font-weight="600">Hybrid Cloud &amp; Data Service Line Leader</text>
+            <rect x="868.2" y="249" width="47.8" height="14" fill="#1D4E9E"/>
+
+            <!-- what the site claims -->
+            <rect x="748.6" y="271" width="167.4" height="12" fill="#FBEDEC" stroke="#B3261E"/>
+            <text x="20" y="282" fill="#B3261E">Sul sito: "Sales Solution Advisor"</text>
+            <text x="560" y="282" fill="#B3261E" font-size="11.5">non esiste su LinkedIn</text>
+          </g>
+        </svg>
+        <figcaption>Figura 4. Le dieci posizioni dell'export LinkedIn. In blu i ruoli in corso, in grigio quelli conclusi. Nel 2024 i ruoli attivi insieme erano cinque. La barra rossa è il ruolo "attuale" mostrato oggi dal sito.</figcaption>
+      </figure>
+
+      <div class="prose indent" style="margin-top:1.5rem">
+        <ul>
+          <li><strong>Ruolo attuale.</strong> <code>experience.js</code> dice "Sales Solution Advisor &amp; SAP Solution Architect", <code>personalInfo.js</code> "Solution Architect - Team Leader &amp; SAP Ariba Implementation Consultant", <code>askme-context.js</code> "Sales Solution Advisor &amp; SAP Ariba Consultant". LinkedIn: Hybrid Cloud &amp; Data Service Line Leader da aprile 2026, insieme a Solution Architect e SAP Ariba Team Leader.</li>
+          <li><strong>Posizionamento.</strong> Headline e summary di LinkedIn parlano di AI generativa e agentica, di strategia della service line e dell'essere autore e inventore. La home del sito parla ancora di SAP ERP e Ariba. Il nuovo testo di apertura dovrebbe partire da LinkedIn, non dal sito.</li>
+          <li><strong>Date fuse.</strong> Il sito unisce i ruoli in 7 voci con date proprie. Per esempio "EHS / SRM Team Leader, marzo 2022 – gennaio 2024", mentre su LinkedIn EHS va da giugno 2023 a febbraio 2026 e SRM da marzo 2022 a settembre 2024. Manca SAP Academy (2020).</li>
+          <li><strong>Niente descrizioni.</strong> Le posizioni LinkedIn hanno solo titolo e date. L'import porterà quelli; i testi restano tuoi, ed è un bene, perché sul sito servono più brevi e orientati al risultato.</li>
+          <li><strong>Clienti.</strong> I progetti di LinkedIn riportano i clienti con le date: Snam, Italgas, Carrefour, BNPP RE, ACinque, Edison (in corso), Brightstar. Sono utili ad AskMe e alla pagina esperienza; da decidere se pubblicarli per nome.</li>
+        </ul>
+      </div>
+
+      <h3 class="indent">Badge e certificazioni</h3>
+      <div class="table-scroll indent">
+        <table class="spec">
+          <caption>Tabella 5. Credly e LinkedIn a confronto con il sito</caption>
+          <thead>
+            <tr><th scope="col">Dato</th><th scope="col">Valore</th><th scope="col">Cosa significa</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Badge su Credly</th><td class="num">219</td><td>IBM 142, SAP 42, Coursera/IBM 12, poi AWS, The Open Group, Microsoft, Google, Anthropic e altri. Sul sito ne compaiono 21.</td></tr>
+            <tr><th scope="row">Per tipo</th><td class="num">19 / 100 / 72</td><td>Certificazioni, validazioni di competenza, corsi completati (28 senza tipo). Solo le prime due categorie meritano spazio in pagina.</td></tr>
+            <tr><th scope="row">Certificazioni attive</th><td class="num">13</td><td>Le altre 6 sono versioni SAP vecchie, scadute a marzo 2025 e già rinnovate con un nome nuovo.</td></tr>
+            <tr><th scope="row">Nuove da giugno 2025, assenti dal sito</th><td class="num">30</td><td>Tra queste: Master Certified Solution Architect Level 2 (The Open Group) e IBM Architect Level 2 Expert, marzo 2026; SAP Enterprise Architect, giugno 2026; SAP LeanIX Enterprise Architecture Consultant, aprile 2026; watsonx Orchestrate Practitioner Advanced, maggio 2026; Claude Certified Associate, ottobre 2026.</td></tr>
+            <tr><th scope="row">Superate o scadute sul sito</th><td class="num">3</td><td class="bad">Il sito mostra i due Level 1 da architetto, superati dai Level 2 e in scadenza a novembre 2026, e Azure Administrator Associate, scaduta a luglio 2022.</td></tr>
+            <tr><th scope="row">Link del sito con ID vecchi</th><td class="num">11 su 21</td><td class="meh">SAP e IBM hanno riemesso alcune badge con nuovi ID. I link funzionano perché Credly reindirizza, ma nome e immagine mostrati sono quelli precedenti.</td></tr>
+            <tr><th scope="row">Solo su LinkedIn</th><td class="num">6+</td><td>ITIL 4 Foundation (PeopleCert, agosto 2026), Registered Scrum Master, Trinity GESE Grade 9, Google Analytics, Fortinet NSE 2, corsi Coursera. Vanno in <code>certifications-extra.yaml</code>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="prose indent" style="margin-top:1.25rem">
+        <p><strong>Regola proposta per la pagina:</strong> in evidenza le 13 certificazioni attive e una selezione di validazioni scelte da te. Il resto va raggruppato per emittente, con il conteggio e il link al profilo Credly. Una versione scaduta si nasconde quando esiste quella rinnovata con lo stesso titolo. Il numero 219, insieme al riconoscimento "Credly top badge earner", è di per sé una prova forte da mostrare in home.</p>
+      </div>
+
+      <h3 class="indent">Pubblicazioni, riconoscimenti, lingue, competenze</h3>
+      <div class="prose indent">
+        <ul>
+          <li><strong>Defensive publication:</strong> su LinkedIn si intitola "Gen AI Application for HR and Project Management use case" (15 luglio 2024), sul sito "System and Method that Use Generative AI to Create a Short List of Job Candidates". Va scelto il titolo ufficiale.</li>
+          <li><strong>Brevetto</strong> 9 giugno 2025 e <strong>libro</strong> 6 agosto 2025, coerenti con il sito. Il link al libro su LinkedIn contiene parametri di tracciamento da togliere.</li>
+          <li><strong>Riconoscimenti</strong> assenti dalle pagine del sito (oggi sono solo nel contesto di AskMe): IBM Champion Learner Gold dal 2021 al 2024, invito a IBM Tech 2023 a Dubai, Credly top badge earner (ottobre 2024).</li>
+          <li><strong>Lingue:</strong> LinkedIn indica GESE Grade 9 livello B2.3 e ESOL B2.2; il contesto di AskMe dice "Trinity Grade 9, B2.2".</li>
+          <li><strong>Competenze:</strong> 59 su LinkedIn, in parte in italiano e in parte in inglese ("Intelligenza artificiale", "Lingua inglese"), con voci come Microsoft Word e Trello. Non conviene importarle così come sono: meglio una lista curata a mano, usando LinkedIn e le competenze collegate alle badge come controllo di cosa manca.</li>
+        </ul>
+      </div>
+
+      <h3 class="indent">Da sapere sull'export</h3>
+      <div class="prose indent">
+        <ul>
+          <li><strong>Hai scaricato l'archivio completo.</strong> Oltre ai dati del profilo contiene contatti, messaggi, inviti, ricevute e numeri di telefono, e <code>Profile.csv</code> include l'indirizzo di casa. Ho letto solo i file utili al portfolio e ho cancellato la copia estratta. Lo script di import leggerà un elenco fisso di file e colonne, ignorerà l'indirizzo, e lo zip non dovrà mai entrare nel repo (regola in <code>.gitignore</code>). La prossima volta basta selezionare i file singoli.</li>
+          <li><strong>Il link al portfolio su LinkedIn</strong> punta a <code>vittoriols.github.io/</code>, non a <code>/newAI-Portfolio/</code>: chi clicca dal profilo potrebbe non arrivare a questo sito. Da verificare, e da aggiornare quando il nuovo sito è online.</li>
+          <li>Il file scaricato si chiama <code>…zip.zip</code>: lo script lo accetterà così com'è.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 10 -->
+    <section id="direzioni">
+      <div class="sec-head"><span class="sec-num">10</span><h2>Direzioni di design</h2></div>
+      <div class="prose indent">
+        <p>Tre punti di partenza, ognuno costruito su un aspetto diverso del tuo profilo. Non sono layout finiti: servono a scegliere il tono prima di disegnare. Si possono combinare, ma uno deve guidare.</p>
+      </div>
+      <div class="directions">
+        <article class="direction">
+          <div class="swatch sw-a" aria-hidden="true"><div class="band"></div><div class="t">Simonetti</div><div class="grid"></div></div>
+          <div class="content">
+            <h3>A. Scheda tecnica</h3>
+            <p class="who">Parte dall'ingegnere elettronico e dall'architetto.</p>
+            <p>Chiaro, rigoroso, tabellare come un datasheet. Esperienze come specifiche, certificazioni come tabella verificabile, un solo blu inchiostro. Trasmette precisione a chi compra consulenza enterprise.</p>
+            <p class="risk">Rischio: freddo, se la parte personale non trova spazio.</p>
+          </div>
+        </article>
+        <article class="direction">
+          <div class="swatch sw-b" aria-hidden="true"><div class="t">Catalog Management with SAP Ariba Catalog</div><div class="rule"></div></div>
+          <div class="content">
+            <h3>B. Editoriale</h3>
+            <p class="who">Parte dall'autore SAP Press e dal docente.</p>
+            <p>Tipografia da libro, molto bianco, testi scritti in prima persona. Libro e brevetto aprono la home; le esperienze diventano un racconto a capitoli. Mette in primo piano la capacità di spiegare.</p>
+            <p class="risk">Rischio: richiede di scrivere bene più testo.</p>
+          </div>
+        </article>
+        <article class="direction">
+          <div class="swatch sw-c" aria-hidden="true"><div class="bubble q">Che esperienza ha su Ariba SLP?</div><div class="bubble a">Da maggio 2024 a marzo 2025, clienti Energy e Lottery. Fonte: Esperienza.</div></div>
+          <div class="content">
+            <h3>C. Conversazione</h3>
+            <p class="who">Parte da AskMe e dal lavoro su AI generativa.</p>
+            <p>La home è la chat, con domande suggerite e risposte che linkano la fonte. Il resto del sito è l'archivio che l'assistente cita. È la più memorabile e la più coerente con il tuo ruolo su watsonx.</p>
+            <p class="risk">Rischio: dipende da un servizio esterno; serve un fallback statico ben fatto.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 8 -->
+    <section id="roadmap">
+      <div class="sec-head"><span class="sec-num">11</span><h2>Roadmap</h2></div>
+      <ol class="roadmap">
+        <li>
+          <div class="when"><strong></strong>Oggi, 30 minuti</div>
+          <div>
+            <h3>Mettere in sicurezza il sito attuale</h3>
+            <ul>
+              <li>Ruotare la chiave Groq; nel frattempo disattivare AskMe o metterlo dietro un Worker.</li>
+              <li><code>branches: [master]</code> nel workflow.</li>
+              <li><code>cancelAnimationFrame</code> nelle particelle.</li>
+              <li>Correggere LinkedIn e GitHub nel contesto AI, togliere la data di nascita.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="when"><strong></strong>Mezza giornata</div>
+          <div>
+            <h3>Modello dei contenuti e prima importazione</h3>
+            <ul>
+              <li>Portare <code>data/*.js</code> e <code>askme-context.js</code> in file YAML e Markdown, eliminando i duplicati.</li>
+              <li>Prima importazione dalle fonti: export LinkedIn e Credly sono già stati analizzati (sezione 9); resta da scrivere i file e i testi dei ruoli nuovi.</li>
+              <li>Risolvere le incoerenze (date, numeri, link) una volta per tutte.</li>
+              <li>Scrivere la frase di apertura e le tre prove che la sostengono.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="when"><strong></strong>2–3 giornate</div>
+          <div>
+            <h3>Nuovo sito sulla direzione scelta</h3>
+            <ul>
+              <li>Progetto Astro, sistema di stile con pochi token, pagine statiche con URL.</li>
+              <li>Script <code>import:credly</code> e <code>import:linkedin</code>, build settimanale programmata.</li>
+              <li>Accessibilità e prestazioni come requisito: obiettivo Lighthouse sopra 95 in tutte le voci.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="when"><strong></strong>1 giornata</div>
+          <div>
+            <h3>AskMe v2</h3>
+            <ul>
+              <li>Worker con chiave segreta, limite per IP, controllo dell'origine.</li>
+              <li>Cronologia della conversazione, streaming, risposte che citano la sezione di origine.</li>
+              <li>Contesto completo generato dai contenuti a ogni build e pubblicato come <code>askme/context.json</code>.</li>
+              <li>File di note per l'assistente e domande di prova eseguite dalla CI.</li>
+              <li>Script <code>audio:script</code> e <code>audio:voice</code>, trascrizione sotto il player.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="when"><strong></strong>Mezza giornata</div>
+          <div>
+            <h3>Rifiniture</h3>
+            <ul>
+              <li>Immagine di anteprima per LinkedIn, meta description, sitemap.</li>
+              <li>Analytics senza cookie, se ti serve.</li>
+              <li>Eventuale dominio personale al posto di <code>github.io/newAI-Portfolio</code>.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 9 -->
+    <section id="decisioni">
+      <div class="sec-head"><span class="sec-num">12</span><h2>Decisioni da prendere</h2></div>
+      <div class="prose indent">
+        <p>Le risposte a queste domande bastano per partire. Dove ho una preferenza, è indicata in blu.</p>
+      </div>
+      <ol class="decisions">
+        <li><div><strong>Rifare o sistemare?</strong><span class="opt"><b>Rifare su Astro</b>, oppure correggere gli errata sul codice attuale tenendo l'aspetto.</span></div></li>
+        <li><div><strong>Quale direzione di design guida?</strong><span class="opt">A scheda tecnica, B editoriale, C conversazione. <b>C con la disciplina visiva di A</b> è la combinazione più distintiva per il tuo profilo.</span></div></li>
+        <li><div><strong>AskMe e audio restano?</strong><span class="opt"><b>Chat sì, con proxy</b>. L'audio resta, rigenerato dai contenuti con copione rivisto da te (sezione 8); oppure NotebookLM a mano, partendo dal file di contesto.</span></div></li>
+        <li><div><strong>Lingua del sito?</strong><span class="opt">Solo inglese, oppure inglese e italiano. <b>Solo inglese</b> se il pubblico è internazionale; il bilingue raddoppia la manutenzione dei testi.</span></div></li>
+        <li><div><strong>Quali contatti pubblici?</strong><span class="opt"><b>Form, email, LinkedIn</b>; telefono e WhatsApp solo su richiesta.</span></div></li>
+        <li><div><strong>Dominio personale?</strong><span class="opt">L'hosting è deciso: GitHub Pages, più un Worker per AskMe. Resta da scegliere se tenere <code>vittoriols.github.io/newAI-Portfolio</code> o collegare un dominio tuo, circa 10–15 € l'anno. <b>Dominio tuo</b>: indirizzo più pulito sul CV e niente prefisso nei link.</span></div></li>
+        <li><div><strong>Quali clienti nominare?</strong><span class="opt">Snam, Italgas, Carrefour, BNPP RE, ACinque, Edison, Brightstar sono già pubblici su LinkedIn. <b>Nominarli nella pagina esperienza</b>, salvo vincoli contrattuali; in alternativa solo il settore.</span></div></li>
+        <li><div><strong>Quale titolo per la defensive publication?</strong><span class="opt">Quello di LinkedIn o quello del sito (sezione 9). <b>Il titolo registrato su ip.com</b>, qualunque dei due sia.</span></div></li>
+        <li><div><strong>Quali badge in evidenza?</strong><span class="opt"><b>Le 13 certificazioni attive più 6–8 validazioni a tua scelta</b>; tutto il resto raggruppato con il link a Credly.</span></div></li>
+      </ol>
+    </section>
+
+    <!-- 10 -->
+    <section id="misure">
+      <div class="sec-head"><span class="sec-num">13</span><h2>Misure</h2></div>
+      <div class="prose indent">
+        <p>Valori rilevati sulla build di produzione compilata in locale il 6 ottobre 2026.</p>
+      </div>
+      <div class="table-scroll indent">
+        <table class="spec">
+          <caption>Tabella 6. Caratteristiche misurate</caption>
+          <thead>
+            <tr><th scope="col">Parametro</th><th scope="col">Valore</th><th scope="col">Nota</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">JavaScript principale</th><td class="num">93,1 kB gzip</td><td>Tutto il sito, anche per chi legge solo la bio</td></tr>
+            <tr><th scope="row">CSS compilato</th><td class="num">6,6 kB gzip</td><td>Basso perché Tailwind non genera le utility (E03)</td></tr>
+            <tr><th scope="row">CSS scritto a mano</th><td class="num">1.996 righe</td><td><code>index.css</code>, <code>animations.css</code>, <code>Contactsection.css</code></td></tr>
+            <tr><th scope="row">Animazioni definite</th><td class="num">35 @keyframes</td><td>Nessuna regola per movimento ridotto</td></tr>
+            <tr><th scope="row">Canvas a particelle</th><td class="num">5 sezioni</td><td>Cicli mai interrotti (E04)</td></tr>
+            <tr><th scope="row">Audio AskMe</th><td class="num">4,6 MB</td><td>Precaricato all'apertura della sezione</td></tr>
+            <tr><th scope="row">Favicon</th><td class="num">332 kB</td><td>Circa 150 volte il necessario</td></tr>
+            <tr><th scope="row">Attributi aria-*</th><td class="num">0</td><td>In tutto <code>src</code></td></tr>
+            <tr><th scope="row">Vulnerabilità npm</th><td class="num">104</td><td>3 critiche, 80 alte, quasi tutte di build</td></tr>
+            <tr><th scope="row">Deploy automatici riusciti</th><td class="num">0</td><td>Tutti i run sono manuali (E02)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">Revisione preparata leggendo il codice del repo e compilando la build di produzione. Non è stato possibile aprire il sito in un browser durante l'analisi: gli effetti visivi descritti sono dedotti dal codice e dal CSS generato.</div>
+</footer>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('.filters button');
+    var rows = document.querySelectorAll('.erratum');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var f = btn.getAttribute('data-filter');
+        buttons.forEach(function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+        rows.forEach(function (r) {
+          r.hidden = !(f === 'all' || r.getAttribute('data-sev') === f);
+        });
+      });
+    });
+  })();
+</script>
+</body>
+</html>

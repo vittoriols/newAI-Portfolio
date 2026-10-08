@@ -1,0 +1,4200 @@
+{
+  "username": "vittorio-loris-simonetti",
+  "syncedOn": "2026-10-08",
+  "badges": [
+    {
+      "id": "4885e661-5291-4c5c-956f-309c2bb72f0a",
+      "name": "Claude Certified Associate - Foundations",
+      "issuer": "Anthropic",
+      "issuedOn": "2026-10-03",
+      "expiresOn": "2027-10-03",
+      "type": "Certification",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/4885e661-5291-4c5c-956f-309c2bb72f0a",
+      "image": "https://images.credly.com/images/a6387cbd-5ac1-4894-833a-da2cbc28587e/blob",
+      "skills": [
+        "Claude Projects",
+        "Knowledge Management",
+        "Model Selection",
+        "Output evaluation",
+        "Prompt Engineering",
+        "Responsible AI",
+        "Troubleshooting",
+        "Workflow Integration"
+      ]
+    },
+    {
+      "id": "e48ec3a0-b5ff-459a-8957-715d9e4fa303",
+      "name": "Build with Gemini",
+      "issuer": "Google Cloud",
+      "issuedOn": "2026-09-29",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/e48ec3a0-b5ff-459a-8957-715d9e4fa303",
+      "image": "https://images.credly.com/images/384e1386-110e-439d-8014-18fe42bb5f18/blob",
+      "skills": [
+        "Artificial Intelligence (AI)",
+        "Gemini Enterprise",
+        "Prompt Engineering"
+      ]
+    },
+    {
+      "id": "03edd8d8-cc0e-452d-9b77-a13f45cdc416",
+      "name": "Forward Deployed Practitioner - Architect",
+      "issuer": "IBM",
+      "issuedOn": "2026-09-17",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/03edd8d8-cc0e-452d-9b77-a13f45cdc416",
+      "image": "https://images.credly.com/images/f1762f9f-c873-4948-b1f0-a38b7da9afcf/Forward-Deployed-Practitioner-Architect.png",
+      "skills": [
+        "AI",
+        "Agentic",
+        "Agentic AI",
+        "Enterprise AI Transformation",
+        "FDU",
+        "FDU Ready",
+        "Forward Deployed Mindset",
+        "Forward Deployed Unit"
+      ]
+    },
+    {
+      "id": "e7f09a60-abab-45ee-a9eb-db0e57ef795a",
+      "name": "Digital Sovereignty 101",
+      "issuer": "IBM",
+      "issuedOn": "2026-09-01",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/e7f09a60-abab-45ee-a9eb-db0e57ef795a",
+      "image": "https://images.credly.com/images/d0468401-7e50-4dcc-aad8-8478e8693eb0/Digital_Sovereignty.png",
+      "skills": [
+        "Digital Sovereignty",
+        "PWID-B1062700",
+        "SOVEREIGN CORE",
+        "SOVEREIGNTY BY INDUSTRY",
+        "SOVEREIGNTY REGULATIONS"
+      ]
+    },
+    {
+      "id": "18840d5b-7e26-48e5-97fb-1ccc9fe4d0f0",
+      "name": "Digital Sovereignty 201",
+      "issuer": "IBM",
+      "issuedOn": "2026-09-01",
+      "expiresOn": null,
+      "type": null,
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/18840d5b-7e26-48e5-97fb-1ccc9fe4d0f0",
+      "image": "https://images.credly.com/images/64ebe53d-46e8-4f95-ba67-3b03908b9289/undefined.png",
+      "skills": [
+        "IBM Solution Expertise",
+        "IBM Solution Knowledge",
+        "IT Consulting",
+        "PWID-B1066400",
+        "Technical Sales"
+      ]
+    },
+    {
+      "id": "b5e835b6-30fd-4a69-a38e-ea06c3d68ff4",
+      "name": "2026 IBMer watsonx Challenge",
+      "issuer": "IBM",
+      "issuedOn": "2026-07-28",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/b5e835b6-30fd-4a69-a38e-ea06c3d68ff4",
+      "image": "https://images.credly.com/images/703c1e3c-800f-4050-b9c0-d6d259e3b187/2026-IBMer-watsonx-Challenge.png",
+      "skills": [
+        "AI",
+        "Agentic AI",
+        "Agents",
+        "Artificial Intelligence",
+        "Bob",
+        "Generative AI",
+        "IBM Consulting Advantage",
+        "SDLC"
+      ]
+    },
+    {
+      "id": "35e2dead-52f7-4c7b-be02-5f811039d738",
+      "name": "Solution Consultant Foundation",
+      "issuer": "IBM",
+      "issuedOn": "2026-07-22",
+      "expiresOn": "2029-07-22",
+      "type": "Certification",
+      "level": null,
+      "url": "https://www.credly.com/badges/35e2dead-52f7-4c7b-be02-5f811039d738",
+      "image": "https://images.credly.com/images/343b1668-2a93-43d9-93eb-5584ae7fa542/69e9d914becc0c6c0c5dff2e.png",
+      "skills": [
+        "Agile Methods & Delivery",
+        "Applications",
+        "Bluemix And Cloud Capability",
+        "Cognitive",
+        "Communication",
+        "Complex Deal",
+        "Consulting",
+        "Continuous Improvement"
+      ]
+    },
+    {
+      "id": "7ea7cf1b-6a62-4083-afc0-a88a168190c2",
+      "name": "IBM Bob Intermediate",
+      "issuer": "IBM",
+      "issuedOn": "2026-06-25",
+      "expiresOn": "2027-06-25",
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/7ea7cf1b-6a62-4083-afc0-a88a168190c2",
+      "image": "https://images.credly.com/images/df4fe6f4-2060-45d4-9a09-160688785dbc/IBM_Bob_TS_Intermediate.png",
+      "skills": [
+        "Bob",
+        "Code Assistant",
+        "Gen AI",
+        "IBM Bob",
+        "PWID-B1061200",
+        "Sales",
+        "Sales Cloud",
+        "Technology Sales"
+      ]
+    },
+    {
+      "id": "505ae17d-2292-49a9-b293-3f4623e8d401",
+      "name": "IBM Bob Sales Foundation",
+      "issuer": "IBM",
+      "issuedOn": "2026-06-25",
+      "expiresOn": "2027-06-25",
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/505ae17d-2292-49a9-b293-3f4623e8d401",
+      "image": "https://images.credly.com/images/2eb07aa8-7625-4ca1-bded-516a1bedbede/IBM_Bob_Sales_Found.png",
+      "skills": [
+        "Bob",
+        "Coding Assistant",
+        "Gen AI",
+        "IBM Bob",
+        "PWID-B1059400",
+        "Sales",
+        "Sales Cloud",
+        "Technology Sales"
+      ]
+    },
+    {
+      "id": "d91e25e5-1f0d-4f90-8c61-5e67caf7a556",
+      "name": "SAP Certified - SAP Enterprise Architect",
+      "issuer": "SAP",
+      "issuedOn": "2026-06-11",
+      "expiresOn": "2027-08-01",
+      "type": "Certification",
+      "level": "Advanced",
+      "url": "https://www.credly.com/badges/d91e25e5-1f0d-4f90-8c61-5e67caf7a556",
+      "image": "https://images.credly.com/images/cf3b4c9e-4651-42e1-81b6-d27fdfadc8fe/blob",
+      "skills": [
+        "Application Architecture",
+        "Clean-core strategy",
+        "Data Architecture",
+        "SAP Enterprise Architecture",
+        "Technical Architecture"
+      ]
+    },
+    {
+      "id": "5edba2ad-8da6-4e79-8651-4c19e1c08e29",
+      "name": "watsonx Orchestrate Practitioner Advanced",
+      "issuer": "IBM",
+      "issuedOn": "2026-05-17",
+      "expiresOn": "2027-05-17",
+      "type": "Validation",
+      "level": "Advanced",
+      "url": "https://www.credly.com/badges/5edba2ad-8da6-4e79-8651-4c19e1c08e29",
+      "image": "https://images.credly.com/images/7423cbd4-3f1a-4147-b793-91e4ed04d28e/blob",
+      "skills": [
+        "AI Agents",
+        "AI Assistants",
+        "AI Automation",
+        "Conversational AI",
+        "PWID-B1007600",
+        "Sales",
+        "Sales Cloud",
+        "Technology Sales"
+      ]
+    },
+    {
+      "id": "7ea73afa-f394-4325-828d-6ecd2124c4ff",
+      "name": "Energy, Environment and Utilities Insights and Solutions (Gold)",
+      "issuer": "IBM",
+      "issuedOn": "2026-05-15",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/7ea73afa-f394-4325-828d-6ecd2124c4ff",
+      "image": "https://images.credly.com/images/09c77bb8-6c90-452e-afb1-077434395a50/Energy-Industry-Gold.png",
+      "skills": [
+        "Asset & Workforce Management",
+        "Benchmarks",
+        "Competitive Analysis",
+        "Customer Systems",
+        "Electrical Utility",
+        "Energy & Utilities Financials",
+        "Enterprise Service Transformation",
+        "Grid Operations"
+      ]
+    },
+    {
+      "id": "a08d3980-06e6-4cfc-924c-e7fc97e10c9e",
+      "name": "SAP Certified - Enterprise Architecture Consultant - SAP LeanIX",
+      "issuer": "SAP",
+      "issuedOn": "2026-04-02",
+      "expiresOn": "2027-08-01",
+      "type": "Certification",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/a08d3980-06e6-4cfc-924c-e7fc97e10c9e",
+      "image": "https://images.credly.com/images/cd48eead-a0fd-4d2f-9c47-0332e427b1c8/blob",
+      "skills": [
+        "Enterprise Architecture",
+        "SAP LeanIX",
+        "SAP LeanIX Meta Model"
+      ]
+    },
+    {
+      "id": "970c248f-5edb-440a-9436-6609192a1087",
+      "name": "Architect Profession Certification - Level 2 Expert",
+      "issuer": "IBM",
+      "issuedOn": "2026-03-06",
+      "expiresOn": "2029-03-06",
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/970c248f-5edb-440a-9436-6609192a1087",
+      "image": "https://images.credly.com/images/5fee91a1-4db0-4659-8179-e7b39d8974b7/Architect-Expert.png",
+      "skills": [
+        "Architectural Decisions",
+        "Architectural Methods",
+        "Architectural Thinking",
+        "Architecture Development",
+        "Asset Creation & Reuse",
+        "CRM",
+        "Communications",
+        "Consulting Techniques"
+      ]
+    },
+    {
+      "id": "1d443b51-a8d8-4225-b07f-55a5e71b6b05",
+      "name": "Professional Certification: Level 2 - Master Certified Solution Architect",
+      "issuer": "The Open Group",
+      "issuedOn": "2026-03-06",
+      "expiresOn": "2029-03-06",
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/1d443b51-a8d8-4225-b07f-55a5e71b6b05",
+      "image": "https://images.credly.com/images/a197869d-20c1-4262-ac3d-6067ca1409a0/badge-openca-master.png",
+      "skills": [
+        "Act As Trusted Advisor",
+        "Architecture",
+        "Architecture Decisions",
+        "Architecture Methods",
+        "Architecture Validation",
+        "Conflict Resolution",
+        "Establishing Vision",
+        "Functional Requirements"
+      ]
+    },
+    {
+      "id": "6eb3469e-a5a5-4173-98f8-363dca42235a",
+      "name": "Decision Intelligence Sales Foundation",
+      "issuer": "IBM",
+      "issuedOn": "2026-02-23",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/6eb3469e-a5a5-4173-98f8-363dca42235a",
+      "image": "https://images.credly.com/images/60b3aead-6160-4f14-8008-0f7ab3d4c712/Decision_20Intelligence_20Sales_20Foundation.png",
+      "skills": [
+        "AI",
+        "Agentic AI",
+        "Business Automation",
+        "Decision Automation",
+        "Decision Intelligence",
+        "Decision Optimization",
+        "Operational Decision Management",
+        "PWID-B1033000"
+      ]
+    },
+    {
+      "id": "9910642a-7d03-405c-a0a1-7645f868ac8a",
+      "name": "Applying a Human-Centered Approach to Identify and Define Business AI Use Cases - Record of Course Completion",
+      "issuer": "SAP",
+      "issuedOn": "2026-01-22",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/9910642a-7d03-405c-a0a1-7645f868ac8a",
+      "image": "https://images.credly.com/images/f39e7c9b-800f-4f06-9624-71b889cd62a4/blob",
+      "skills": [
+        "Explore and define AI use cases",
+        "Prepare and run a Business AI Design workshop",
+        "Prepare and run a Business AI Explore Workshop"
+      ]
+    },
+    {
+      "id": "2d40e2cf-e54f-43c7-8a94-e4c09333bb5a",
+      "name": "Exploring the SAP Enterprise Architecture Framework Foundation - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2026-01-22",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/2d40e2cf-e54f-43c7-8a94-e4c09333bb5a",
+      "image": "https://images.credly.com/images/224f37d7-2e5c-404f-8a8e-ea193d646ec2/blob",
+      "skills": [
+        "Business Architecture",
+        "Business Transformation",
+        "Enterprise Architecture",
+        "Solution Architecture"
+      ]
+    },
+    {
+      "id": "089e798f-320a-4901-be65-0e103d63bef9",
+      "name": "Understanding SAP’s 2026 Go-to-Market Direction for Partners - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2026-01-21",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/089e798f-320a-4901-be65-0e103d63bef9",
+      "image": "https://images.credly.com/images/3b47a819-d8bc-4b24-8286-471a6f692086/blob",
+      "skills": [
+        "Awareness of segmentation / portfolio positioning / Suite-first and AI-first priorities",
+        "Understanding SAP’s 2026 Go-to-Market direction",
+        "Understanding the role ole of partner organizations in delivering customer outcomes"
+      ]
+    },
+    {
+      "id": "4beba323-58e2-4733-821b-40740f7609e1",
+      "name": "Generative AI Essentials: Using LLMs to Work with Data",
+      "issuer": "IBM SkillsBuild",
+      "issuedOn": "2026-01-07",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/4beba323-58e2-4733-821b-40740f7609e1",
+      "image": "https://images.credly.com/images/f3f8fc51-e8e4-4b1e-b9a9-44100cf3c465/Generative_20AI_20Essentials_20Using_20LLMs_20to_20Work_20with_20Data.png",
+      "skills": [
+        "AI Prompting Techniques",
+        "Analytical Thinking",
+        "Data Analysis",
+        "Data Classification",
+        "Generative AI",
+        "IBM Granite",
+        "IBM watsonx",
+        "Large Language Models (LLMs)"
+      ]
+    },
+    {
+      "id": "43379502-c302-4090-a16e-750fe5b8bad0",
+      "name": "Make Agentic AI Work for You",
+      "issuer": "IBM SkillsBuild",
+      "issuedOn": "2026-01-07",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/43379502-c302-4090-a16e-750fe5b8bad0",
+      "image": "https://images.credly.com/images/124daa9f-13ce-43be-b3fd-aa45e3924245/Make_20Agentic_20AI_20Work_20for_20You.png",
+      "skills": [
+        "AI Agents",
+        "AI Prompting Techniques",
+        "Analytical Thinking",
+        "Generative AI",
+        "IBM Granite",
+        "IBM watsonx",
+        "PWID-B1039700",
+        "Problem Solving"
+      ]
+    },
+    {
+      "id": "05f3312d-971a-41ae-badc-a0aa5092a781",
+      "name": "Provisioning and Implementing Joule - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2026-01-07",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/05f3312d-971a-41ae-badc-a0aa5092a781",
+      "image": "https://images.credly.com/images/7aab5df9-6c64-424b-9bee-6218feefdb31/blob",
+      "skills": [
+        "Commercializing Joule",
+        "Mastering fundamental Joule functionalities",
+        "Setting up Joule",
+        "Troubleshooting and customizing Joule"
+      ]
+    },
+    {
+      "id": "8f624061-ed26-4e92-9efa-7037b5d7f920",
+      "name": "AWS Educate Introduction to Generative AI - Training Badge",
+      "issuer": "Amazon Web Services Training and Certification",
+      "issuedOn": "2025-09-09",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": null,
+      "url": "https://www.credly.com/badges/8f624061-ed26-4e92-9efa-7037b5d7f920",
+      "image": "https://images.credly.com/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/blob",
+      "skills": [
+        "AI",
+        "AI and ML on AWS - Foundational",
+        "AWS Cloud",
+        "Amazon Web Services (AWS)"
+      ]
+    },
+    {
+      "id": "b6e2664d-2cd2-4c1f-8a7c-0fb9cf00f6e6",
+      "name": "2025 IBMer watsonx Challenge",
+      "issuer": "IBM",
+      "issuedOn": "2025-08-12",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/b6e2664d-2cd2-4c1f-8a7c-0fb9cf00f6e6",
+      "image": "https://images.credly.com/images/d7c25044-d214-421c-bc32-9636a2420c14/2025-IBMer-watsonx-Challenge.png",
+      "skills": [
+        "AI",
+        "Agentic AI",
+        "Agents",
+        "Artificial Intelligence",
+        "Generative AI",
+        "IBM Consulting Advantage",
+        "watsonx",
+        "watsonx Orchestrate"
+      ]
+    },
+    {
+      "id": "5157ea84-e08e-4c6d-a767-0fbef04a15bd",
+      "name": "IBM watsonx Orchestrate: Getting Started with Automation Builder",
+      "issuer": "IBM",
+      "issuedOn": "2025-08-07",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/5157ea84-e08e-4c6d-a767-0fbef04a15bd",
+      "image": "https://images.credly.com/images/953dc232-9669-4cf9-a8e3-c62cfd448c20/IBM_20watsonx_20Orchestrate_20Getting_20Started_20with_20Autom_20Builder.png",
+      "skills": [
+        "Automation Builder",
+        "Consultants",
+        "IBM watsonx Orchestrate",
+        "PWID-B0944900",
+        "Support",
+        "Technical Sales"
+      ]
+    },
+    {
+      "id": "7404d023-08c5-4a45-ba65-7ea55d8ce190",
+      "name": "watsonx: Technical Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2025-08-01",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/7404d023-08c5-4a45-ba65-7ea55d8ce190",
+      "image": "https://images.credly.com/images/d9970e21-0f8a-4c24-8272-8998d068ab51/watsonx_20Technical_20Essentials_20IBM_20Training.png",
+      "skills": [
+        "Agents",
+        "Foundation Models",
+        "PWID-B1021100",
+        "assistants",
+        "watsonx",
+        "watsonx Code Assistant",
+        "watsonx Orchestrate",
+        "watsonx.ai"
+      ]
+    },
+    {
+      "id": "2d697972-8cf3-4c02-a68d-4b69bbd3e049",
+      "name": "watsonx Orchestrate Technical Sales Intermediate",
+      "issuer": "IBM",
+      "issuedOn": "2025-07-12",
+      "expiresOn": "2027-07-12",
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/2d697972-8cf3-4c02-a68d-4b69bbd3e049",
+      "image": "https://images.credly.com/images/94c4be15-befd-41ef-a955-c6fe458d0ed1/watsonx_20Orchestrate_20Technical_20Sales_20Intermediate.png",
+      "skills": [
+        "Business Automation",
+        "Orchestrate",
+        "PWID-B0935200",
+        "Sales",
+        "Sales - Cloud",
+        "Technology Sales",
+        "Trusted Advisor",
+        "watsonx"
+      ]
+    },
+    {
+      "id": "fd5c4c2d-436a-4b2a-9fb7-bba9ae2f7f77",
+      "name": "watsonx Orchestrate Sales Foundation",
+      "issuer": "IBM",
+      "issuedOn": "2025-07-03",
+      "expiresOn": "2027-07-03",
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/fd5c4c2d-436a-4b2a-9fb7-bba9ae2f7f77",
+      "image": "https://images.credly.com/images/4e41089e-6e5d-4700-b084-4e018a423d4c/image.png",
+      "skills": [
+        "PWID-B0791700",
+        "Sales",
+        "Sales-Cloud",
+        "Technology Sales",
+        "Trusted Advisor",
+        "watsonx",
+        "watsonx Orchestrate"
+      ]
+    },
+    {
+      "id": "4a0ad59d-3985-4c33-9059-a8bc0ed8e5bb",
+      "name": "Life Sciences Industry Jumpstart",
+      "issuer": "IBM",
+      "issuedOn": "2025-06-24",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/4a0ad59d-3985-4c33-9059-a8bc0ed8e5bb",
+      "image": "https://images.credly.com/images/e127d294-365c-4137-8b4d-0da88b9fdaeb/Life-Sciences-Industry-Jumpstart.png",
+      "skills": [
+        "Benchmarks",
+        "Bold Idea Creation",
+        "Business Models",
+        "Business Processes",
+        "Industry Expertise",
+        "Industry Financials",
+        "Industry Segments",
+        "Industry Solutions"
+      ]
+    },
+    {
+      "id": "fbd8a312-c9c5-470a-9df2-3d3cfed7a960",
+      "name": "IBM Generative & Agentic AI Expert - Architect",
+      "issuer": "IBM",
+      "issuedOn": "2025-06-23",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Advanced",
+      "url": "https://www.credly.com/badges/fbd8a312-c9c5-470a-9df2-3d3cfed7a960",
+      "image": "https://images.credly.com/images/10298344-5814-403f-bbff-eb7b08fc795d/IBM-Generative-Agentic-AI-Expert---Architect.png",
+      "skills": [
+        "Architecture",
+        "Generative AI",
+        "IBM Consulting Advantage",
+        "watsonx"
+      ]
+    },
+    {
+      "id": "3f2eadf2-f676-4ff3-ae38-2b93141a2be0",
+      "name": "Component Business Modeling Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2025-06-19",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/3f2eadf2-f676-4ff3-ae38-2b93141a2be0",
+      "image": "https://images.credly.com/images/8e65436c-4708-4cd8-94b3-e2508f9c1235/CBM_Essentials.png",
+      "skills": [
+        "Blueprint",
+        "Business Architecture",
+        "Business Modeling",
+        "Cognitive Enterprise",
+        "Component",
+        "Enterprise Architecture",
+        "Strategy"
+      ]
+    },
+    {
+      "id": "abb9bbd9-3ec1-4e75-8cb5-c0b9c2edb56e",
+      "name": "First Patent File",
+      "issuer": "IBM",
+      "issuedOn": "2025-06-11",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/abb9bbd9-3ec1-4e75-8cb5-c0b9c2edb56e",
+      "image": "https://images.credly.com/images/ecfcaa31-deb4-4e3a-8bbd-d0277a7a0c74/First-patent.png",
+      "skills": [
+        "Consulter",
+        "Inventor",
+        "Researcher"
+      ]
+    },
+    {
+      "id": "589a7331-7982-4a79-8c65-965d249d4115",
+      "name": "Introducing SAP Ariba Central Procurement, Private Cloud Edition - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2025-05-13",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/589a7331-7982-4a79-8c65-965d249d4115",
+      "image": "https://images.credly.com/images/2a48ab05-e1bd-4fd3-b6d4-17bc355f9055/image.png",
+      "skills": [
+        "Configure SAP Ariba Central Procurement to suit specific procurement",
+        "End-to-end process flows within SAP Ariba Central Procurement",
+        "SAP Ariba Central Procurement for managing procurement operations",
+        "Scope items of SAP Ariba Central Procurement"
+      ]
+    },
+    {
+      "id": "50791bb1-b330-4ce1-9570-f6667c913f7f",
+      "name": "SAP Certified - Project Manager - SAP Activate for Agile Implementation Management",
+      "issuer": "SAP",
+      "issuedOn": "2025-04-22",
+      "expiresOn": "2027-09-12",
+      "type": "Certification",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/50791bb1-b330-4ce1-9570-f6667c913f7f",
+      "image": "https://images.credly.com/images/09455701-c24c-4c58-bab4-1176de55f7d5/blob",
+      "skills": [
+        "Agile Project Management",
+        "Project Management",
+        "SAP Activate",
+        "SAP Cloud ALM",
+        "SAP Implementation"
+      ]
+    },
+    {
+      "id": "2916201c-b033-46d5-b0a2-199284e80e55",
+      "name": "License to Lead - First-Line Manager",
+      "issuer": "IBM",
+      "issuedOn": "2025-04-17",
+      "expiresOn": "2028-04-17",
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/2916201c-b033-46d5-b0a2-199284e80e55",
+      "image": "https://images.credly.com/images/b4b042b8-162e-4e9a-8cec-dae52f9312f0/IBM-Certified-First-Line-Manager-New.png",
+      "skills": [
+        "Agile Leadership",
+        "Change Leadership",
+        "Coach",
+        "Collaboration",
+        "Communication",
+        "Courageous",
+        "Culture",
+        "Culture & Diversity"
+      ]
+    },
+    {
+      "id": "b9c50791-ee13-4540-bbfd-1ccf4dfd7cd8",
+      "name": "AI Catalyst: Agentic AI",
+      "issuer": "O'Reilly Media",
+      "issuedOn": "2025-02-25",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/b9c50791-ee13-4540-bbfd-1ccf4dfd7cd8",
+      "image": "https://images.credly.com/images/82fa9885-52ac-4509-9df3-45fd655ac842/0e2a6f1d-b85c-4a43-8a4d-cd6c1af8df2f.png",
+      "skills": [
+        "AI & ML",
+        "Artificial Intelligence (AI)",
+        "Dall-E"
+      ]
+    },
+    {
+      "id": "42340f3b-c57d-4c5f-89a6-f599aee4cd03",
+      "name": "OIC Initiative Star Contributor",
+      "issuer": "IBM",
+      "issuedOn": "2025-02-25",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/42340f3b-c57d-4c5f-89a6-f599aee4cd03",
+      "image": "https://images.credly.com/images/1e23c667-4610-4b9d-b756-e9b561aa9ec8/OIC-Initiative-Star-Contributor.png",
+      "skills": [
+        "Collaboration",
+        "Communication",
+        "Networking",
+        "Technical Eminence"
+      ]
+    },
+    {
+      "id": "6a52db51-dc33-40ca-86f1-36c8162e3900",
+      "name": "SAP Certified - Implementation Consultant - SAP Ariba Procurement",
+      "issuer": "SAP",
+      "issuedOn": "2025-01-24",
+      "expiresOn": "2027-09-12",
+      "type": "Certification",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/6a52db51-dc33-40ca-86f1-36c8162e3900",
+      "image": "https://images.credly.com/images/c099b0d4-03c8-4307-ac94-56ffcd262f54/image.png",
+      "skills": [
+        "Procurement",
+        "Procurement Management",
+        "Purchasing"
+      ]
+    },
+    {
+      "id": "178d04d5-ddf6-453e-8de9-0f0fef6bc154",
+      "name": "Discovering Category Management - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2025-01-15",
+      "expiresOn": "2026-09-24",
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/178d04d5-ddf6-453e-8de9-0f0fef6bc154",
+      "image": "https://images.credly.com/images/12de162b-f65e-490a-ab3e-6728b6f2f57d/image.png",
+      "skills": [
+        "Category Management principles",
+        "SAP Ariba Category Management",
+        "Supply Market Dynamics"
+      ]
+    },
+    {
+      "id": "8df32ac8-dff3-4cac-b270-fb1821dda977",
+      "name": "Introducing SAP Ariba Contracts - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2025-01-13",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/8df32ac8-dff3-4cac-b270-fb1821dda977",
+      "image": "https://images.credly.com/images/c8e398b0-4c50-40e7-8fcb-fb2725cce465/blob",
+      "skills": [
+        "Publish SAP Ariba Contracts",
+        "SAP Ariba Contract creation",
+        "SAP Ariba Contracts"
+      ]
+    },
+    {
+      "id": "5db34113-785b-4c94-ac32-1f6a46250680",
+      "name": "Discovering SAP Ariba Contracts - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2025-01-12",
+      "expiresOn": "2026-09-24",
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/5db34113-785b-4c94-ac32-1f6a46250680",
+      "image": "https://images.credly.com/images/31652103-6212-4fb4-9444-ad7dd303b98b/image.png",
+      "skills": [
+        "Contract management process in SAP Ariba",
+        "SAP Ariba Contracts",
+        "SAP Ariba Contracts application"
+      ]
+    },
+    {
+      "id": "17829c02-0e87-4967-bc88-cf89edf08381",
+      "name": "AWS Partner: Architecting SAP - Training Badge",
+      "issuer": "Amazon Web Services Training and Certification",
+      "issuedOn": "2025-01-07",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": null,
+      "url": "https://www.credly.com/badges/17829c02-0e87-4967-bc88-cf89edf08381",
+      "image": "https://images.credly.com/images/cf680480-e652-42cf-80c8-35a8c28a4767/blob",
+      "skills": [
+        "AWS",
+        "AWS Cloud",
+        "Architecting Solutions On AWS",
+        "SAP on AWS"
+      ]
+    },
+    {
+      "id": "d0b6d2eb-f411-40f0-b9b3-6c2954632de3",
+      "name": "Interskill - Cloud Foundations",
+      "issuer": "IBM",
+      "issuedOn": "2025-01-03",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/d0b6d2eb-f411-40f0-b9b3-6c2954632de3",
+      "image": "https://images.credly.com/images/13851e65-cf52-44b6-8445-64a87f32cdd8/image.png",
+      "skills": [
+        "Application Programmer",
+        "Cloud",
+        "Cloud Adoption",
+        "Cloud Governance",
+        "Compliance",
+        "Containers",
+        "Cybersecurity",
+        "Hybrid Cloud"
+      ]
+    },
+    {
+      "id": "68e73ba5-35c5-4783-9593-ce7cf977dd46",
+      "name": "AWS Partner: Technical Accredited - Training Badge",
+      "issuer": "Amazon Web Services Training and Certification",
+      "issuedOn": "2025-01-02",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": null,
+      "url": "https://www.credly.com/badges/68e73ba5-35c5-4783-9593-ce7cf977dd46",
+      "image": "https://images.credly.com/images/8f006312-3154-45bf-a845-4a043641e83c/blob",
+      "skills": [
+        "AWS Cloud",
+        "AWS Cloud Computing",
+        "AWS Partner",
+        "Amazon Web Services"
+      ]
+    },
+    {
+      "id": "a329421e-255e-4ce0-bb45-20588b432129",
+      "name": "Introducing SAP Ariba Category Management Fundamentals - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2024-12-17",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/a329421e-255e-4ce0-bb45-20588b432129",
+      "image": "https://images.credly.com/images/c3fb920b-0795-4255-91e2-284b01eecc5d/blob",
+      "skills": [
+        "Category Profiles",
+        "Category Strategies",
+        "Monitor Strategy Goals"
+      ]
+    },
+    {
+      "id": "b1324566-c5af-4e96-bffe-67c134f62e5b",
+      "name": "InstructLab: Democratizing AI Models at Scale",
+      "issuer": "IBM",
+      "issuedOn": "2024-11-29",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/b1324566-c5af-4e96-bffe-67c134f62e5b",
+      "image": "https://images.credly.com/images/d739a868-f29a-4754-a49c-cde9ac936ef7/InstructLab_20Democratizing_20AI_20Models_20at_20Scale_20Foundational.png",
+      "skills": [
+        "Artificial Intelligence",
+        "Generative AI",
+        "Granite Models",
+        "InstructLab",
+        "LAB (Large-Scale Alignment for ChatBots)",
+        "Large Language Models (LLMs)",
+        "Open Source",
+        "PWID-B0969800"
+      ]
+    },
+    {
+      "id": "d2878cb7-377a-4fc8-a8aa-0497faba6b6b",
+      "name": "IBM Delivery Central Platform Foundations",
+      "issuer": "IBM",
+      "issuedOn": "2024-11-13",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/d2878cb7-377a-4fc8-a8aa-0497faba6b6b",
+      "image": "https://images.credly.com/images/bef4952f-f3d5-49e8-895f-072149aad1a7/image.png",
+      "skills": [
+        "Data Analytics",
+        "Data Visualization",
+        "Delivery Execution",
+        "Delivery Management",
+        "Quality Assurance",
+        "RAID Management",
+        "Task Management",
+        "Test Management"
+      ]
+    },
+    {
+      "id": "ab244b55-76ee-4aa5-8ec3-6ae5b2b42520",
+      "name": "Credly Top Legacy Badge Earner",
+      "issuer": "Credly",
+      "issuedOn": "2024-10-18",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/ab244b55-76ee-4aa5-8ec3-6ae5b2b42520",
+      "image": "https://images.credly.com/images/3cfeed0f-fbfe-456e-ae16-d2c866fb06e7/blob",
+      "skills": [
+        "Digital Credentialing",
+        "Innovation",
+        "Knowledge Sharing",
+        "Leadership",
+        "Lifelong Learning",
+        "Professional Growth"
+      ]
+    },
+    {
+      "id": "a9b87697-999e-4249-8e56-dc78d7852a05",
+      "name": "Managing User Identity and Access in SAP S/4HANA Cloud - Public Edition - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2024-09-18",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/a9b87697-999e-4249-8e56-dc78d7852a05",
+      "image": "https://images.credly.com/images/91039e73-db72-4c5d-9181-d5374889ade9/image.png",
+      "skills": [
+        "Describing the Authorization Concept in SAP S/4HANA Cloud, Public Edition",
+        "Describing the Upgrade Methodology",
+        "Managing Reporting in IAM",
+        "Managing Troubleshooting",
+        "Performing Business Role Maintenance",
+        "Performing User Maintenance",
+        "Transporting Business Roles (title tbc)"
+      ]
+    },
+    {
+      "id": "943167c0-beb3-49f0-908b-2535cecf3345",
+      "name": "watsonx.ai Generative AI Tools Sales Foundation",
+      "issuer": "IBM",
+      "issuedOn": "2024-08-29",
+      "expiresOn": "2027-08-29",
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/943167c0-beb3-49f0-908b-2535cecf3345",
+      "image": "https://images.credly.com/images/51507f50-7116-4522-8aae-7d2e307ed37a/watson_20ai_20Generative_20AI_20Tools_20Sales_20Foundation.png",
+      "skills": [
+        "Artificial Intelligence",
+        "Generative AI",
+        "PWID-B0942800",
+        "Sales",
+        "Sales -cloud",
+        "Technology Sales",
+        "Trusted Advisor",
+        "watsonx"
+      ]
+    },
+    {
+      "id": "88c60693-fbd6-4cbe-b5ae-d06ed4b61d0a",
+      "name": "Discovering SAP Ariba Supplier Management - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2024-07-17",
+      "expiresOn": "2026-09-24",
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/88c60693-fbd6-4cbe-b5ae-d06ed4b61d0a",
+      "image": "https://images.credly.com/images/ab6310aa-1029-43ed-b982-1a417b97c57b/image.png",
+      "skills": [
+        "Lifecycle Management",
+        "Risk Management",
+        "SAP Ariba",
+        "Supplier Management",
+        "Supplier Performance Management"
+      ]
+    },
+    {
+      "id": "58970f58-0985-439e-a91d-f59e73042d85",
+      "name": "Exploring SAP Datasphere - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2024-07-15",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/58970f58-0985-439e-a91d-f59e73042d85",
+      "image": "https://images.credly.com/images/7b804787-c763-471a-837b-e3e272b12f8a/image.png",
+      "skills": [
+        "Administration And Service Management",
+        "Data Cataloging",
+        "Data Integration",
+        "Data Modeling",
+        "Data Provisioning"
+      ]
+    },
+    {
+      "id": "a56599d2-d592-4267-9c6d-c3af2f2d83ca",
+      "name": "Advisory Skills - RISE with SAP S/4HANA Cloud Private Edition - Cloud Architecture",
+      "issuer": "SAP",
+      "issuedOn": "2024-07-12",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": null,
+      "url": "https://www.credly.com/badges/a56599d2-d592-4267-9c6d-c3af2f2d83ca",
+      "image": "https://images.credly.com/images/7c0087a6-b49e-4150-95df-229d4a589039/image.png",
+      "skills": [
+        "Business Acumen",
+        "Communication",
+        "Impact",
+        "Presentation Skills",
+        "Understanding Of Customer"
+      ]
+    },
+    {
+      "id": "327ef791-956c-4958-b305-5fb9aa7a14e0",
+      "name": "Discovering SAP Process Orchestration - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2024-07-08",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/327ef791-956c-4958-b305-5fb9aa7a14e0",
+      "image": "https://images.credly.com/images/f16e639d-ecfa-44eb-9194-27289ff67e50/image.png",
+      "skills": [
+        "Create Sender and Receiver with Communication Channels",
+        "Create a Message Mapping and Operation Mapping",
+        "Create a simple Integration Flow (iFlow)",
+        "Explain Data Types, Message Types and Service Interfaces,",
+        "Explain the SAP Process Orchestration Architecture",
+        "Monitor your messages"
+      ]
+    },
+    {
+      "id": "0cb058e4-671e-4265-95d8-31e80c593292",
+      "name": "Discovering SAP Integration Suite - Managed Gateway for spend Management and SAP Business Network - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2024-07-08",
+      "expiresOn": "2026-09-22",
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/0cb058e4-671e-4265-95d8-31e80c593292",
+      "image": "https://images.credly.com/images/af96517d-cc8f-4838-b696-d80d43e38ed2/image.png",
+      "skills": [
+        "Explain basic concepts",
+        "Identify the essential elements involved in the end-to-end solution",
+        "Knowledge and insights to drive efficient integration processes, accelerating digital transformation initiatives within their organizations,"
+      ]
+    },
+    {
+      "id": "88008604-0db6-4539-b4dd-fcd29c71be74",
+      "name": "Discovering SAP Ariba Procurement - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2024-07-05",
+      "expiresOn": "2026-09-24",
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/88008604-0db6-4539-b4dd-fcd29c71be74",
+      "image": "https://images.credly.com/images/1aa0aa49-9901-44ad-931c-d2c50ff7054c/image.png",
+      "skills": [
+        "Describe the requisitioning process",
+        "Identify key features of SAP ARiba buying and invoicing",
+        "Identify key features of SAP Ariba Guided buying",
+        "Summarize the components of catalogs"
+      ]
+    },
+    {
+      "id": "f20d0d31-1765-4c01-a482-e0f59c7270e5",
+      "name": "Red Hat EX180 and EX280 Course",
+      "issuer": "O'Reilly Media",
+      "issuedOn": "2024-06-27",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Advanced",
+      "url": "https://www.credly.com/badges/f20d0d31-1765-4c01-a482-e0f59c7270e5",
+      "image": "https://images.credly.com/images/1d33c15c-cf40-48f4-8d95-49c7aadd660b/d7c01838-9452-4bcc-87f3-254e46d68eb2.png",
+      "skills": [
+        "OpenShift",
+        "Red Hat",
+        "Red Hat Certified Specialist in Containers and Kubernetes"
+      ]
+    },
+    {
+      "id": "bd422e4a-04fa-4d68-9898-783a72eb0486",
+      "name": "IBM Generative & Agentic AI Architect",
+      "issuer": "IBM",
+      "issuedOn": "2024-06-12",
+      "expiresOn": "2027-03-01",
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/bd422e4a-04fa-4d68-9898-783a72eb0486",
+      "image": "https://images.credly.com/images/893eea7b-aa2d-43cb-b0a2-42bc5a3fc1ea/IBM-Generative-and-Agentic-AI-Architect---Intermediate.png",
+      "skills": [
+        "Architect",
+        "Generative AI",
+        "Hyperscaler",
+        "IBM Strategic Partner",
+        "watsonx"
+      ]
+    },
+    {
+      "id": "32cc9aac-641c-46aa-b111-22809aed5ccb",
+      "name": "Clean Energy Transition Foundations",
+      "issuer": "IBM",
+      "issuedOn": "2024-06-04",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/32cc9aac-641c-46aa-b111-22809aed5ccb",
+      "image": "https://images.credly.com/images/101c2b79-a31a-42ce-a995-d1ab10956e77/Clean-Energy-Transition-Foundational.png",
+      "skills": [
+        "Biofuels",
+        "Clean Energy Transition",
+        "Climate Change",
+        "ESG",
+        "Electric Vehicles",
+        "Energy",
+        "Energy Transition",
+        "Environment"
+      ]
+    },
+    {
+      "id": "16b0293d-82c9-4682-8dba-d4f1468f1976",
+      "name": "Sustainability Foundation: Supply Chain, Finance, and Circularity",
+      "issuer": "IBM",
+      "issuedOn": "2024-05-30",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/16b0293d-82c9-4682-8dba-d4f1468f1976",
+      "image": "https://images.credly.com/images/20bbc5e6-0087-4eba-980e-62c476c684d0/image.png",
+      "skills": [
+        "Circularity",
+        "Climate Change",
+        "Environment",
+        "Governance",
+        "Social",
+        "Supply Chain",
+        "Sustainability",
+        "Sustainable Finance"
+      ]
+    },
+    {
+      "id": "b5dc2160-1309-492c-ac37-e491c63e1075",
+      "name": "Discovering SAP Ariba Cross-Solution Functionality - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2024-04-30",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/b5dc2160-1309-492c-ac37-e491c63e1075",
+      "image": "https://images.credly.com/images/a40f6a88-c440-4309-a5d0-f6ab0d1c18dc/image.png",
+      "skills": [
+        "Reports",
+        "SAP Ariba",
+        "System Navigation"
+      ]
+    },
+    {
+      "id": "4cff4617-7846-415d-a7d8-203a15e8f03f",
+      "name": "SAP Certified - Back-End Developer - ABAP Cloud",
+      "issuer": "SAP",
+      "issuedOn": "2024-04-19",
+      "expiresOn": "2027-09-12",
+      "type": "Certification",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/4cff4617-7846-415d-a7d8-203a15e8f03f",
+      "image": "https://images.credly.com/images/5489be1c-ce49-4cf3-8b24-eee50e5259be/blob",
+      "skills": [
+        "Advanced Business Application Programming (ABAP)",
+        "Application Development",
+        "Cloud Application Development",
+        "Development Environment",
+        "Full Stack Development",
+        "Object-Oriented Design",
+        "Programming Environments",
+        "SQL (Programming Language)"
+      ]
+    },
+    {
+      "id": "00bdf2d8-b64f-4199-b83a-27b16a10ba34",
+      "name": "IBM watsonx.data Technical Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2024-04-16",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/00bdf2d8-b64f-4199-b83a-27b16a10ba34",
+      "image": "https://images.credly.com/images/2a36b3c9-830b-4260-86b7-4a80d25cfb86/blob",
+      "skills": [
+        "AI",
+        "Data Lake",
+        "Data Lakehouse",
+        "Data Warehouse",
+        "Generative AI",
+        "Hybrid Cloud",
+        "Iceberg",
+        "Open Source"
+      ]
+    },
+    {
+      "id": "74d51281-1449-4973-a626-3674ae3ea8ac",
+      "name": "Creating Applications and Extensions using SAP Build Code - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2024-04-05",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/74d51281-1449-4973-a626-3674ae3ea8ac",
+      "image": "https://images.credly.com/images/4b37b444-be60-41ec-a979-b61a3fc92217/image.png",
+      "skills": [
+        "Application development using SAP Build Code's AI-enhanced capabilities",
+        "SAP Build Code environment setup and configuration",
+        "Theoretical and practical understanding of SAP Build Code for proficient application in real-world SAP project environments."
+      ]
+    },
+    {
+      "id": "e3e704c7-4f41-4cd1-b130-dfa1dd63ab9c",
+      "name": "Introducing SAP’s Cloud Strategy - Record of Course Completion",
+      "issuer": "SAP",
+      "issuedOn": "2024-02-12",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/e3e704c7-4f41-4cd1-b130-dfa1dd63ab9c",
+      "image": "https://images.credly.com/images/fb281600-9c9c-4c81-918b-e2bce23a1246/blob",
+      "skills": [
+        "Drive Innovation",
+        "Explain SAP’s cloud strategy",
+        "Generative AI Integration",
+        "RISE with SAP"
+      ]
+    },
+    {
+      "id": "47fda6bb-f998-4974-8c2a-7f26e7714b61",
+      "name": "IBM Quantum-Safe Conversations",
+      "issuer": "IBM",
+      "issuedOn": "2024-02-09",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/47fda6bb-f998-4974-8c2a-7f26e7714b61",
+      "image": "https://images.credly.com/images/4c81357e-c683-4295-91d9-8039bcfd5c90/69e9d38fbecc0c6c0c5df4c3.png",
+      "skills": [
+        "Cryptography",
+        "IBM Quantum",
+        "IBM Quantum-Safe",
+        "Quantum Computing",
+        "Quantum Cryptography",
+        "Quantum-safe"
+      ]
+    },
+    {
+      "id": "33c9380c-b971-46e5-9d2b-d2faa8c3f22a",
+      "name": "IBM Cloud Technical Advocate Concepts V2",
+      "issuer": "IBM",
+      "issuedOn": "2024-02-08",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/33c9380c-b971-46e5-9d2b-d2faa8c3f22a",
+      "image": "https://images.credly.com/images/ccac265b-cc07-4168-82ba-af81f7bc5a0d/image.png",
+      "skills": [
+        "Cloud",
+        "Cloud Adoption",
+        "Cloud Essentials",
+        "Cloud Native",
+        "Cloud Service",
+        "Cloud Technology",
+        "Compute Options",
+        "IBM Center for Cloud Training"
+      ]
+    },
+    {
+      "id": "efa29e1c-be42-494b-9796-c75525bc8b6f",
+      "name": "IBM Cloud Technical Advocate Foundations V2",
+      "issuer": "IBM",
+      "issuedOn": "2024-02-07",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/efa29e1c-be42-494b-9796-c75525bc8b6f",
+      "image": "https://images.credly.com/images/9aa6ef9a-944e-4bb2-be40-ec142ef2627a/image.png",
+      "skills": [
+        "Cloud",
+        "Cloud Adoption",
+        "Cloud Essentials",
+        "Cloud Technology",
+        "IBM Center for Cloud Training",
+        "IBM Cloud",
+        "IBM Cloud Fundamentals",
+        "ICCT"
+      ]
+    },
+    {
+      "id": "3fe73aab-816a-4e20-a0ef-2ee0852832ab",
+      "name": "Support Insights Sales Foundation",
+      "issuer": "IBM",
+      "issuedOn": "2024-02-06",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/3fe73aab-816a-4e20-a0ef-2ee0852832ab",
+      "image": "https://images.credly.com/images/2d8970a6-0de6-42b8-9282-38b3a83ce4e9/image.png",
+      "skills": [
+        "PWID-B0035600",
+        "Sales",
+        "Sales –Cloud",
+        "Support Insights",
+        "Technology Lifecycle Services",
+        "Technology Sales",
+        "Trusted Advisor"
+      ]
+    },
+    {
+      "id": "0107ce84-5db7-425a-9a59-ced4d7a8a825",
+      "name": "watsonx.ai Practitioner Advanced",
+      "issuer": "IBM",
+      "issuedOn": "2024-01-22",
+      "expiresOn": "2027-01-22",
+      "type": "Validation",
+      "level": "Advanced",
+      "url": "https://www.credly.com/badges/0107ce84-5db7-425a-9a59-ced4d7a8a825",
+      "image": "https://images.credly.com/images/f744e8bd-5112-468d-ad59-da4cabc71f8c/watsonx_20ai_20Practitioner_20Advanced.png",
+      "skills": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "PWID-B0908500",
+        "Sales",
+        "Sales –Cloud",
+        "Technology Sales",
+        "Trusted Advisor",
+        "watsonx"
+      ]
+    },
+    {
+      "id": "0b57efc2-8620-4495-80b2-ca0a1a631c09",
+      "name": "Earning Advocacy Practitioner",
+      "issuer": "IBM",
+      "issuedOn": "2024-01-17",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/0b57efc2-8620-4495-80b2-ca0a1a631c09",
+      "image": "https://images.credly.com/images/2362d8c0-d4f4-4914-90ce-2c9e1252544a/Earning-Advocacy-Practitioner.png",
+      "skills": [
+        "Advocacy",
+        "Client Focus",
+        "Customer Advocacy",
+        "Feedback",
+        "NPS"
+      ]
+    },
+    {
+      "id": "e6fbc96e-cb13-4c9d-b538-11d7c1b00a0a",
+      "name": "Celonis Foundations",
+      "issuer": "Celonis",
+      "issuedOn": "2024-01-02",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/e6fbc96e-cb13-4c9d-b538-11d7c1b00a0a",
+      "image": "https://images.credly.com/images/4ff66a5e-7ca4-4018-a50a-621d1075c1bc/Foundations-Learning-Foundational.png",
+      "skills": [
+        "Celonis Platform",
+        "Process Analysis",
+        "Process Automation",
+        "Process Improvement",
+        "Process Intelligence",
+        "Process Mining",
+        "Process Monitoring"
+      ]
+    },
+    {
+      "id": "fa95374f-900b-42fa-b92b-081cd86b29f7",
+      "name": "watsonx.ai Sales Foundation",
+      "issuer": "IBM",
+      "issuedOn": "2023-12-28",
+      "expiresOn": "2025-12-28",
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/fa95374f-900b-42fa-b92b-081cd86b29f7",
+      "image": "https://images.credly.com/images/8079b4fc-9494-45d5-8621-78815d88fa3a/image.png",
+      "skills": [
+        "Artificial Intelligence",
+        "Machine Learning (ML)",
+        "PWID-B0645600",
+        "Sales",
+        "Sales –Cloud",
+        "Technology Sales",
+        "Trusted Advisor",
+        "watsonx"
+      ]
+    },
+    {
+      "id": "d6ab057e-8fb2-4e4c-b969-144d2ab41427",
+      "name": "watsonx.ai Technical Sales Intermediate",
+      "issuer": "IBM",
+      "issuedOn": "2023-12-19",
+      "expiresOn": "2025-12-19",
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/d6ab057e-8fb2-4e4c-b969-144d2ab41427",
+      "image": "https://images.credly.com/images/e776e507-65f6-473c-b025-83211d94dd25/image.png",
+      "skills": [
+        "Artificial Intelligence",
+        "Machine Learning (ML)",
+        "PWID-B0884700",
+        "Sales",
+        "Sales -cloud",
+        "Technology Sales",
+        "Trusted Advisor",
+        "watsonx"
+      ]
+    },
+    {
+      "id": "a433f5f4-62f6-4c5f-a770-a8726ab09eae",
+      "name": "AWS Partner: Generative AI Essentials - Training Badge",
+      "issuer": "Amazon Web Services Training and Certification",
+      "issuedOn": "2023-12-11",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": null,
+      "url": "https://www.credly.com/badges/a433f5f4-62f6-4c5f-a770-a8726ab09eae",
+      "image": "https://images.credly.com/images/4b547104-5ce9-43d5-8708-a7abb4b0c7ec/blob",
+      "skills": [
+        "AI and ML on AWS - Foundational",
+        "AWS",
+        "AWS Cloud Computing",
+        "Co-selling with AWS"
+      ]
+    },
+    {
+      "id": "74cc96d0-9cf3-4f0c-b285-d1f4bfe6559c",
+      "name": "IBM Generative & Agentic AI Foundation",
+      "issuer": "IBM",
+      "issuedOn": "2023-12-07",
+      "expiresOn": "2027-12-15",
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/74cc96d0-9cf3-4f0c-b285-d1f4bfe6559c",
+      "image": "https://images.credly.com/images/95ae9d80-bc45-40fa-84a1-45cba63bd44b/IBM-Generative-and-Agentic-AI-Foundation.png",
+      "skills": [
+        "Generative AI",
+        "IBM Strategic Partnerships",
+        "IBM watsonx"
+      ]
+    },
+    {
+      "id": "c45b2c22-b8c4-4067-a02e-9027a9ec4c93",
+      "name": "Architect Profession Certification - Level 1 Experienced",
+      "issuer": "IBM",
+      "issuedOn": "2023-11-27",
+      "expiresOn": "2026-11-27",
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/c45b2c22-b8c4-4067-a02e-9027a9ec4c93",
+      "image": "https://images.credly.com/images/2447f00f-12ba-4898-a9a9-061bf01ec129/Architect-Experienced.png",
+      "skills": [
+        "Architectural Decisions",
+        "Architectural Methods",
+        "Architectural Thinking",
+        "Architecture Development",
+        "Asset Creation & Reuse",
+        "Communications",
+        "Giveback",
+        "Modeling Techniques"
+      ]
+    },
+    {
+      "id": "6868d128-32f3-4f94-91d0-f946472fdd8d",
+      "name": "Professional Certification: Level 1 - Certified Solution Architect",
+      "issuer": "The Open Group",
+      "issuedOn": "2023-11-27",
+      "expiresOn": "2026-11-27",
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/6868d128-32f3-4f94-91d0-f946472fdd8d",
+      "image": "https://images.credly.com/images/5f0b34f7-d488-4e8c-8a1d-e87e3adfcefe/badge-openca-certified.png",
+      "skills": [
+        "Act As Trusted Advisor",
+        "Architecture",
+        "Architecture Decisions",
+        "Architecture Methods",
+        "Architecture Validation",
+        "Conflict Resolution",
+        "Establishing Vision",
+        "Functional Requirements"
+      ]
+    },
+    {
+      "id": "cbfddafb-06ab-4aa1-8642-bc6fb414551a",
+      "name": "Generative AI Overview for Project Managers",
+      "issuer": "Project Management Institute",
+      "issuedOn": "2023-11-22",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/cbfddafb-06ab-4aa1-8642-bc6fb414551a",
+      "image": "https://images.credly.com/images/f5c094f4-e07c-44e0-b685-4ffd8980fd53/blob",
+      "skills": [
+        "Enhancing PM with GenAI",
+        "Generative AI",
+        "Generative AI Tools"
+      ]
+    },
+    {
+      "id": "985b33e3-c514-4b3a-97eb-30798861281a",
+      "name": "Energy, Environment and Utilities Insights and Solutions (Silver)",
+      "issuer": "IBM",
+      "issuedOn": "2023-11-20",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/985b33e3-c514-4b3a-97eb-30798861281a",
+      "image": "https://images.credly.com/images/4640c618-5123-481c-a205-2252edb99bf6/Energy-Industry-Silver.png",
+      "skills": [
+        "Asset & Workforce Management",
+        "Benchmarks",
+        "Business Models",
+        "Business Processes",
+        "Customer Systems",
+        "Electrical Utility",
+        "Energy & Utilities Financials",
+        "Enterprise Service Transformation"
+      ]
+    },
+    {
+      "id": "89b18a55-ac72-454c-bc0b-3779afd2876c",
+      "name": "IBM watsonx Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2023-11-20",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/89b18a55-ac72-454c-bc0b-3779afd2876c",
+      "image": "https://images.credly.com/images/47a15e48-3fd7-4c36-8f7e-639a65945ad8/image.png",
+      "skills": [
+        "AI",
+        "Artificial Intelligence",
+        "Generative AI",
+        "PWID-B0905700",
+        "Trusted Advisor",
+        "watsonx",
+        "watsonx.ai",
+        "watsonx.data"
+      ]
+    },
+    {
+      "id": "f6971298-3111-463d-8a39-c51f5918417b",
+      "name": "IBM watsonx.ai Technical Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2023-10-28",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/f6971298-3111-463d-8a39-c51f5918417b",
+      "image": "https://images.credly.com/images/23fa4f52-49e4-4a85-b09e-66d0973e808b/image.png",
+      "skills": [
+        "Foundation Model",
+        "Generative AI",
+        "Large Language Model",
+        "PWID-B0840500",
+        "Prompt Engineering",
+        "watsonx",
+        "watsonx.ai",
+        "watsonx.data"
+      ]
+    },
+    {
+      "id": "6d6ced5e-7185-4938-8064-1f137b878b82",
+      "name": "SAP Certified - SAP S/4HANA Conversion and SAP System Upgrade",
+      "issuer": "SAP",
+      "issuedOn": "2023-10-02",
+      "expiresOn": "2027-09-12",
+      "type": "Certification",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/6d6ced5e-7185-4938-8064-1f137b878b82",
+      "image": "https://images.credly.com/images/652d08e6-201a-4db4-8608-c26b8c5d9cb2/blob",
+      "skills": [
+        "Downtime",
+        "Handling Of An SAP System Landscape",
+        "Manual Activities For SUM",
+        "Modification Adjustment",
+        "SAP S/4HANA Conversion Prepare Phase",
+        "SUM Execution Part",
+        "SUM Monitoring And Troubleshooting",
+        "SUM Prepare Part"
+      ]
+    },
+    {
+      "id": "57207602-2446-4023-88b2-45a70e52f509",
+      "name": "SAP Certified Technology Specialist - SAP S/4HANA Conversion and SAP System Upgrade 2022",
+      "issuer": "SAP",
+      "issuedOn": "2023-10-02",
+      "expiresOn": "2025-03-31",
+      "type": "Certification",
+      "level": null,
+      "url": "https://www.credly.com/badges/57207602-2446-4023-88b2-45a70e52f509",
+      "image": "https://images.credly.com/images/75d7e19f-4987-4db1-b6a6-7b7eaa915ce9/E_S4HCON2022.png",
+      "skills": [
+        "Downtime",
+        "Handling Of An SAP System Landscape",
+        "Manual Activities For SUM",
+        "Modification Adjustment",
+        "SAP S/4HANA Conversion Prepare Phase",
+        "SUM Execution Part",
+        "SUM Monitoring And Troubleshooting",
+        "SUM Prepare Part"
+      ]
+    },
+    {
+      "id": "82dfa3f1-ff05-4802-b9c7-49d2318cbe8c",
+      "name": "Technology Knowledge 2021 - SAP S/4HANA Downtime Optimized Conversion",
+      "issuer": "SAP",
+      "issuedOn": "2023-09-05",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": null,
+      "url": "https://www.credly.com/badges/82dfa3f1-ff05-4802-b9c7-49d2318cbe8c",
+      "image": "https://images.credly.com/images/943b1596-84c5-4967-937c-e9cb7d15a031/SAP_S4HANA_Downtime_Optimized_Conversion2021.png",
+      "skills": [
+        "Checking Database Triggers",
+        "Monitoring The Replication Process",
+        "Preparation For The Downtime Optimized Conversion Run",
+        "Reconfiguring The Temporary System To Add Resources",
+        "Selecting Appropriate Tables For Uptime Migration",
+        "Starting The Downtime Optimized Conversion Run"
+      ]
+    },
+    {
+      "id": "bafe25cb-631a-4cd4-b36f-b895c6c36df9",
+      "name": "Discovering the Environment - Health & Safety modules in SAP S/4HANA - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2023-08-03",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/bafe25cb-631a-4cd4-b36f-b895c6c36df9",
+      "image": "https://images.credly.com/images/49deaa03-1912-4253-b306-762c5743f761/image.png",
+      "skills": [
+        "Environment Health And Safety",
+        "Support customers in managing their operational sustainability.",
+        "Understand Environment, Health and Safety solution portfolio based on SAP S/4HANA 2020"
+      ]
+    },
+    {
+      "id": "a1e74b40-bbd0-40d7-a06b-7bf40cbbfce4",
+      "name": "IBM AI Associate Leader",
+      "issuer": "IBM",
+      "issuedOn": "2023-07-06",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/a1e74b40-bbd0-40d7-a06b-7bf40cbbfce4",
+      "image": "https://images.credly.com/images/4b2792a2-3339-4169-88ea-9ede13358440/IBM-AI-Associate-Leader.png",
+      "skills": [
+        "AI Ethics",
+        "AI Maturity Framework",
+        "AI Workflows",
+        "Artificial Intelligence",
+        "Change Management",
+        "Cloud",
+        "Culture",
+        "Data Framework"
+      ]
+    },
+    {
+      "id": "7cae3d11-bdf0-443e-b3ef-6153d3088098",
+      "name": "Industry 4.0 Fundamentals",
+      "issuer": "IBM",
+      "issuedOn": "2023-06-30",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/7cae3d11-bdf0-443e-b3ef-6153d3088098",
+      "image": "https://images.credly.com/images/a547e10c-27b8-4b2b-aa63-7ff9c5e60e7c/Industry-4.0-Fundamentals.png",
+      "skills": [
+        "Industry 4.0",
+        "Manufacturing 4.0",
+        "Smart Manufacturing"
+      ]
+    },
+    {
+      "id": "b4ca79e3-61b4-48c0-bddf-35b4995ab79f",
+      "name": "Trustworthy AI and AI Ethics",
+      "issuer": "IBM",
+      "issuedOn": "2023-06-26",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/b4ca79e3-61b4-48c0-bddf-35b4995ab79f",
+      "image": "https://images.credly.com/images/817e6df0-5259-46a8-a739-fade09ea0a1d/Trustworthy-AI-and-AI-Ethics-Foundations.png",
+      "skills": [
+        "AI",
+        "Ethical AI",
+        "Ethics",
+        "Trustworthy AI"
+      ]
+    },
+    {
+      "id": "8b678cab-a737-4d26-9648-b6e0076d79a9",
+      "name": "IBM Cloud for SAP Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2023-06-12",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/8b678cab-a737-4d26-9648-b6e0076d79a9",
+      "image": "https://images.credly.com/images/8c55a05c-54a4-4c42-bd80-9b48b15639cb/image.png",
+      "skills": [
+        "Business Opportunities",
+        "Business Transformation",
+        "Cloud",
+        "Cloud Adoption",
+        "Cloud Technology",
+        "IBM Center for Cloud Training",
+        "IBM Cloud",
+        "IBM Cloud Services"
+      ]
+    },
+    {
+      "id": "d1ab5ddd-b427-41a8-8ca7-571374e730c6",
+      "name": "SAP Certified - Backend Developer - SAP Cloud Application Programming Model",
+      "issuer": "SAP",
+      "issuedOn": "2023-05-06",
+      "expiresOn": "2027-09-12",
+      "type": "Certification",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/d1ab5ddd-b427-41a8-8ca7-571374e730c6",
+      "image": "https://images.credly.com/images/0e5294d3-aa48-4a91-b30b-84fe4ee74749/blob",
+      "skills": [
+        "Application Development",
+        "Application Security",
+        "Continuous Delivery",
+        "Development Environment",
+        "Git (Version Control System)",
+        "Multi-Cloud"
+      ]
+    },
+    {
+      "id": "8dd62c00-aa0c-4d56-a07f-e787880073d1",
+      "name": "SAP Certified Development Associate - SAP BTP Extensions with SAP Cloud Application Programming Model",
+      "issuer": "SAP",
+      "issuedOn": "2023-05-06",
+      "expiresOn": "2025-03-31",
+      "type": "Certification",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/8dd62c00-aa0c-4d56-a07f-e787880073d1",
+      "image": "https://images.credly.com/images/6a26918e-9cf4-4a6a-ae5b-ecdf843893ec/image.png",
+      "skills": [
+        "Application Runtimes And Development Environments",
+        "Multi-Cloud Foundation",
+        "Secure Development"
+      ]
+    },
+    {
+      "id": "b0216ecf-4ad3-4212-b606-07ec20fb33e9",
+      "name": "Exploring SAP Cloud ERP - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2023-04-03",
+      "expiresOn": "2026-05-30",
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/b0216ecf-4ad3-4212-b606-07ec20fb33e9",
+      "image": "https://images.credly.com/images/c3f5f84d-a48f-4579-98b1-69442acc9868/image.png",
+      "skills": [
+        "Cloud Integration Technologies",
+        "Cloud Strategy",
+        "Cloud Technologies",
+        "Deployment Options",
+        "Digital Discovery Assessment",
+        "Extensibility",
+        "Organizational Change Management",
+        "SAP Activate"
+      ]
+    },
+    {
+      "id": "bf2622f7-062c-433c-8985-1da900dfb4fc",
+      "name": "Client Centricity NextGen",
+      "issuer": "IBM",
+      "issuedOn": "2023-03-20",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/bf2622f7-062c-433c-8985-1da900dfb4fc",
+      "image": "https://images.credly.com/images/300e3777-fdb9-45e4-a9dd-caf43b59926c/Client-Centricity-NextGen.png",
+      "skills": [
+        "Client Advocacy",
+        "Client Centricity",
+        "Client-centric Mindset"
+      ]
+    },
+    {
+      "id": "8d0d58b2-762a-44e8-b15c-be48ed57ec71",
+      "name": "IBM Growth Behaviors",
+      "issuer": "IBM",
+      "issuedOn": "2023-03-20",
+      "expiresOn": "2033-03-20",
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/8d0d58b2-762a-44e8-b15c-be48ed57ec71",
+      "image": "https://images.credly.com/images/7bdbf172-7abf-4335-93de-f357a04b8903/69eb775cc80a2549e6edea71.png",
+      "skills": [
+        "Courageous",
+        "Growth Behaviors",
+        "Growth Minded",
+        "Outcome Focused",
+        "People Skills",
+        "Resourceful",
+        "Team Focused",
+        "Trusted"
+      ]
+    },
+    {
+      "id": "9b2cf042-aa11-4013-ac9a-2bee8d623ad6",
+      "name": "Learning the Basics of ABAP Programming on SAP BTP - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2023-03-13",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/9b2cf042-aa11-4013-ac9a-2bee8d623ad6",
+      "image": "https://images.credly.com/images/62904b7d-0e7f-4393-9a0d-74ebf58fcb1c/image.png",
+      "skills": [
+        "ABAP application development on SAP BTP, ABAP environment",
+        "ABAP program debugging on SAP BTP, ABAP environment",
+        "Runtime error troubleshooting and error handling"
+      ]
+    },
+    {
+      "id": "07fd6790-b261-4ccc-86ac-652614e16375",
+      "name": "Blockchain Technologies",
+      "issuer": "Interskill Learning",
+      "issuedOn": "2023-03-02",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/07fd6790-b261-4ccc-86ac-652614e16375",
+      "image": "https://images.credly.com/images/d431cb25-8425-40d4-8f3e-81914f822601/image.png",
+      "skills": [
+        "Blockchain",
+        "Blockchain Frameworks",
+        "Cryptocurrencies",
+        "Distributed Ledger",
+        "Hashes And Blocks"
+      ]
+    },
+    {
+      "id": "50233e83-c01c-4640-be73-2ccfd86004d5",
+      "name": "Exploring SAP Business Technology Platform - Record of Achievement",
+      "issuer": "SAP",
+      "issuedOn": "2023-02-16",
+      "expiresOn": "2026-09-24",
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/50233e83-c01c-4640-be73-2ccfd86004d5",
+      "image": "https://images.credly.com/images/2b0a7f5f-8e61-4bef-af74-9cb52c667325/blob",
+      "skills": [
+        "Application Runtimes And Development Environments",
+        "Cloud Application Development",
+        "Database Services",
+        "Multi-Cloud Foundation",
+        "SAP Business Technology Platform",
+        "Security Concepts"
+      ]
+    },
+    {
+      "id": "e65e8572-f607-4b64-8144-ff0ea761a20b",
+      "name": "Cloud Transformation- Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2023-01-03",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/e65e8572-f607-4b64-8144-ff0ea761a20b",
+      "image": "https://images.credly.com/images/7b60569f-5359-4cf3-b4bc-0a04abefde9a/69e9d9cebecc0c6c0c5dfffa.png",
+      "skills": [
+        "Cloud",
+        "Cloud Essentials",
+        "Journey To Cloud"
+      ]
+    },
+    {
+      "id": "169d2c80-c727-4468-937c-e8a5929d65ca",
+      "name": "IBM Cloud Advocate Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2023-01-02",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/169d2c80-c727-4468-937c-e8a5929d65ca",
+      "image": "https://images.credly.com/images/a8cf9611-e48c-46e4-aa02-02e0df4fc2e9/image.png",
+      "skills": [
+        "Cloud",
+        "Cloud Adoption",
+        "Cloud Advocate",
+        "Cloud Essentials",
+        "Cloud Migration",
+        "Cloud Technology",
+        "IBM Center for Cloud Training",
+        "IBM Cloud"
+      ]
+    },
+    {
+      "id": "42027e1f-ad69-4bdf-bcce-b7a97b115a8f",
+      "name": "IBM Garage Foundation",
+      "issuer": "IBM",
+      "issuedOn": "2023-01-02",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/42027e1f-ad69-4bdf-bcce-b7a97b115a8f",
+      "image": "https://images.credly.com/images/9beccf39-df2f-4025-b971-3a7ec6dfdbfa/image.png",
+      "skills": [
+        "Design Thinking",
+        "IBM Garage",
+        "Methodology",
+        "PWID-B0237900"
+      ]
+    },
+    {
+      "id": "d4065b98-7263-42f4-96e9-02bc5e08c2b4",
+      "name": "IBM Storage and Cloud Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2023-01-02",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/d4065b98-7263-42f4-96e9-02bc5e08c2b4",
+      "image": "https://images.credly.com/images/512a27db-7a61-4b90-966e-76371ae5604c/blob",
+      "skills": [
+        "Cloud",
+        "Cloud Computing",
+        "Cloud Engineer",
+        "DS8880",
+        "IBM Cloud PowerVC Manager",
+        "IBM Spectrum",
+        "IBM Spectrum Virtualize",
+        "IBM Storage"
+      ]
+    },
+    {
+      "id": "09671118-cf66-456f-afba-c2b8c0c2a65f",
+      "name": "IBM Consulting Way Habits - Foundational",
+      "issuer": "IBM",
+      "issuedOn": "2022-12-16",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/09671118-cf66-456f-afba-c2b8c0c2a65f",
+      "image": "https://images.credly.com/images/2d07eb92-26fd-4b4c-b3a4-3283bf9dcf74/IBM-Consulting-Way-Habits---Foundational.png",
+      "skills": [
+        "Appreciation",
+        "Career",
+        "Client Relationships",
+        "Client Trust",
+        "Collaboration",
+        "Curiosity",
+        "Delivery",
+        "Diversity"
+      ]
+    },
+    {
+      "id": "fa04e502-700a-4459-9df0-ce0eaefc1c7d",
+      "name": "IBM Cloud Professional Developer Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2022-11-15",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/fa04e502-700a-4459-9df0-ce0eaefc1c7d",
+      "image": "https://images.credly.com/images/0b9095a9-f462-471b-8fb3-ed7822bd3d93/image.png",
+      "skills": [
+        "Blockchain",
+        "Cloud",
+        "Cloud Application Development",
+        "Compute Options",
+        "Containers",
+        "Deploy",
+        "Develop",
+        "Developer"
+      ]
+    },
+    {
+      "id": "e18f1c6d-5716-4be6-995f-962f7b31ce43",
+      "name": "IBM Consultant Profession Certification - Experienced",
+      "issuer": "IBM",
+      "issuedOn": "2022-07-29",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/e18f1c6d-5716-4be6-995f-962f7b31ce43",
+      "image": "https://images.credly.com/images/570b7d44-4867-48ff-b966-d482dc13d7d1/image.png",
+      "skills": [
+        "Agile",
+        "Business Acumen",
+        "Consulting",
+        "Creative Thinking",
+        "Critical Thinking",
+        "Design Thinking",
+        "Industry Expertise",
+        "Problem Solving"
+      ]
+    },
+    {
+      "id": "fa505aed-569f-4aa2-8530-54ace6230909",
+      "name": "Method Essential",
+      "issuer": "IBM",
+      "issuedOn": "2022-07-12",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/fa505aed-569f-4aa2-8530-54ace6230909",
+      "image": "https://images.credly.com/images/d94b8fbd-cb6a-4726-83e8-c9f328514dec/69e9d3d8becc0c6c0c5df678.png",
+      "skills": [
+        "Delivery",
+        "Method Adoption",
+        "Method Workspace",
+        "Methods",
+        "PM&T",
+        "Solutioning Project Launch"
+      ]
+    },
+    {
+      "id": "fde21b06-07fa-4291-a830-9b70e36e3cac",
+      "name": "IBM Machine Learning Specialist - Associate",
+      "issuer": "IBM",
+      "issuedOn": "2022-07-11",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/fde21b06-07fa-4291-a830-9b70e36e3cac",
+      "image": "https://images.credly.com/images/77dcb042-b420-42f3-9d9d-bb1e0d9dcf60/image.png",
+      "skills": [
+        "AI",
+        "AI Enterprise Workflow",
+        "Data Analyze",
+        "Data Collect",
+        "Data Infuse",
+        "Data Organize",
+        "Docker",
+        "Hybrid Cloud"
+      ]
+    },
+    {
+      "id": "cff1e8fd-6c27-4587-a04f-f1795790cc4e",
+      "name": "IBM Associate Project Manager",
+      "issuer": "IBM",
+      "issuedOn": "2022-06-20",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/cff1e8fd-6c27-4587-a04f-f1795790cc4e",
+      "image": "https://images.credly.com/images/01a0af6e-aa37-4a4c-8b84-3a980dda4ff5/PM-Associate.png",
+      "skills": [
+        "Communication",
+        "Control",
+        "Financial Management",
+        "Foundation",
+        "Issue Management",
+        "Managing Projects And Programs",
+        "Project Manager",
+        "Project Plan"
+      ]
+    },
+    {
+      "id": "4063319c-61f1-44a2-96c1-eea4022f5ff3",
+      "name": "IBM Mentor",
+      "issuer": "IBM",
+      "issuedOn": "2022-05-16",
+      "expiresOn": "2028-05-15",
+      "type": "Validation",
+      "level": "Advanced",
+      "url": "https://www.credly.com/badges/4063319c-61f1-44a2-96c1-eea4022f5ff3",
+      "image": "https://images.credly.com/images/6c88ebf4-5ef0-47ef-bf93-2bed3b3c8f3b/IBM-Mentor-template.png",
+      "skills": [
+        "Careeer Development",
+        "Mentoring",
+        "Peer Development"
+      ]
+    },
+    {
+      "id": "35ad1db8-3cb7-4d86-bdd7-d5d23a22cb93",
+      "name": "SAP HANA Cloud - Application Development for SAP HANA Cloud",
+      "issuer": "SAP",
+      "issuedOn": "2022-05-12",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": null,
+      "url": "https://www.credly.com/badges/35ad1db8-3cb7-4d86-bdd7-d5d23a22cb93",
+      "image": "https://images.credly.com/images/55f89e19-3b58-4c9a-8562-caabeb20b63a/Application_Development_for_SAP_HANA_Cloud_2021.png",
+      "skills": [
+        "Code Simple Fully Functional SAP HANA Software Applications",
+        "Configure The Client-server Communication Services Based On Node.js And XSODATA",
+        "Define The Persistency Layer Based On Core Data Services",
+        "Develop SAP HANA Native Software Applications Running On The SAP Business Technology Platform Using SAP HANA Cloud As The DB",
+        "Implement The User Interface Based On SAPUI5",
+        "Learn About The Development Tools And Programming Model Used To Realize The Different Parts Of A Software Application In SAP HANA Cloud"
+      ]
+    },
+    {
+      "id": "2b862733-980d-41d1-a1c0-2d2d515f3f6d",
+      "name": "Design & User Experience (D&UX) Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2022-05-09",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/2b862733-980d-41d1-a1c0-2d2d515f3f6d",
+      "image": "https://images.credly.com/images/0610d6ca-17e9-4348-8ce3-8be1e42dcd26/Design-_-User-Experience-Essentials.png",
+      "skills": [
+        "D&UX",
+        "Design",
+        "User Experience"
+      ]
+    },
+    {
+      "id": "f528aec0-6b12-4bef-a536-2d5c79a1708f",
+      "name": "iOS Design Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2022-05-09",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/f528aec0-6b12-4bef-a536-2d5c79a1708f",
+      "image": "https://images.credly.com/images/98b844fa-4dde-4aea-bcbc-1afafad6aae5/iOS-Design-Essentials.png",
+      "skills": [
+        "Design",
+        "Human Interface Guidelines (HIG)",
+        "UX",
+        "User-Centered Design",
+        "iOS Fundamentals"
+      ]
+    },
+    {
+      "id": "36a0dc15-fc83-438a-81a5-54d2c3c4b631",
+      "name": "Energy, Environment and Utilities Insights and Solutions (Bronze)",
+      "issuer": "IBM",
+      "issuedOn": "2022-04-20",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/36a0dc15-fc83-438a-81a5-54d2c3c4b631",
+      "image": "https://images.credly.com/images/c59edabe-33d4-4f6d-a7e3-ce95fd132c5e/Energy-Industry-Bronze.png",
+      "skills": [
+        "Analytics",
+        "Benchmarks",
+        "Blockchain",
+        "Cloud Platform",
+        "Competitive Analysis",
+        "Compliance",
+        "Cost Benefit",
+        "End To End Digitization"
+      ]
+    },
+    {
+      "id": "2ab58952-795c-473c-bd99-f8baf4a8ac89",
+      "name": "IBM Recognized Teacher/Educator",
+      "issuer": "IBM",
+      "issuedOn": "2022-04-20",
+      "expiresOn": "2028-04-20",
+      "type": "Validation",
+      "level": "Advanced",
+      "url": "https://www.credly.com/badges/2ab58952-795c-473c-bd99-f8baf4a8ac89",
+      "image": "https://images.credly.com/images/cb7d5b5f-47f5-438f-be3c-d2d3254af584/Recognized-Teacher-Educator.png",
+      "skills": [
+        "Communications",
+        "Giveback",
+        "Share Expertise",
+        "Show Personal Interest",
+        "Teaching Skills",
+        "Think, Prepare, Rehearse"
+      ]
+    },
+    {
+      "id": "bf23f39d-ccff-4117-acda-6b2f9f2611ad",
+      "name": "SAP Business Technology Platform 2021 - Developing with SAP BTP ABAP Environment",
+      "issuer": "SAP",
+      "issuedOn": "2022-03-31",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/bf23f39d-ccff-4117-acda-6b2f9f2611ad",
+      "image": "https://images.credly.com/images/aee2eff8-b726-4a9a-9b2d-69d49c644fa2/1625.png",
+      "skills": [
+        "ABAP Language Versions",
+        "ABAP RESTful Programming Model",
+        "Custom Code Transformation",
+        "Extensions Of SAP Business Suite And SAP S/4HANA",
+        "In-App Extensibility.",
+        "Side-by-Side Extensions Between SAP Cloud Platform ABAP And SAP Backend",
+        "Transporting Software Components",
+        "abapGit"
+      ]
+    },
+    {
+      "id": "8485571f-fb3f-4110-bd3e-395c59851409",
+      "name": "SAP on IBM Cloud Sales Foundation",
+      "issuer": "IBM",
+      "issuedOn": "2022-03-28",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/8485571f-fb3f-4110-bd3e-395c59851409",
+      "image": "https://images.credly.com/images/e2f5e77f-787c-462c-8137-847f87596023/image.png",
+      "skills": [
+        "PWID-B0023400",
+        "Public Cloud",
+        "SAP On IBM Cloud",
+        "Sales",
+        "Sales Cloud",
+        "Sales –Cloud",
+        "Technology Sales",
+        "Trusted Advisor"
+      ]
+    },
+    {
+      "id": "ff991a01-e5c3-4511-aed6-254de9e8b8c7",
+      "name": "IBM Solution Architect for Kubernetes and IBM Cloud Paks",
+      "issuer": "IBM",
+      "issuedOn": "2022-01-28",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/ff991a01-e5c3-4511-aed6-254de9e8b8c7",
+      "image": "https://images.credly.com/images/09363744-c3a4-49b3-b9a7-6b3d552340ce/IBM-Solution-Architect-for-Kubernetes-and-IBM-Cloud-Paks.png",
+      "skills": [
+        "14-in-4 Offerings",
+        "Architect",
+        "Architecture",
+        "Cloud Solutioning",
+        "Cloud Solutions Leader",
+        "IBM Cloud Paks",
+        "IBM Cloud Tech Seller",
+        "IBM Offerings"
+      ]
+    },
+    {
+      "id": "d8199f35-4564-4d56-8641-9177102ac5c1",
+      "name": "Privacy Foundations",
+      "issuer": "IBM",
+      "issuedOn": "2022-01-27",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/d8199f35-4564-4d56-8641-9177102ac5c1",
+      "image": "https://images.credly.com/images/d7e7c9ae-1b1d-4b62-a106-01736daafab8/Privacy-Foundations.png",
+      "skills": [
+        "CCPA",
+        "Data Protection",
+        "GDPR",
+        "LGPD",
+        "Privacy",
+        "Privacy Regulation"
+      ]
+    },
+    {
+      "id": "b23b5cbe-9d00-448a-9f04-5bc38517b08b",
+      "name": "Be Equal Ally",
+      "issuer": "IBM",
+      "issuedOn": "2022-01-17",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": null,
+      "url": "https://www.credly.com/badges/b23b5cbe-9d00-448a-9f04-5bc38517b08b",
+      "image": "https://images.credly.com/images/7b43db8d-4e77-458e-92ad-e7aa542fd455/Be-Equal-1.png",
+      "skills": [
+        "Belonging",
+        "Culture",
+        "Diversity",
+        "Diversity And Inclusion",
+        "Emotional Intelligence",
+        "Inclusion",
+        "Inclusiveness In The Workplace",
+        "Leadership"
+      ]
+    },
+    {
+      "id": "f97ecfbc-8a69-4fed-bbee-7c958fe1a344",
+      "name": "IBM Agile Advocate",
+      "issuer": "IBM",
+      "issuedOn": "2022-01-17",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/f97ecfbc-8a69-4fed-bbee-7c958fe1a344",
+      "image": "https://images.credly.com/images/00cfeff7-03d2-4c00-b129-d2c09ca39831/IBM-Agile-Advocate.png",
+      "skills": [
+        "Agile",
+        "Collaboration",
+        "Continuous Learning",
+        "Facilitation",
+        "Flexible",
+        "Iteration Planning",
+        "Iterations",
+        "Kanban"
+      ]
+    },
+    {
+      "id": "ee573c14-4f82-4f2d-870b-947d0ddf9a1f",
+      "name": "IBM Cloud Private Infrastructure and Architecture",
+      "issuer": "IBM",
+      "issuedOn": "2022-01-12",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/ee573c14-4f82-4f2d-870b-947d0ddf9a1f",
+      "image": "https://images.credly.com/images/90f6af3b-70a4-47c1-9ee8-389cdaa05b23/IBM_Cloud_Private_-_Infrastructure_-_Architecture.png",
+      "skills": [
+        "Architect",
+        "Cloud",
+        "Developer",
+        "Helm",
+        "IBM Cloud Private",
+        "Kubernetes",
+        "Linux",
+        "Microservices"
+      ]
+    },
+    {
+      "id": "408e999b-b202-44c6-b288-806fd4932618",
+      "name": "Explore Emerging Tech",
+      "issuer": "IBM SkillsBuild",
+      "issuedOn": "2022-01-11",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/408e999b-b202-44c6-b288-806fd4932618",
+      "image": "https://images.credly.com/images/c6f4a830-11d9-46ba-a061-8ac2e5a099e9/Explore_Emerging_Tech.png",
+      "skills": [
+        "Artificial Intelligence (AI)",
+        "Blockchain",
+        "Career Exploration In Technology",
+        "Cloud Computing",
+        "Cybersecurity",
+        "Data And Analytics (Data Science)",
+        "Distributed Ledger Technology",
+        "Information Technology Operations"
+      ]
+    },
+    {
+      "id": "f61fc39b-385d-4d4c-8d3d-61f484016e6f",
+      "name": "IBM Security Essentials for Architects",
+      "issuer": "IBM",
+      "issuedOn": "2022-01-09",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/f61fc39b-385d-4d4c-8d3d-61f484016e6f",
+      "image": "https://images.credly.com/images/4354bf64-fabc-4870-9f9c-9785ebea3f79/IBM-Security-Essentials-for-Architects.png",
+      "skills": [
+        "Architecture",
+        "IBM Security",
+        "Principles",
+        "Security"
+      ]
+    },
+    {
+      "id": "7150f1c9-f0d2-4099-a95c-dd7e183a2866",
+      "name": "IBM Blockchain Foundation Developer V2",
+      "issuer": "IBM",
+      "issuedOn": "2022-01-07",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/7150f1c9-f0d2-4099-a95c-dd7e183a2866",
+      "image": "https://images.credly.com/images/7671b89f-4102-455a-be3a-0413b734a59b/IBM-Blockchain-Foundation-Developer-V2.png",
+      "skills": [
+        "Blockchain",
+        "Cloud",
+        "PWID-B0298800"
+      ]
+    },
+    {
+      "id": "e25c5459-7ee7-4d26-bc3a-7ed3bb6166c2",
+      "name": "SAP Certified - SAP Fiori Application Developer",
+      "issuer": "SAP",
+      "issuedOn": "2022-01-02",
+      "expiresOn": "2027-09-12",
+      "type": "Certification",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/e25c5459-7ee7-4d26-bc3a-7ed3bb6166c2",
+      "image": "https://images.credly.com/images/3cfa3645-97f0-4744-83e3-1ce980460427/blob",
+      "skills": [
+        "OData And Advanced Data Handling",
+        "SAP Fiori Foundation",
+        "SAP Fiori Infrastructure",
+        "SAP Fiori Strategy",
+        "SAP HANA Cloud Platform And Web IDE Basics",
+        "SAP Hybrid App Toolkit",
+        "Standards And Guidelines"
+      ]
+    },
+    {
+      "id": "cdacca19-6bb4-41b6-b510-27fe06c62e73",
+      "name": "SAP Certified Development Associate - SAP Fiori Application Developer",
+      "issuer": "SAP",
+      "issuedOn": "2022-01-02",
+      "expiresOn": "2025-03-31",
+      "type": "Certification",
+      "level": null,
+      "url": "https://www.credly.com/badges/cdacca19-6bb4-41b6-b510-27fe06c62e73",
+      "image": "https://images.credly.com/images/844e0d1e-45e7-4818-8640-df588b002d8d/C_FIORDEV_21.png",
+      "skills": [
+        "Deploy Applications And Test The Applications",
+        "Describe SAP Fiori Strategy - Standards - Guidelines And Architecture",
+        "Perform An Extension To Existing Fiori Applications",
+        "Perform Development Of SAPUI5 Applications",
+        "Perform Development With OData Models"
+      ]
+    },
+    {
+      "id": "0ee6b5dc-93bb-4283-8a6b-bf706034f7d3",
+      "name": "Docker Essentials: A Developer Introduction",
+      "issuer": "IBM",
+      "issuedOn": "2022-01-01",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/0ee6b5dc-93bb-4283-8a6b-bf706034f7d3",
+      "image": "https://images.credly.com/images/b0c5445a-72a2-46ce-a599-96147e210efb/blob",
+      "skills": [
+        "Cloud",
+        "Containers",
+        "Docker",
+        "PWID-B0098400"
+      ]
+    },
+    {
+      "id": "48ef8855-cd8c-4aef-a0ba-58b450521488",
+      "name": "SAP Certified - Project Manager - SAP Activate",
+      "issuer": "SAP",
+      "issuedOn": "2021-12-11",
+      "expiresOn": "2027-09-12",
+      "type": "Certification",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/48ef8855-cd8c-4aef-a0ba-58b450521488",
+      "image": "https://images.credly.com/images/4990469d-ad15-403a-b966-68d0d623faaa/blob",
+      "skills": [
+        "Project Implementation",
+        "Project Management",
+        "Project Planning And Execution"
+      ]
+    },
+    {
+      "id": "0eb0f0af-63f2-460b-994c-dc363a23cd23",
+      "name": "SAP Certified Associate - SAP Activate Project Manager",
+      "issuer": "SAP",
+      "issuedOn": "2021-12-11",
+      "expiresOn": "2025-03-31",
+      "type": "Certification",
+      "level": null,
+      "url": "https://www.credly.com/badges/0eb0f0af-63f2-460b-994c-dc363a23cd23",
+      "image": "https://images.credly.com/images/034a0102-9b43-4331-8941-a7a6ec62fb1a/C_ACTIVATE05.png",
+      "skills": [
+        "Agile Project Delivery",
+        "SAP Activate Elements.",
+        "SAP Activate Overview.",
+        "Workstreams Overview."
+      ]
+    },
+    {
+      "id": "3cdbc9a0-11f9-4894-86a7-d884a496cfdc",
+      "name": "Architectural Thinking",
+      "issuer": "IBM",
+      "issuedOn": "2021-10-27",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/3cdbc9a0-11f9-4894-86a7-d884a496cfdc",
+      "image": "https://images.credly.com/images/e6a6d587-cc85-4e3a-9ce0-08c06677bf1b/Architectural-Thinking.png",
+      "skills": [
+        "Architects Tools",
+        "Architectural Assets",
+        "Architecture Concepts",
+        "Architecture Decision",
+        "Architecture Industry Standards",
+        "Architecture Life Cycle",
+        "Architecture Overview",
+        "Architecture Principles"
+      ]
+    },
+    {
+      "id": "8594b2cc-5e40-46bd-b3c0-d7dc431e4e4b",
+      "name": "SAP Certified Development Specialist - ABAP for SAP HANA 2.0",
+      "issuer": "SAP",
+      "issuedOn": "2021-08-13",
+      "expiresOn": "2025-03-31",
+      "type": "Certification",
+      "level": null,
+      "url": "https://www.credly.com/badges/8594b2cc-5e40-46bd-b3c0-d7dc431e4e4b",
+      "image": "https://images.credly.com/images/c404c861-c9d8-49d5-aa48-1e69fdb83f04/E_HANAAW_16.png",
+      "skills": [
+        "ABAP Programming Based On SAP HANA Artefacts",
+        "Guided Performance Analysis",
+        "Implications Of SAP HANA On ABAP Programming",
+        "Integration Of SAP HANA Coding Into ABAP Programs",
+        "SAP Development Tools For SAP NetWeaver",
+        "SAP HANA Basics And Technical Concepts",
+        "SAP HANA Information Models And Database Procedures"
+      ]
+    },
+    {
+      "id": "d29cee5d-ee79-474e-9dfe-f133f312c615",
+      "name": "IBM Garage Method for Cloud Advocate",
+      "issuer": "IBM",
+      "issuedOn": "2021-07-24",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/d29cee5d-ee79-474e-9dfe-f133f312c615",
+      "image": "https://images.credly.com/images/59b78dac-c708-46c6-986b-a918efeb1606/IBM_Garage_Method_for_Cloud_-_Advocate.png",
+      "skills": [
+        "Agile",
+        "Continuous Delivery",
+        "Delivery Pipeline",
+        "DevOps",
+        "Garage Method For Cloud",
+        "PWID-B0266600"
+      ]
+    },
+    {
+      "id": "32614ebd-60a4-457d-b629-0b0142867ead",
+      "name": "Microsoft Certified: Azure Administrator Associate",
+      "issuer": "Microsoft",
+      "issuedOn": "2021-07-01",
+      "expiresOn": "2022-07-01",
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/32614ebd-60a4-457d-b629-0b0142867ead",
+      "image": "https://images.credly.com/images/336eebfc-0ac3-4553-9a67-b402f491f185/azure-administrator-associate-600x600.png",
+      "skills": [
+        "Application Services",
+        "Azure",
+        "Azure Active Directory",
+        "Azure Administrator",
+        "Azure App Service",
+        "Azure Load Balancer",
+        "Azure Storage",
+        "Azure Subscriptions"
+      ]
+    },
+    {
+      "id": "b608e6cc-35f0-43e7-b5e5-57cee9c1c981",
+      "name": "Microsoft Certified: Azure AI Fundamentals",
+      "issuer": "Microsoft",
+      "issuedOn": "2021-06-10",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/b608e6cc-35f0-43e7-b5e5-57cee9c1c981",
+      "image": "https://images.credly.com/images/4136ced8-75d5-4afb-8677-40b6236e2672/azure-ai-fundamentals-600x600.png",
+      "skills": [
+        "Azure Bot Services",
+        "Azure Machine Learning",
+        "Cognitive Services"
+      ]
+    },
+    {
+      "id": "572e08b2-53a2-44ef-bd40-5163fe384f49",
+      "name": "Lifelong Learning",
+      "issuer": "Certiprof",
+      "issuedOn": "2021-06-09",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/572e08b2-53a2-44ef-bd40-5163fe384f49",
+      "image": "https://images.credly.com/images/21e16d4d-d2df-46e6-9098-526caab49e63/blob",
+      "skills": [
+        "Career Development",
+        "Continuing Education",
+        "Enthusiasm For Lifelong Learning",
+        "Ethics - Professionalism - Values",
+        "Growth Mindset: Open To Evolving Continuously And Adopting A Lifelong Learning Attitude",
+        "Lifelong Learning",
+        "Open Education Resources"
+      ]
+    },
+    {
+      "id": "31ae1158-cc2e-4739-96a8-2910bc77536b",
+      "name": "Accelerated Deep Learning with GPU",
+      "issuer": "IBM",
+      "issuedOn": "2021-05-25",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Advanced",
+      "url": "https://www.credly.com/badges/31ae1158-cc2e-4739-96a8-2910bc77536b",
+      "image": "https://images.credly.com/images/ce22d252-c0ef-4e57-9840-9e1ce22820a9/blob",
+      "skills": [
+        "Accelerated Deep Learning",
+        "Deep Learning",
+        "Distributed Deep Learning",
+        "GPU",
+        "PWID-B0599700"
+      ]
+    },
+    {
+      "id": "a0bae6a4-7a53-473b-b9ff-3683651c9351",
+      "name": "Deep Learning",
+      "issuer": "IBM",
+      "issuedOn": "2021-05-25",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/a0bae6a4-7a53-473b-b9ff-3683651c9351",
+      "image": "https://images.credly.com/images/19df5d04-16a5-4c4f-8ea1-1ed5512013f4/blob",
+      "skills": [
+        "Deep Learning",
+        "Neural Networks",
+        "PWID-B0504900",
+        "TensorFlow"
+      ]
+    },
+    {
+      "id": "ef4be605-97ae-422a-aecd-06b59a1768cd",
+      "name": "Deep Learning using TensorFlow",
+      "issuer": "IBM",
+      "issuedOn": "2021-05-25",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Advanced",
+      "url": "https://www.credly.com/badges/ef4be605-97ae-422a-aecd-06b59a1768cd",
+      "image": "https://images.credly.com/images/ba85e07d-8263-4f30-b39b-d79883ee558c/blob",
+      "skills": [
+        "Autoencoders",
+        "Convolutional Neural Networks (CNN)",
+        "Deep Learning",
+        "Deep-learning Networks",
+        "PWID-B0592000",
+        "Recurrent Neural Networks (RNN)",
+        "TensorFlow"
+      ]
+    },
+    {
+      "id": "0db7e1ec-b7eb-48af-a486-279d54459335",
+      "name": "Cybersecurity Fundamentals",
+      "issuer": "IBM SkillsBuild",
+      "issuedOn": "2021-05-22",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/0db7e1ec-b7eb-48af-a486-279d54459335",
+      "image": "https://images.credly.com/images/50b96632-6cbb-40b7-ac0e-b83f49ff7f94/image.png",
+      "skills": [
+        "Cryptography",
+        "Cyber Attacks",
+        "Cyber Threat Analysis",
+        "Cyber Threat Intelligence",
+        "Cybersecurity",
+        "Cybersecurity Processes",
+        "Cybersecurity Risk Management",
+        "Incident Response"
+      ]
+    },
+    {
+      "id": "9fa5f995-7812-4d65-b277-3e59a7a0664d",
+      "name": "Introduction to Cybersecurity",
+      "issuer": "Cisco",
+      "issuedOn": "2021-05-21",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/9fa5f995-7812-4d65-b277-3e59a7a0664d",
+      "image": "https://images.credly.com/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png",
+      "skills": [
+        "Cyber Best Practices",
+        "Cybersecurity",
+        "Network Vulnerabilities",
+        "Privacy And Data Confidentiality",
+        "Threat Detection"
+      ]
+    },
+    {
+      "id": "f62e8f8f-d703-4cd9-b939-3214e2a8e1c0",
+      "name": "IBM Consulting – Leading Initiatives",
+      "issuer": "IBM",
+      "issuedOn": "2021-05-20",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/f62e8f8f-d703-4cd9-b939-3214e2a8e1c0",
+      "image": "https://images.credly.com/images/6ecee6bd-3678-4a4a-a6ef-1c964dc427a0/IBM-Consulting-Education-leading-initiatives.png",
+      "skills": [
+        "Challenging Behaviours",
+        "Coaching",
+        "Conflict Management",
+        "Giving And Receiving Feedback",
+        "Leading Teams",
+        "Simulations",
+        "Situational Leadership ®",
+        "Stakeholders Relationship"
+      ]
+    },
+    {
+      "id": "64d3ffcb-768a-4d2b-8407-50572365837d",
+      "name": "IBM Consulting – Building Teams",
+      "issuer": "IBM",
+      "issuedOn": "2021-05-17",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/64d3ffcb-768a-4d2b-8407-50572365837d",
+      "image": "https://images.credly.com/images/83e20d4d-e10b-410f-8b30-6fc9f0548f0f/IBM-Consulting-Education-building-teams.png",
+      "skills": [
+        "Emotional Intelligence",
+        "Interpersonal Interactions",
+        "Leadership Styles",
+        "Listening",
+        "Networking",
+        "Personal Eminence & Impact",
+        "Relating To Others",
+        "Team Dynamics"
+      ]
+    },
+    {
+      "id": "bb5eef74-bd5f-4318-b641-9fe35a7ac8fa",
+      "name": "IBM Consulting – Delivering Business Value",
+      "issuer": "IBM",
+      "issuedOn": "2021-05-17",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/bb5eef74-bd5f-4318-b641-9fe35a7ac8fa",
+      "image": "https://images.credly.com/images/b9f5de36-678a-4687-8abb-331a82526bf2/IBM-Consulting-Education-delivering-business-value.png",
+      "skills": [
+        "Analytical Thinking",
+        "Case For Change",
+        "Client Business Understanding",
+        "Maximizing Business Outcomes",
+        "Problem Solving",
+        "Value Creation"
+      ]
+    },
+    {
+      "id": "e5962351-f943-41c2-9ee7-8df5cda7e241",
+      "name": "IBM Robotic Process Automation - Basic",
+      "issuer": "IBM",
+      "issuedOn": "2021-05-16",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/e5962351-f943-41c2-9ee7-8df5cda7e241",
+      "image": "https://images.credly.com/images/b4d34585-6423-488a-bc3f-822389b0d83d/image.png",
+      "skills": [
+        "Assets",
+        "Commands",
+        "Database",
+        "Datatable",
+        "PDF",
+        "PWID-B0234700",
+        "Parameters",
+        "RPA"
+      ]
+    },
+    {
+      "id": "eefc284f-5eb6-4ce8-b18c-4930974fe010",
+      "name": "Data Science for Business - Level 2",
+      "issuer": "IBM",
+      "issuedOn": "2021-05-13",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/eefc284f-5eb6-4ce8-b18c-4930974fe010",
+      "image": "https://images.credly.com/images/4256595e-d92e-47de-84f6-42cfb0be191e/blob",
+      "skills": [
+        "Data Privacy",
+        "Digital Analytics And Regression",
+        "PWID-B0047300",
+        "Predictive Modeling"
+      ]
+    },
+    {
+      "id": "6e16594a-ecfa-477f-835b-87008f342598",
+      "name": "IBM Consultant Profession Certification - Foundation",
+      "issuer": "IBM",
+      "issuedOn": "2021-05-13",
+      "expiresOn": null,
+      "type": "Certification",
+      "level": null,
+      "url": "https://www.credly.com/badges/6e16594a-ecfa-477f-835b-87008f342598",
+      "image": "https://images.credly.com/images/3ef40b2e-3565-435a-ac76-55fe33e6460f/image.png",
+      "skills": [
+        "Active Listening",
+        "Analytical Thinking",
+        "Build Client Relationships",
+        "Communication",
+        "Consultant",
+        "Consulting",
+        "Foundation Level",
+        "Problem Solving"
+      ]
+    },
+    {
+      "id": "9f13114e-bda6-4840-824d-f112a52e17a2",
+      "name": "Knowledge Sharing for Business Impact",
+      "issuer": "IBM",
+      "issuedOn": "2021-05-11",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Advanced",
+      "url": "https://www.credly.com/badges/9f13114e-bda6-4840-824d-f112a52e17a2",
+      "image": "https://images.credly.com/images/b013c9b8-92bc-4312-b7a8-4835e513f988/Knowledge-Sharing-for-Business-Impact.png",
+      "skills": [
+        "Best Practices",
+        "IBM Way",
+        "Knowledge Sharing"
+      ]
+    },
+    {
+      "id": "6a276169-9287-419a-bf26-93eb0ea2b2d5",
+      "name": "IBM Consulting – Communicating Value",
+      "issuer": "IBM",
+      "issuedOn": "2021-05-10",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/6a276169-9287-419a-bf26-93eb0ea2b2d5",
+      "image": "https://images.credly.com/images/f81be9d3-cfd6-43e3-88a7-aaf0200dcbe0/IBM-Consulting-Education-communicating-value.png",
+      "skills": [
+        "Creating Presentations",
+        "Facilitation",
+        "Presentations",
+        "Professional Writing",
+        "Story Telling"
+      ]
+    },
+    {
+      "id": "a89b7c29-1111-4a2e-840f-55d46b4c759b",
+      "name": "IBM Consulting – Delivering Trust",
+      "issuer": "IBM",
+      "issuedOn": "2021-05-10",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/a89b7c29-1111-4a2e-840f-55d46b4c759b",
+      "image": "https://images.credly.com/images/59343ba3-93fb-4485-946a-bf8506da062c/IBM-Consulting-Education-delivering-trust.png",
+      "skills": [
+        "Assertiveness",
+        "Building Trust",
+        "Confidence",
+        "Delegations",
+        "Leadership Styles",
+        "Trust"
+      ]
+    },
+    {
+      "id": "0df1ab2d-f153-487e-b7d1-e336c0b6a62e",
+      "name": "Data & AI Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2021-05-08",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/0df1ab2d-f153-487e-b7d1-e336c0b6a62e",
+      "image": "https://images.credly.com/images/7481cfd9-3956-4b6b-8dc5-edbabb2fd98f/Data_-_AI_Essentials_CP4D_Journey.png",
+      "skills": [
+        "AI",
+        "AI Ladder",
+        "Analytics",
+        "Artificial Intelligence",
+        "CP4D",
+        "Cloud Pak For Data",
+        "Data Engineering",
+        "Data Governance"
+      ]
+    },
+    {
+      "id": "ac721dd4-6371-463f-9948-b4e6805cc0b3",
+      "name": "IBM AI Associate Data Scientist",
+      "issuer": "IBM",
+      "issuedOn": "2021-05-03",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/ac721dd4-6371-463f-9948-b4e6805cc0b3",
+      "image": "https://images.credly.com/images/eebcd520-bf77-491d-aea5-6967b15aba9c/AI-for-Data-Scientists.png",
+      "skills": [
+        "AI At Scale",
+        "AI Ethics",
+        "AI Maturity Framework",
+        "Artificial Intelligence",
+        "Cloud",
+        "Data Science",
+        "Data Visualization",
+        "Infusing AI"
+      ]
+    },
+    {
+      "id": "ffce1f48-9cf0-43f0-82f2-b33f62ebea5b",
+      "name": "Data Privacy Fundamentals",
+      "issuer": "IBM",
+      "issuedOn": "2021-05-01",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/ffce1f48-9cf0-43f0-82f2-b33f62ebea5b",
+      "image": "https://images.credly.com/images/95272ba4-d722-4e3c-8727-d3235c75e4d6/blob",
+      "skills": [
+        "Data Privacy",
+        "Data Science",
+        "Ethics",
+        "Government",
+        "IT Security",
+        "PWID-B0485900"
+      ]
+    },
+    {
+      "id": "0a285137-024a-4e9f-810f-6cdd518acc81",
+      "name": "IBM Garage Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2021-04-30",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/0a285137-024a-4e9f-810f-6cdd518acc81",
+      "image": "https://images.credly.com/images/fb718a87-6d0d-4a6d-8068-677f1bec78f2/IBM_Garage_Essentials.png",
+      "skills": [
+        "Agile",
+        "Design Thinking",
+        "IBM Garage",
+        "Methodology",
+        "PWID-B0489200"
+      ]
+    },
+    {
+      "id": "d3700f5b-68e3-4c2f-b8d6-feeae7c2708d",
+      "name": "IBM Explorer Project Manager",
+      "issuer": "IBM",
+      "issuedOn": "2021-04-28",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/d3700f5b-68e3-4c2f-b8d6-feeae7c2708d",
+      "image": "https://images.credly.com/images/86f1f003-7c50-47d9-a6f0-f12f43a940df/PM-Explorer.png",
+      "skills": [
+        "Change",
+        "Entry",
+        "Issue Management",
+        "Project Plan",
+        "Risk Management",
+        "Tracking"
+      ]
+    },
+    {
+      "id": "58097bc9-6ead-447d-9be8-f27b3dc163c5",
+      "name": "Enterprise Design Thinking Co-Creator",
+      "issuer": "IBM",
+      "issuedOn": "2021-04-24",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/58097bc9-6ead-447d-9be8-f27b3dc163c5",
+      "image": "https://images.credly.com/images/2700b813-82b8-4232-9b36-5dcd5cd24584/Badges_v8-08_Co-Creator.png",
+      "skills": [
+        "Design",
+        "Empathy",
+        "Experience Design",
+        "Facilitation",
+        "Ideation",
+        "Offering Management",
+        "PWID-B0111500",
+        "Product Management"
+      ]
+    },
+    {
+      "id": "ec34b554-cbaa-4de8-be40-3bcbf265f8df",
+      "name": "IBM AI Associate for All IBMers",
+      "issuer": "IBM",
+      "issuedOn": "2021-04-14",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/ec34b554-cbaa-4de8-be40-3bcbf265f8df",
+      "image": "https://images.credly.com/images/4e05e7e2-bc65-4a0f-a73d-7ef4ce8505c7/AI-for-All.png",
+      "skills": [
+        "AI Ethics",
+        "AI Ladder",
+        "Artificial Intelligence",
+        "Cloud",
+        "Data Science",
+        "Design Thinking",
+        "Infusing AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2ee1284d-a0e7-498f-afb4-2b52548262f3",
+      "name": "Watson AI Essentials",
+      "issuer": "Coursera / IBM",
+      "issuedOn": "2021-04-13",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/2ee1284d-a0e7-498f-afb4-2b52548262f3",
+      "image": "https://images.credly.com/images/2effcefe-c68b-437d-9594-31ffac658b3f/IBM_AI_-_Watson_AI_Essentials_Foundational.png",
+      "skills": [
+        "AI",
+        "Application Program Interface",
+        "Deep Learning",
+        "Machine Learning",
+        "PWID-B0369000",
+        "Watson"
+      ]
+    },
+    {
+      "id": "c5285443-556f-49f0-b55f-d0851f8bf320",
+      "name": "Applied Data Science Capstone",
+      "issuer": "Coursera / IBM",
+      "issuedOn": "2021-04-12",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Advanced",
+      "url": "https://www.credly.com/badges/c5285443-556f-49f0-b55f-d0851f8bf320",
+      "image": "https://images.credly.com/images/60f2e1e1-1b74-4dc0-a24b-cd08b460c12d/Applied_Data_Science_Capstone.png",
+      "skills": [
+        "Clustering",
+        "Data Analysis",
+        "Data Science",
+        "Data Visualization",
+        "Foursquare",
+        "Location Data",
+        "Machine Learning",
+        "PWID-B0363000"
+      ]
+    },
+    {
+      "id": "9b0cc29c-7ba4-4ecf-91a4-d122102cab65",
+      "name": "Data Science Professional Certificate",
+      "issuer": "Coursera / IBM",
+      "issuedOn": "2021-04-12",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Advanced",
+      "url": "https://www.credly.com/badges/9b0cc29c-7ba4-4ecf-91a4-d122102cab65",
+      "image": "https://images.credly.com/images/0da411a5-24e9-4991-9756-ca5f6073e7af/image.png",
+      "skills": [
+        "AI",
+        "Artificial Intelligence",
+        "Bokeh",
+        "Classification",
+        "Clustering",
+        "Data Analysis",
+        "Data Science",
+        "Data Visualization"
+      ]
+    },
+    {
+      "id": "19abba21-c015-4665-9d57-b58312b71750",
+      "name": "IBM Data Science Professional Certificate",
+      "issuer": "Coursera / IBM",
+      "issuedOn": "2021-04-12",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Advanced",
+      "url": "https://www.credly.com/badges/19abba21-c015-4665-9d57-b58312b71750",
+      "image": "https://images.credly.com/images/0f740f0e-52f0-4ff3-bcac-e8d2ff735c07/image.png",
+      "skills": [
+        "AI",
+        "Artificial Intelligence",
+        "Bokeh",
+        "Classification",
+        "Clustering",
+        "Data Analysis",
+        "Data Science",
+        "Data Visualization"
+      ]
+    },
+    {
+      "id": "2b3bdba5-47db-486e-bddf-a06895f60613",
+      "name": "Databases and SQL for Data Science",
+      "issuer": "Coursera / IBM",
+      "issuedOn": "2021-04-11",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/2b3bdba5-47db-486e-bddf-a06895f60613",
+      "image": "https://images.credly.com/images/f2573aac-d21c-483d-acda-afaa366b4f51/image.png",
+      "skills": [
+        "Data Science",
+        "Db2",
+        "Jupyter Notebook",
+        "PWID-B0609900",
+        "Python",
+        "Relational Database",
+        "SQL"
+      ]
+    },
+    {
+      "id": "8fbd528e-0a20-4735-a480-f17353eefaa2",
+      "name": "Energy, Environment and Utilities Industry Jumpstart",
+      "issuer": "IBM",
+      "issuedOn": "2021-04-11",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/8fbd528e-0a20-4735-a480-f17353eefaa2",
+      "image": "https://images.credly.com/images/d685a2f3-218d-4147-9de6-455d0a0ddd62/Energy-Industry-Jumpstart.png",
+      "skills": [
+        "Benchmarks",
+        "Bold Idea Creation",
+        "Business Models",
+        "Business Processes",
+        "Industry Expertise",
+        "Industry Financials",
+        "Industry Segments",
+        "Industry Solutions"
+      ]
+    },
+    {
+      "id": "b2c84f6f-faba-479e-a8d0-a72f7f8e9cc8",
+      "name": "Data Science Methodology",
+      "issuer": "Coursera / IBM",
+      "issuedOn": "2021-04-10",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/b2c84f6f-faba-479e-a8d0-a72f7f8e9cc8",
+      "image": "https://images.credly.com/images/46defa53-a922-47bd-94ea-b43488f5cd8a/Data_Science_Methodology_Foundational.png",
+      "skills": [
+        "Data Science Methodology",
+        "Jupyter Notebook",
+        "PWID-B0463700"
+      ]
+    },
+    {
+      "id": "8a201922-fe1c-412f-88e9-84ed8c1cf70e",
+      "name": "Python for Data Science and AI",
+      "issuer": "Coursera / IBM",
+      "issuedOn": "2021-04-10",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/8a201922-fe1c-412f-88e9-84ed8c1cf70e",
+      "image": "https://images.credly.com/images/40bee502-a5b3-4365-90e7-57eed5067594/image.png",
+      "skills": [
+        "Bokeh",
+        "Matplotlib",
+        "PWID-B0394900",
+        "Python"
+      ]
+    },
+    {
+      "id": "755d72e1-105d-4459-ad4e-db50c1ab8874",
+      "name": "Python Project for Data Science",
+      "issuer": "Coursera / IBM",
+      "issuedOn": "2021-04-10",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/755d72e1-105d-4459-ad4e-db50c1ab8874",
+      "image": "https://images.credly.com/images/4dd14b9d-2750-43bc-a5f6-27970c0de0fa/image.png",
+      "skills": [
+        "Artificial Intelligence",
+        "Data Science",
+        "PWID-B0600000",
+        "Python"
+      ]
+    },
+    {
+      "id": "44a8e15d-7ace-4622-8240-de69b5e12d99",
+      "name": "Data Science Foundations - Level 2 (V2)",
+      "issuer": "IBM",
+      "issuedOn": "2021-04-05",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/44a8e15d-7ace-4622-8240-de69b5e12d99",
+      "image": "https://images.credly.com/images/2fde0bfe-ca31-4e31-860b-a109eeb86c05/blob",
+      "skills": [
+        "Data Science",
+        "Data Scientist Workbench",
+        "Dswb",
+        "PWID-B0279600",
+        "Python",
+        "Scala",
+        "Statistics"
+      ]
+    },
+    {
+      "id": "77efcc79-cd1a-46d6-9e54-7760b13d558c",
+      "name": "IBM Client Mindset",
+      "issuer": "IBM",
+      "issuedOn": "2021-04-02",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/77efcc79-cd1a-46d6-9e54-7760b13d558c",
+      "image": "https://images.credly.com/images/61eef13c-d54e-4080-af76-dc3ba8da668b/IBM-Client-Mindset.png",
+      "skills": [
+        "Adaptability",
+        "Agile",
+        "Balance",
+        "Client Ethos",
+        "Delivery",
+        "Empathy",
+        "Enthusiasm",
+        "Ownership"
+      ]
+    },
+    {
+      "id": "a859cb2c-218a-40e2-b092-7bc178eca078",
+      "name": "IBM Quantum Conversations",
+      "issuer": "IBM",
+      "issuedOn": "2021-03-31",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/a859cb2c-218a-40e2-b092-7bc178eca078",
+      "image": "https://images.credly.com/images/18cfda79-63fc-4a6d-a96c-2ffc9887cd3c/IBM-Quantum-Conversations.png",
+      "skills": [
+        "Big Picture Understanding",
+        "Business Cases",
+        "Client Conversations",
+        "Client Readiness",
+        "Competitive Landscape",
+        "Core Concepts",
+        "Differentiators",
+        "Direct Leads"
+      ]
+    },
+    {
+      "id": "727876c1-07de-49b4-8f30-0aaf4d50becf",
+      "name": "Data Science Tools",
+      "issuer": "IBM",
+      "issuedOn": "2021-03-30",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/727876c1-07de-49b4-8f30-0aaf4d50becf",
+      "image": "https://images.credly.com/images/aa8b8df6-98d7-4bf5-9546-dd4c1103d718/blob",
+      "skills": [
+        "Cloud Architect",
+        "Data Engineer",
+        "Data Science",
+        "Developer",
+        "Jupiter Notebooks",
+        "PWID-B0608900",
+        "RStudio",
+        "Security Engineer"
+      ]
+    },
+    {
+      "id": "8f618989-05aa-4ced-92b5-4de4075cc8bd",
+      "name": "Power Skills - Resilience, Growth Minded, Learning Agility, Time Management",
+      "issuer": "IBM",
+      "issuedOn": "2021-03-29",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/8f618989-05aa-4ced-92b5-4de4075cc8bd",
+      "image": "https://images.credly.com/images/aba73992-6d82-4914-9016-dccd117d399b/69e9d966becc0c6c0c5dffca.png",
+      "skills": [
+        "Be Resilient",
+        "Growth Minded",
+        "Learning Agility",
+        "Mindfulness",
+        "People Skills",
+        "Power Skills",
+        "Resilience",
+        "Time Management"
+      ]
+    },
+    {
+      "id": "ba8c1474-a761-4468-b179-5be460558d88",
+      "name": "Data Science Methodologies",
+      "issuer": "IBM",
+      "issuedOn": "2021-03-27",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/ba8c1474-a761-4468-b179-5be460558d88",
+      "image": "https://images.credly.com/images/3e42e90a-da56-4680-9f9b-140e8a1dd6d4/blob",
+      "skills": [
+        "Data Science",
+        "Data Science Methodology",
+        "PWID-B0443200"
+      ]
+    },
+    {
+      "id": "a2d21dc2-bf46-4c53-9b2c-e3d3f305627c",
+      "name": "IBM Machine Learning Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2021-03-27",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/a2d21dc2-bf46-4c53-9b2c-e3d3f305627c",
+      "image": "https://images.credly.com/images/45818c5e-a481-47f6-9958-9ad52f2846c4/image.png",
+      "skills": [
+        "Algorithms",
+        "Clustering",
+        "Data Mining",
+        "Data Modeling",
+        "Data Science",
+        "Deep Learning",
+        "PWID-B0164400",
+        "Predictive Analytics"
+      ]
+    },
+    {
+      "id": "e94f5d2f-444a-4673-b9e2-cf13e8b1e9fd",
+      "name": "Applied Data Science with Python - Level 2",
+      "issuer": "IBM",
+      "issuedOn": "2021-03-23",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/e94f5d2f-444a-4673-b9e2-cf13e8b1e9fd",
+      "image": "https://images.credly.com/images/90b92982-adc0-4826-afeb-455be8609899/blob",
+      "skills": [
+        "Bokeh",
+        "Matplotlib",
+        "PWID-B0571500",
+        "Python"
+      ]
+    },
+    {
+      "id": "5f550322-cc0e-49ad-9f36-ba69479e11f1",
+      "name": "Data Visualization with Python",
+      "issuer": "IBM",
+      "issuedOn": "2021-03-22",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/5f550322-cc0e-49ad-9f36-ba69479e11f1",
+      "image": "https://images.credly.com/images/9da3eedf-fda3-4e81-bb46-d174b4699bf1/image.png",
+      "skills": [
+        "And The Jupyter Notebook",
+        "Folium",
+        "Matplotlib",
+        "NumPy",
+        "PWID-B0320000",
+        "Python",
+        "Seaborn"
+      ]
+    },
+    {
+      "id": "e9874172-9787-4e38-a604-c2162520769b",
+      "name": "Containers & Kubernetes Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2021-03-21",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/e9874172-9787-4e38-a604-c2162520769b",
+      "image": "https://images.credly.com/images/82966826-6630-4768-80d4-6028b3fab414/image.png",
+      "skills": [
+        "Cloud",
+        "Container",
+        "IBM Cloud",
+        "Kubernetes",
+        "PWID-B0251400"
+      ]
+    },
+    {
+      "id": "821e5b1f-0080-4dd1-9a13-016fb2343de0",
+      "name": "Tools for Data Science",
+      "issuer": "Coursera / IBM",
+      "issuedOn": "2021-03-15",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/821e5b1f-0080-4dd1-9a13-016fb2343de0",
+      "image": "https://images.credly.com/images/60cf69ce-6129-425d-9a42-7732fa07da1e/Tools_for_Data_Science_Foundational.png",
+      "skills": [
+        "Jupyter",
+        "PWID-B0470500",
+        "RStudio",
+        "Watson Studio",
+        "Zeppelin"
+      ]
+    },
+    {
+      "id": "dfeefcb3-0048-499c-bbdb-703bcb04624c",
+      "name": "IBM Virtual Collaborator",
+      "issuer": "IBM",
+      "issuedOn": "2021-03-10",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/dfeefcb3-0048-499c-bbdb-703bcb04624c",
+      "image": "https://images.credly.com/images/a660853a-b47c-4950-956f-c8540a5ced74/IBM-Virtual-Collaborator-1.png",
+      "skills": [
+        "Actionable Insights",
+        "Co-Creation",
+        "Collaboration",
+        "Communication",
+        "Consultative Selling",
+        "Gravitas",
+        "Influence",
+        "Organization"
+      ]
+    },
+    {
+      "id": "946655c8-bebf-4e12-b064-6073ceb4d950",
+      "name": "IBM Cloud Private - Foundation Technology",
+      "issuer": "IBM",
+      "issuedOn": "2021-03-09",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/946655c8-bebf-4e12-b064-6073ceb4d950",
+      "image": "https://images.credly.com/images/39b80b52-77e4-4da5-9a52-7933c1d3bdd7/IBM_Cloud_Private_-_Foundation_Technology.png",
+      "skills": [
+        "Cloud Foundry",
+        "Containers",
+        "Docker",
+        "Helm",
+        "IBM Cloud Private",
+        "Kubernetes",
+        "Microservices",
+        "PWID-B0042500"
+      ]
+    },
+    {
+      "id": "98f8e272-ee72-42b4-b760-bc2fdeb0ac31",
+      "name": "Data Visualization Using Python",
+      "issuer": "IBM",
+      "issuedOn": "2021-03-08",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/98f8e272-ee72-42b4-b760-bc2fdeb0ac31",
+      "image": "https://images.credly.com/images/90baa00c-2d2b-4544-8c11-77c99068728a/blob",
+      "skills": [
+        "Data Visualization",
+        "Folium",
+        "Matplotlib",
+        "PWID-B0441900",
+        "Python",
+        "Seaborn",
+        "Visualization Tools"
+      ]
+    },
+    {
+      "id": "80280e86-b508-4472-9751-f1410dbfebb6",
+      "name": "SAP Certified - SAP S/4HANA Cloud Private Edition - Sourcing and Procurement",
+      "issuer": "SAP",
+      "issuedOn": "2021-03-04",
+      "expiresOn": "2027-09-12",
+      "type": "Certification",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/80280e86-b508-4472-9751-f1410dbfebb6",
+      "image": "https://images.credly.com/images/596a8e1a-f0a4-4292-99c7-7bdd59de3e8e/blob",
+      "skills": [
+        "Procurement",
+        "Strategic Procurement",
+        "Strategic Sourcing"
+      ]
+    },
+    {
+      "id": "1f115ef6-4518-4ae6-ba9e-b6dde336fb9d",
+      "name": "SAP Certified Application Associate - SAP S/4HANA Sourcing and Procurement",
+      "issuer": "SAP",
+      "issuedOn": "2021-03-04",
+      "expiresOn": "2025-03-31",
+      "type": "Certification",
+      "level": null,
+      "url": "https://www.credly.com/badges/1f115ef6-4518-4ae6-ba9e-b6dde336fb9d",
+      "image": "https://images.credly.com/images/03b9f921-960b-4ca8-9e48-dacc64cada98/C_TS452_1909.png",
+      "skills": [
+        "Apply Embedded Analytics Capabilities To Analyze Procurement KPIs",
+        "Configure And Customize Materials Management",
+        "Determine And Configure Organizational Levels And Master Data For Procurement Processes In SAP S/4HANA",
+        "Explain - Configure And Apply Inventory Management Capabilities",
+        "Explain - Configure And Apply Purchasing Capabilities",
+        "Identify - Configure And Execute Key Procurement Processes In SAP S/4HANA",
+        "Perform Consumption-based Planning And Forecasting",
+        "Perform Different Types Of Invoice Verification"
+      ]
+    },
+    {
+      "id": "8d76d9c0-4f01-4be3-8b03-ff4cfb22416b",
+      "name": "Explorations into Mindfulness",
+      "issuer": "IBM SkillsBuild",
+      "issuedOn": "2021-02-16",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/8d76d9c0-4f01-4be3-8b03-ff4cfb22416b",
+      "image": "https://images.credly.com/images/7aa8da9f-3580-4f1d-b604-faecad98e7c5/blob",
+      "skills": [
+        "Attention",
+        "Communication Skills",
+        "Emotional Intelligence",
+        "Mental Management",
+        "Mindfulness",
+        "PWID-B0530500",
+        "Professional Skills",
+        "Relaxation Techniques"
+      ]
+    },
+    {
+      "id": "2b721eca-e7f2-462a-9c18-e72eff3ca28b",
+      "name": "Data Analysis Using Python",
+      "issuer": "IBM",
+      "issuedOn": "2021-01-31",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/2b721eca-e7f2-462a-9c18-e72eff3ca28b",
+      "image": "https://images.credly.com/images/f5bb6420-710c-4508-bd1f-df3a9d3fafb0/blob",
+      "skills": [
+        "Data Analysis",
+        "Jupyter",
+        "JupyterLab",
+        "PWID-B0522000",
+        "Python"
+      ]
+    },
+    {
+      "id": "02b3a9ec-7594-40bb-8d8d-dcfbe22ea4cf",
+      "name": "Data Science Orientation",
+      "issuer": "Coursera / IBM",
+      "issuedOn": "2021-01-24",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/02b3a9ec-7594-40bb-8d8d-dcfbe22ea4cf",
+      "image": "https://images.credly.com/images/5fc2d535-e716-46c4-881a-f4822b8da0e5/Cognitive_Class_-_What_is_Data_Science.png",
+      "skills": [
+        "AI",
+        "Artificial Intelligence",
+        "Critical Listening",
+        "Critical Reading",
+        "Data Science",
+        "Machine Learning",
+        "PWID-B0267600"
+      ]
+    },
+    {
+      "id": "e6db6f8c-c06d-4e86-920b-e4703ed10559",
+      "name": "Machine Learning with Python",
+      "issuer": "Coursera / IBM",
+      "issuedOn": "2021-01-23",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/e6db6f8c-c06d-4e86-920b-e4703ed10559",
+      "image": "https://images.credly.com/images/f283df3d-1780-4c2d-947d-fc80eae0953b/image.png",
+      "skills": [
+        "Classification",
+        "Clustering",
+        "Data Science",
+        "ML",
+        "Machine Learning",
+        "PWID-B0247600",
+        "Recommender Systems",
+        "Regression"
+      ]
+    },
+    {
+      "id": "c70a5a9e-ec83-4150-a9e5-a8f423ffc15a",
+      "name": "Machine Learning with Python - Level 1",
+      "issuer": "IBM",
+      "issuedOn": "2021-01-15",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/c70a5a9e-ec83-4150-a9e5-a8f423ffc15a",
+      "image": "https://images.credly.com/images/ede27d34-ab6b-4eef-8808-f266564df2a2/blob",
+      "skills": [
+        "Classification",
+        "Clustering",
+        "PWID-B0176600",
+        "Recommender Systems",
+        "Regression",
+        "Supervised Learning",
+        "Unsupervised Learning"
+      ]
+    },
+    {
+      "id": "7812647d-2843-4edb-b024-85c16f655793",
+      "name": "Enterprise Design Thinking - Team Essentials for AI",
+      "issuer": "IBM",
+      "issuedOn": "2021-01-09",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/7812647d-2843-4edb-b024-85c16f655793",
+      "image": "https://images.credly.com/images/09f644d1-eed2-4279-bc49-1e26cddc9d3d/Team_Essentials.png",
+      "skills": [
+        "AI",
+        "Artificial Intelligence",
+        "Critical Thinking",
+        "Design Thinking",
+        "PWID-B0189400",
+        "Problem Solving"
+      ]
+    },
+    {
+      "id": "b22aa929-24de-465c-9b1e-37d7e4f713d8",
+      "name": "Data Analysis with Python",
+      "issuer": "Coursera / IBM",
+      "issuedOn": "2021-01-07",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/b22aa929-24de-465c-9b1e-37d7e4f713d8",
+      "image": "https://images.credly.com/images/950038fc-2519-4f79-8827-f71caf0f5095/image.png",
+      "skills": [
+        "NumPy",
+        "PWID-B0381400",
+        "Pandas",
+        "Python",
+        "SciPy",
+        "Scikit-learn"
+      ]
+    },
+    {
+      "id": "ef764f48-b1af-4bf3-9296-271113c80433",
+      "name": "IBM Cloud Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2021-01-06",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/ef764f48-b1af-4bf3-9296-271113c80433",
+      "image": "https://images.credly.com/images/7d768acf-ce3c-4a05-9778-a5013b1211c9/blob",
+      "skills": [
+        "Advisor",
+        "Cloud",
+        "IBM Cloud",
+        "PWID-B0195700"
+      ]
+    },
+    {
+      "id": "af6e55f5-923a-42ad-807b-f1fb6a641678",
+      "name": "Python for Data Science",
+      "issuer": "IBM",
+      "issuedOn": "2021-01-02",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/af6e55f5-923a-42ad-807b-f1fb6a641678",
+      "image": "https://images.credly.com/images/b40db465-587f-45eb-a854-af8630a630e7/blob",
+      "skills": [
+        "Data Science",
+        "PWID-B0367400",
+        "Pandas",
+        "Python",
+        "Python Programming"
+      ]
+    },
+    {
+      "id": "b18c5bce-f6c7-4801-ac16-4586aea8928c",
+      "name": "Cloud Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2020-11-02",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/b18c5bce-f6c7-4801-ac16-4586aea8928c",
+      "image": "https://images.credly.com/images/5ee26427-f944-4182-b802-459462184c9a/image.png",
+      "skills": [
+        "Architect",
+        "Cloud",
+        "Cloud Native",
+        "Container",
+        "DevOps",
+        "Developer",
+        "Hybrid",
+        "IBM Cloud"
+      ]
+    },
+    {
+      "id": "5e1d7774-6d1b-4300-96df-93ca1f8cc433",
+      "name": "IoT - Engineering - LL - Intro to IBM Engineering Test Management",
+      "issuer": "IBM",
+      "issuedOn": "2020-10-15",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/5e1d7774-6d1b-4300-96df-93ca1f8cc433",
+      "image": "https://images.credly.com/images/aba80971-f282-4b12-b681-bbda14fb6ece/LL_Eng_Test_Mgmt_-_Engineering.png",
+      "skills": [
+        "ETM",
+        "IBM Engineeering Lifecycle",
+        "PWID-B0498000",
+        "Test Management"
+      ]
+    },
+    {
+      "id": "3c5c4aed-d1f5-4a96-9506-b5507e2999f5",
+      "name": "IBM CLM® for SAFe® - Level 1",
+      "issuer": "IBM",
+      "issuedOn": "2020-10-13",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/3c5c4aed-d1f5-4a96-9506-b5507e2999f5",
+      "image": "https://images.credly.com/images/fb0ed3a5-d027-4134-87a3-ea2737e5b36f/image.png",
+      "skills": [
+        "Collaborative Lifecycle Management",
+        "Connected Products",
+        "Continuous Engineering",
+        "PWID-B0077900",
+        "SAFe®"
+      ]
+    },
+    {
+      "id": "1975a5ea-3fc8-44ef-844e-86785723ac70",
+      "name": "AgileTA Explorer",
+      "issuer": "IBM",
+      "issuedOn": "2020-10-10",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/1975a5ea-3fc8-44ef-844e-86785723ac70",
+      "image": "https://images.credly.com/images/63fc3f04-b31e-40e0-b24f-ebe6824a39a7/AgileTA-Explorer.png",
+      "skills": [
+        "Agile",
+        "Agile Recruitment",
+        "AgileTA",
+        "HR",
+        "Hiring",
+        "Human Resources",
+        "Recruitment",
+        "TA"
+      ]
+    },
+    {
+      "id": "d49baf30-0dd7-49f4-9a37-4c484a38bbdf",
+      "name": "DevSecOps Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2020-10-09",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/d49baf30-0dd7-49f4-9a37-4c484a38bbdf",
+      "image": "https://images.credly.com/images/6fcae0c0-78b7-48c5-a414-5d21665b2250/DevSecOps-Essentials.png",
+      "skills": [
+        "Collaboration",
+        "DevOps",
+        "Essentials",
+        "Methodology",
+        "Practice-based",
+        "Principles",
+        "Software Development"
+      ]
+    },
+    {
+      "id": "0c36e6ea-e271-46d4-9465-5b5966d51c0e",
+      "name": "IBM Garage Methodology Explorer",
+      "issuer": "IBM",
+      "issuedOn": "2020-09-25",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/0c36e6ea-e271-46d4-9465-5b5966d51c0e",
+      "image": "https://images.credly.com/images/638d3298-73ef-4821-9686-8c65f75bb4e6/IBM_Garage_Methodology_Explorer.png",
+      "skills": [
+        "Agile",
+        "Design Thinking",
+        "DevOps",
+        "Garage Methodology",
+        "Lean",
+        "PWID-B0131400"
+      ]
+    },
+    {
+      "id": "fc0395f9-c408-492e-b484-484c26db34a2",
+      "name": "Using Agile Service Manager to Understand and Prevent Service Problems",
+      "issuer": "IBM",
+      "issuedOn": "2020-09-17",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/fc0395f9-c408-492e-b484-484c26db34a2",
+      "image": "https://images.credly.com/images/abd628a0-87c1-410c-8d28-1fdae8ffe1e4/image.png",
+      "skills": [
+        "Containers",
+        "Networking Components",
+        "PWID-B0116300",
+        "Pods",
+        "Virtual Machines"
+      ]
+    },
+    {
+      "id": "9e43e33f-9ac7-4953-93f1-15fe5221801b",
+      "name": "Data Science Foundations - Level 1",
+      "issuer": "IBM",
+      "issuedOn": "2020-09-08",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/9e43e33f-9ac7-4953-93f1-15fe5221801b",
+      "image": "https://images.credly.com/images/5950e6bd-1d0b-40f0-9313-4b2fa36622ce/blob",
+      "skills": [
+        "Data Science",
+        "Data Scientist Workbench",
+        "Dswb",
+        "PWID-B0159400",
+        "Python",
+        "R",
+        "R Programming",
+        "Scala"
+      ]
+    },
+    {
+      "id": "2b86c9e4-a88f-475f-867e-afc18bd60123",
+      "name": "Watson Studio Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2020-09-01",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/2b86c9e4-a88f-475f-867e-afc18bd60123",
+      "image": "https://images.credly.com/images/ad001ad4-458d-44bc-90d0-9295c7b87655/Watson_Studio_Essentials_-_v2.png",
+      "skills": [
+        "Data Science",
+        "Deep Learning",
+        "Jupyter Notebooks",
+        "Machine Learning",
+        "PWID-B0321200",
+        "Python",
+        "R",
+        "RStudio"
+      ]
+    },
+    {
+      "id": "978002d5-eb9a-485c-8dc9-97890894106c",
+      "name": "IBM Automation Practitioner",
+      "issuer": "IBM",
+      "issuedOn": "2020-08-28",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/978002d5-eb9a-485c-8dc9-97890894106c",
+      "image": "https://images.credly.com/images/9a3615eb-ffc5-4384-bbe2-c3b20d0c294d/IBM-Automation-Practitioner.png",
+      "skills": [
+        "Artificial Intelligence",
+        "Automation",
+        "Automation Foundation",
+        "Automation Knowledge",
+        "Automation Practitioner",
+        "Cognitive",
+        "Digital Workforce",
+        "IBM Automation"
+      ]
+    },
+    {
+      "id": "59762a4b-7560-4e53-805b-1642b9b81c76",
+      "name": "Quality in Practice",
+      "issuer": "IBM",
+      "issuedOn": "2020-08-28",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/59762a4b-7560-4e53-805b-1642b9b81c76",
+      "image": "https://images.credly.com/images/e53a7464-dff2-4028-a8d3-6336574b7028/Quality-in-Practice.png",
+      "skills": [
+        "CMMI",
+        "Continuous Improvement",
+        "Methods Overview",
+        "Metrics",
+        "QA In Delivery",
+        "Quality Assurance",
+        "Software SDLC Foundation"
+      ]
+    },
+    {
+      "id": "7ff7e1c8-3295-4a7c-bd03-1533bffeca56",
+      "name": "Think Like a Hacker",
+      "issuer": "IBM",
+      "issuedOn": "2020-08-28",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/7ff7e1c8-3295-4a7c-bd03-1533bffeca56",
+      "image": "https://images.credly.com/images/fb49de32-6a4c-4850-97cc-942b638ae4c3/Think-LIke-a-Hacker.png",
+      "skills": [
+        "Security"
+      ]
+    },
+    {
+      "id": "efd52581-3cf1-41c3-a375-428af4efaddf",
+      "name": "IBM Garage Seller for Services",
+      "issuer": "IBM",
+      "issuedOn": "2020-08-27",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/efd52581-3cf1-41c3-a375-428af4efaddf",
+      "image": "https://images.credly.com/images/d3f32c2d-7d64-4f2f-9f8f-805ef6eacf3f/IBM_Garage_Seller_for_Services.png",
+      "skills": [
+        "Contracting",
+        "IBM Garage",
+        "Offering",
+        "Selling",
+        "Value Proposition"
+      ]
+    },
+    {
+      "id": "1e58442c-ef69-4b55-9553-6931c49ae5ae",
+      "name": "Electronics Industry Jumpstart",
+      "issuer": "IBM",
+      "issuedOn": "2020-08-26",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/1e58442c-ef69-4b55-9553-6931c49ae5ae",
+      "image": "https://images.credly.com/images/dfef6410-90af-4daa-98fe-f7c242e91b03/Electronics-Industry-Jumpstart.png",
+      "skills": [
+        "Benchmarks",
+        "Bold Idea Creation",
+        "Business Models",
+        "Business Processes",
+        "Industry Expertise",
+        "Industry Financials",
+        "Industry Segments",
+        "Industry Solutions"
+      ]
+    },
+    {
+      "id": "8bc1f13c-617e-4206-9387-d544fe2aa7f1",
+      "name": "The IBM Way",
+      "issuer": "IBM",
+      "issuedOn": "2020-08-23",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/8bc1f13c-617e-4206-9387-d544fe2aa7f1",
+      "image": "https://images.credly.com/images/009696ad-3bb2-48e7-88d6-48c4a0d2c9a3/The-IBM-Way.png",
+      "skills": [
+        "Agile",
+        "Client Delivery",
+        "Client Services",
+        "Cloud",
+        "Cognitive",
+        "Consulting",
+        "IBM Way"
+      ]
+    },
+    {
+      "id": "59a83cec-aab2-4b36-bc3f-26e34f0c51a7",
+      "name": "Power Skills - Communication, Presentation, Collaboration, and Problem Solving",
+      "issuer": "IBM",
+      "issuedOn": "2020-07-30",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/59a83cec-aab2-4b36-bc3f-26e34f0c51a7",
+      "image": "https://images.credly.com/images/a9e02af0-34b1-460b-a4b7-9eb4a3070535/69e9d5aebecc0c6c0c5dfb6b.png",
+      "skills": [
+        "Agile",
+        "Collaboration",
+        "Communication",
+        "Communication Skills",
+        "Creative Thinking",
+        "Critical Thinking",
+        "Delivering Quality Work",
+        "Emotional Intelligence"
+      ]
+    },
+    {
+      "id": "3385d8e0-ffef-408c-9e77-d381fbea2b5c",
+      "name": "Watson Assistant Hands-On",
+      "issuer": "IBM",
+      "issuedOn": "2020-07-30",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/3385d8e0-ffef-408c-9e77-d381fbea2b5c",
+      "image": "https://images.credly.com/images/391b9f26-273b-4721-8718-05152e3cd2da/Watson-Assistant-Hands-On.png",
+      "skills": [
+        "AI",
+        "Artificial Intelligence",
+        "Assistant",
+        "Bots",
+        "Chatbots",
+        "Conversation",
+        "Dialog",
+        "Digital Agents"
+      ]
+    },
+    {
+      "id": "8259c398-5a3a-44f5-8282-e9982a6c6aa6",
+      "name": "Watson Assistant Methodology",
+      "issuer": "IBM",
+      "issuedOn": "2020-07-29",
+      "expiresOn": "2022-07-27",
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/8259c398-5a3a-44f5-8282-e9982a6c6aa6",
+      "image": "https://images.credly.com/images/6135f203-21b0-41f1-bd19-681faf473235/Watson_Assistant_-Methodology.png",
+      "skills": [
+        "AI",
+        "Artificial Intelligence",
+        "Assistant",
+        "Bots",
+        "Chatbots",
+        "Dialog",
+        "Digital Agents",
+        "Digital Assistants"
+      ]
+    },
+    {
+      "id": "184c38e1-cea3-4456-abe1-6fa8538b55e4",
+      "name": "Watson Assistant Foundations",
+      "issuer": "IBM",
+      "issuedOn": "2020-07-27",
+      "expiresOn": "2021-07-26",
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/184c38e1-cea3-4456-abe1-6fa8538b55e4",
+      "image": "https://images.credly.com/images/993f0916-3c26-4d06-89ff-76c29e986d68/Watson_Assistant_-_Foundations.png",
+      "skills": [
+        "AI",
+        "Artificial Intelligence",
+        "Bots",
+        "Chatbots",
+        "Dialog",
+        "Digital Agents",
+        "Digital Assistants",
+        "Entities"
+      ]
+    },
+    {
+      "id": "235c1328-1964-4d69-9d0e-cba7b7595a58",
+      "name": "Digital Insights - Knowledge Delivery",
+      "issuer": "IBM",
+      "issuedOn": "2020-07-24",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/235c1328-1964-4d69-9d0e-cba7b7595a58",
+      "image": "https://images.credly.com/images/8018262b-22f7-4211-ab8b-16b6172799ad/Digital-Insights-Delivery.png",
+      "skills": [
+        "Analytics Platform Services",
+        "Big Data",
+        "Cloud",
+        "Digital Insights Methodology",
+        "Hadoop",
+        "Hive",
+        "Information Integration",
+        "SQL"
+      ]
+    },
+    {
+      "id": "4e26c254-939a-4dc5-b2a6-3e6e1680e887",
+      "name": "Security and Privacy by Design Foundations",
+      "issuer": "IBM",
+      "issuedOn": "2020-07-21",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/4e26c254-939a-4dc5-b2a6-3e6e1680e887",
+      "image": "https://images.credly.com/images/557dcbfb-065e-4971-8a9b-35fb91896ef5/Security-and-Privacy-by-Design-Foundational.png",
+      "skills": [
+        "Security",
+        "Security Testing",
+        "Software Development",
+        "Vulnerability Management"
+      ]
+    },
+    {
+      "id": "92a94f96-b6e7-4b1a-abe3-02451898825f",
+      "name": "IBM Agile Explorer",
+      "issuer": "IBM",
+      "issuedOn": "2020-07-10",
+      "expiresOn": null,
+      "type": null,
+      "level": null,
+      "url": "https://www.credly.com/badges/92a94f96-b6e7-4b1a-abe3-02451898825f",
+      "image": "https://images.credly.com/images/a972f054-be07-4845-85c7-95c8d11852f5/IBM-Agile-Explorer.png",
+      "skills": [
+        "Agile",
+        "Agile Kanban",
+        "Agile Operations",
+        "Collaboration",
+        "Flexible",
+        "Iterations",
+        "Sprints",
+        "Team"
+      ]
+    },
+    {
+      "id": "4c1d1b98-27dc-4b82-a175-7894009f74b8",
+      "name": "IBM Blockchain Foundation Consulting",
+      "issuer": "IBM",
+      "issuedOn": "2020-07-10",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/4c1d1b98-27dc-4b82-a175-7894009f74b8",
+      "image": "https://images.credly.com/images/0b831161-bca5-4118-97c5-df106a5f6515/IBM-Blockchain-Foundation-Consulting.png",
+      "skills": [
+        "Blockchain",
+        "IBM Blockchain Platform",
+        "Network Design"
+      ]
+    },
+    {
+      "id": "fc08be3c-685b-4e0d-993b-92ca63552445",
+      "name": "Deep Learning Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2020-07-06",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Intermediate",
+      "url": "https://www.credly.com/badges/fc08be3c-685b-4e0d-993b-92ca63552445",
+      "image": "https://images.credly.com/images/ef4b79d9-5b12-4d26-b4f2-a8fc22b0351b/blob",
+      "skills": [
+        "Convolutional Neural Networks",
+        "Data Science",
+        "Deep Learning",
+        "Neural Networks",
+        "PWID-B0289300",
+        "Statistical Programming"
+      ]
+    },
+    {
+      "id": "578273fa-8c6e-4d28-900f-a84d360c0840",
+      "name": "Enterprise Design Thinking Practitioner",
+      "issuer": "IBM",
+      "issuedOn": "2020-07-02",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/578273fa-8c6e-4d28-900f-a84d360c0840",
+      "image": "https://images.credly.com/images/bc08972c-3c7d-4b99-82a0-c94bcca36674/Badges_v8-07_Practitioner.png",
+      "skills": [
+        "Design",
+        "Empathy",
+        "Experience Design",
+        "Ideation",
+        "PWID-B0495200",
+        "UX",
+        "User Experience",
+        "User Research"
+      ]
+    },
+    {
+      "id": "c400b675-c30b-4966-b4d9-9be9f50d1c26",
+      "name": "Cognitive Practitioner",
+      "issuer": "IBM",
+      "issuedOn": "2020-07-01",
+      "expiresOn": null,
+      "type": "Learning",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/c400b675-c30b-4966-b4d9-9be9f50d1c26",
+      "image": "https://images.credly.com/images/ac149add-c35d-47e0-89ed-af16b9e37e05/Cognitive-Practitioner.png",
+      "skills": [
+        "AI Fundamentals",
+        "Cognitive Fundamentals",
+        "Cognitive Market",
+        "Cognitive Technologies",
+        "IBM Watson Conversation Service Foundation",
+        "Machine Learning Fundamentals",
+        "Watson"
+      ]
+    },
+    {
+      "id": "c2f5fbe7-63d0-4f63-8514-27b9b1e0eae6",
+      "name": "IBM Watson Machine Learning Essentials",
+      "issuer": "IBM",
+      "issuedOn": "2020-06-30",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/c2f5fbe7-63d0-4f63-8514-27b9b1e0eae6",
+      "image": "https://images.credly.com/images/3d90dec1-cf80-4815-b359-ac84a8acb848/Watson_Machine_Learning_Essentials.png",
+      "skills": [
+        "Analytics",
+        "Machine Learning",
+        "PWID-B0583200",
+        "Watson Machine Learning",
+        "Watson Studio"
+      ]
+    },
+    {
+      "id": "2a4c4f6b-a915-4ef4-9d13-60af936eca92",
+      "name": "IBM Blockchain Essentials V2",
+      "issuer": "IBM",
+      "issuedOn": "2020-06-24",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/2a4c4f6b-a915-4ef4-9d13-60af936eca92",
+      "image": "https://images.credly.com/images/2f9eee24-6834-4595-b2b6-e8e585190a0d/IBM-Blockchain-Essentials-V2.png",
+      "skills": [
+        "Blockchain",
+        "DLT",
+        "Distributed Ledger Technology",
+        "Hyperledger",
+        "Ledger",
+        "Open Source",
+        "PWID-B0045400"
+      ]
+    },
+    {
+      "id": "81c96a01-e63a-4c39-8f13-55d450923b31",
+      "name": "IBM Automation: Compass",
+      "issuer": "IBM",
+      "issuedOn": "2020-06-23",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": "Foundational",
+      "url": "https://www.credly.com/badges/81c96a01-e63a-4c39-8f13-55d450923b31",
+      "image": "https://images.credly.com/images/34d550f8-8478-4b71-b7ab-91dd3642932e/image.png",
+      "skills": [
+        "Digital Worker",
+        "Future Of Work",
+        "Intelligent Automation",
+        "Intelligent Workflow",
+        "PWID-B0275700"
+      ]
+    }
+  ]
+}

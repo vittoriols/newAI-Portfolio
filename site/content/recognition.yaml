@@ -1,0 +1,32 @@
+# Awards, teaching and community. Sources: LinkedIn (Honors, Organizations) and
+# the previous AskMe context.
+
+awards:
+  - title: Credly Top Legacy Badge Earner
+    date: 2024-10
+    note: Among Credly's top badge earners of all time.
+  - title: EMEA IBM Tech 2023 Honoree
+    date: 2023
+    note: Invited to IBM Tech 2023 in Dubai as one of IBM's top technical contributors, for the work done in 2022.
+  - title: Speaker at 75 years of IBM in Naples
+    date: 2023
+    note: Spoke about growth at IBM at Città della Scienza, alongside IBM leadership and local institutions.
+  - title: IBM Champion Learner Gold
+    date: 2021–2024
+    note: Every year from 2021 to 2024, for hundreds of hours of learning a year.
+
+teaching:
+  - title: SAP Academy teacher
+    period: 2022 – present
+    note: Trains new IBM hires on Agile, Scrum and Design Thinking.
+  - title: Mentor and company tutor
+    period: 2022 – present
+    note: IBM Blue Core Mentor; tutor for university interns.
+  - title: Ask-me-anything sessions for new hires
+    period: 2023 – present
+    note: Global sessions with new IBM hires on career growth.
+
+community:
+  - title: IBM Open Innovation Community
+    period: 2024 – present
+    note: Member; recognised as an Initiative Star Contributor in 2025.

@@ -1,0 +1,46 @@
+# Client engagements, always anonymous: industry and scope, never the client's name.
+# Source: the "Projects" section of LinkedIn. Leave "end" out if still in progress.
+
+- id: lottery-ariba
+  industry: International lottery operator
+  start: 2025-09
+  end: 2026-04
+  scope: SAP Ariba
+
+- id: energy-ariba
+  industry: Energy company
+  start: 2024-07
+  scope: SAP Ariba Procurement, Sourcing and Supplier Lifecycle and Performance
+
+- id: multiutility
+  industry: Multi-utility
+  start: 2024-03
+  end: 2024-07
+  scope: SAP
+
+- id: banking-pi-po
+  industry: International banking group
+  start: 2023-04
+  end: 2024-02
+  scope: SAP PI 7.4 to SAP PO 7.5 migration, as project manager
+
+- id: retail-s4
+  industry: International retailer
+  start: 2021-03
+  end: 2022-02
+  scope: Greenfield SAP S/4HANA, active invoicing and external interfaces
+
+- id: utility-srm-a
+  industry: Energy and utilities operator
+  start: 2020-06
+  scope: >-
+    SAP SRM application management: catalogues with SAP MDM, supplier master data,
+    and a tool that automates its upload
+
+- id: utility-srm-b
+  industry: Energy and utilities operator
+  start: 2020-06
+  end: 2021-03
+  scope: >-
+    SAP SRM application management: EU tenders, planned and spot purchasing,
+    catalogues, and a robotic process automation for external user creation

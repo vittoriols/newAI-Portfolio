@@ -1,0 +1,25 @@
+# Certifications that are not on Credly (source: LinkedIn). Same format as the
+# Credly badges; expired ones are hidden automatically.
+# linkedinName: the name as written on LinkedIn, when it differs.
+# Not listed on purpose: Google Analytics and Fortinet NSE 2 (expired),
+# the Coursera course and the British Institutes ESOL B2.2 (superseded by GESE Grade 9).
+
+- id: itil4-foundation
+  name: ITIL 4 Foundation Certificate in IT Service Management
+  issuer: PeopleCert
+  issuedOn: 2026-08-01
+  expiresOn: 2029-08-01
+  url: https://badges.peoplecert.org/Badge/en/2/37BD0C26-2017-4298-B614-005BD155303A?1373
+
+- id: trinity-gese-9
+  name: GESE Grade 9, CEFR B2.3
+  linkedinName: GESE Grade 9 - level QCER B2.3
+  issuer: Trinity College London
+  issuedOn: 2013-05-01
+
+- id: registered-scrum-master
+  name: Registered Scrum Master
+  issuer: Scrum Inc.
+  issuedOn: 2021-11-01
+  expiresOn: 2022-11-01
+  url: https://s3.amazonaws.com/scruminc-certs/RSM-8042170

@@ -1,0 +1,85 @@
+---
+// Contact form sent through Web3Forms. Its access key is public by design
+// (it can only deliver messages to your inbox), so it lives in the page.
+const key = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
+---
+{key ? (
+  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-contact novalidate>
+    <input type="hidden" name="access_key" value={key} />
+    <input type="hidden" name="from_name" value="Portfolio contact form" />
+    <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <div class="row-2">
+      <div class="field">
+        <label for="cf-name">Name</label>
+        <input id="cf-name" name="name" type="text" autocomplete="name" required minlength="2" />
+      </div>
+      <div class="field">
+        <label for="cf-email">Email</label>
+        <input id="cf-email" name="email" type="email" autocomplete="email" required />
+      </div>
+    </div>
+    <div class="field">
+      <label for="cf-subject">Subject</label>
+      <input id="cf-subject" name="subject" type="text" required minlength="3" />
+    </div>
+    <div class="field">
+      <label for="cf-message">Message</label>
+      <textarea id="cf-message" name="message" required minlength="10"></textarea>
+    </div>
+    <div class="actions">
+      <button class="button" type="submit">Send message</button>
+      <p class="status small" data-status role="status" aria-live="polite"></p>
+    </div>
+  </form>
+) : (
+  <p class="contact-form muted">The contact form is not configured in this build. Write to me by email or on LinkedIn.</p>
+)}
+
+<style>
+  .contact-form { display: grid; gap: 1rem; }
+  .row-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .status { margin: 0; }
+  .status.error { color: #A3271C; }
+  .status.ok { color: var(--live); font-weight: 600; }
+  input:user-invalid, textarea:user-invalid { border-color: #A3271C; }
+  @media (max-width: 560px) { .row-2 { grid-template-columns: minmax(0, 1fr); } }
+</style>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-contact]');
+  if (form) {
+    const status = form.querySelector<HTMLElement>('[data-status]')!;
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+    const say = (text: string, kind: 'ok' | 'error' | '' = '') => {
+      status.textContent = text;
+      status.className = `status small ${kind}`;
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        say('Fill in every field: the message needs at least 10 characters.', 'error');
+        return;
+      }
+      button.disabled = true;
+      say('Sending…');
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(form),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data.success) throw new Error(data.message);
+        form.reset();
+        say('Message sent. I will reply by email.', 'ok');
+      } catch {
+        say('The message was not sent. Try again, or write to me by email.', 'error');
+      } finally {
+        button.disabled = false;
+      }
+    });
+  }
+</script>

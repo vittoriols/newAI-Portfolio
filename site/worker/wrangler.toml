@@ -1,0 +1,12 @@
+# AskMe proxy. Deploy from this folder:
+#   npx wrangler login
+#   npx wrangler secret put GROQ_API_KEY
+#   npx wrangler deploy
+name = "askme"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+CONTEXT_URL = "https://vittoriols.github.io/newAI-Portfolio/askme/context.json"
+ALLOWED_ORIGINS = "https://vittoriols.github.io,http://localhost:4321"
+MODEL = "llama-3.1-8b-instant"
