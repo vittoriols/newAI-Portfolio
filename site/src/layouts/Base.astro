@@ -10,8 +10,9 @@ interface Props {
   updatedOn?: string;
   credlySyncedOn?: string;
   nav?: boolean;
+  cvUrl?: string;
 }
-const { title, description, updatedOn, credlySyncedOn, nav = true } = Astro.props;
+const { title, description, updatedOn, credlySyncedOn, nav = true, cvUrl } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(withBase('og.png'), Astro.site);
 const askEndpoint = import.meta.env.PUBLIC_ASKME_ENDPOINT;
@@ -57,6 +58,12 @@ const csp = [
               <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
+        )}
+        {cvUrl && (
+          <a class="cv-link" href={cvUrl} target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            CV<span class="visually-hidden"> (PDF, opens in a new tab)</span>
+          </a>
         )}
       </div>
     </header>

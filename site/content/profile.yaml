@@ -57,6 +57,9 @@ links:
   github: https://github.com/vittoriols
   sapCommunity: https://community.sap.com/t5/user/viewprofilepage/user-id/1448043
   credly: https://www.credly.com/users/vittorio-loris-simonetti
+  # CV in PDF on Google Drive. To update it keep the same link: on Drive use
+  # "Manage versions" and upload the new file, instead of uploading a new one.
+  cv: https://drive.google.com/file/d/1MwcR6yGW3b-wB2-SUOr8X3ySwxOYSSbt/view
 
 # Username used by "npm run import:credly".
 credly: vittorio-loris-simonetti

@@ -49,7 +49,7 @@ if (profile.audio && monthIndex(profile.audio.recorded) < latestRoleChange) {
 const today = new Date().toISOString().slice(0, 10);
 const description = `${profile.name}: ${profile.role} at ${profile.organization}. ${profile.thesis}`;
 ---
-<Base title={`${profile.name}, ${profile.role}`} description={description} updatedOn={today} credlySyncedOn={credly.syncedOn ?? today}>
+<Base title={`${profile.name}, ${profile.role}`} description={description} updatedOn={today} credlySyncedOn={credly.syncedOn ?? today} cvUrl={profile.links.cv}>
 
   <!-- Hero -->
   <section class="hero" id="about" aria-labelledby="hero-name">
@@ -239,6 +239,7 @@ const description = `${profile.name}: ${profile.role} at ${profile.organization}
       <p class="section-lede">For projects, talks or anything AskMe could not answer. I reply by email.</p>
       <ul class="contact-links">
         <li><a href={`mailto:${profile.links.email}`}>{profile.links.email}</a></li>
+        {profile.links.cv && <li><a href={profile.links.cv} target="_blank" rel="noopener">CV (PDF)</a></li>}
         <li><a href={profile.links.linkedin}>LinkedIn</a></li>
         <li><a href={profile.links.credly}>Credly</a></li>
         <li><a href={profile.links.sapCommunity}>SAP Community</a></li>

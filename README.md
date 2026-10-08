@@ -49,13 +49,3 @@ In locale, AskMe e il form di contatto leggono le chiavi da `site/.env`, che va 
 PUBLIC_ASKME_ENDPOINT=https://askme.<tuo-account>.workers.dev
 PUBLIC_WEB3FORMS_KEY=<chiave Web3Forms>
 ```
-
-## File del vecchio sito da rimuovere
-
-Il vecchio sito (Create React App) non è più usato dalla build. Questi file e cartelle in radice si
-possono cancellare:
-
-- `src/`, `public/` (l'audio e la firma sono già stati copiati in `site/`)
-- `package.json`, `package-lock.json`, `node_modules/`, `build/`
-- `tailwind.config.js`, `postcss.config.js`
-- il file chiamato `--force` (si cancella con `rm ./--force`)

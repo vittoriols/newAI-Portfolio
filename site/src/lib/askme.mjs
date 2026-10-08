@@ -68,7 +68,8 @@ export function buildContext(all, { featured } = {}) {
 
   add('contact', 'Contact', '#contact');
   lines.push('## Contact [[contact]]',
-    `Email ${profile.links.email}, LinkedIn ${profile.links.linkedin}, or the contact form on the site. No phone number is shared.`, '');
+    `Email ${profile.links.email}, LinkedIn ${profile.links.linkedin}, or the contact form on the site. No phone number is shared.`,
+    ...(profile.links.cv ? [`The CV in PDF can be downloaded from ${profile.links.cv} or with the CV button at the top of the page.`] : []), '');
 
   lines.push('## Notes from Vittorio', notes.replace(/<!--[\s\S]*?-->/g, '').trim());
 

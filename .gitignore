@@ -1,24 +1,19 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# The site lives in site/, which has its own .gitignore.
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Dependencies and builds, wherever they are
+node_modules/
+dist/
+.astro/
 
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
+# Local keys
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
 
+# Never commit a LinkedIn export: it contains messages, contacts and your address.
+*.zip
+*LinkedInDataExport*
+
+# OS files
+.DS_Store
+Thumbs.db
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
