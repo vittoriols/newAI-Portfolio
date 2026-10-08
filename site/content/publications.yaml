@@ -1,0 +1,33 @@
+# Book, patent and defensive publication.
+
+- id: book-ariba-catalog
+  type: Book
+  title: Catalog Management with SAP Ariba Catalog
+  publisher: SAP Press
+  date: 2025-08
+  url: https://www.sap-press.com/catalog-management-with-sap-ariba-catalog_6208/
+  summary: >-
+    A complete guide to managing catalogues in SAP Ariba procurement.
+
+- id: patent-genai-accessibility
+  type: Patent
+  title: Gen AI System to Support Impaired People
+  publisher: Filed by IBM
+  date: 2025-06
+  confidential: true
+  summary: >-
+    A Generative AI system designed to assist people with impairments. Details are
+    confidential while the application is pending.
+
+# The title used by the previous site. LinkedIn lists it as
+# "Gen AI Application for HR and Project Management use case": check which one
+# is registered on IP.com and keep that.
+- id: defensive-publication-hr
+  type: Defensive publication
+  title: System and Method that Use Generative AI to Create a Short List of Job Candidates
+  publisher: IP.com
+  date: 2024-07
+  confidential: true
+  summary: >-
+    Using Generative AI to support recruiting and project staffing by short-listing
+    candidates. The full text is confidential.

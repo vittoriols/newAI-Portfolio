@@ -1,0 +1,86 @@
+---
+import '../styles/global.css';
+import { Image } from 'astro:assets';
+import signature from '../assets/signature.png';
+import { withBase } from '../lib/paths.mjs';
+
+interface Props {
+  title: string;
+  description: string;
+  updatedOn?: string;
+  credlySyncedOn?: string;
+  nav?: boolean;
+}
+const { title, description, updatedOn, credlySyncedOn, nav = true } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL(withBase('og.png'), Astro.site);
+const askEndpoint = import.meta.env.PUBLIC_ASKME_ENDPOINT;
+const askOrigin = askEndpoint ? new URL(askEndpoint).origin : '';
+const csp = [
+  "default-src 'self'", "script-src 'self' 'unsafe-inline'", "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data:", "media-src 'self'", "font-src 'self'",
+  `connect-src 'self' https://api.web3forms.com ${askOrigin}`.trim(),
+  "form-action 'self' https://api.web3forms.com", "base-uri 'self'",
+].join('; ');
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={withBase('favicon.svg')} type="image/svg+xml" />
+    <meta name="theme-color" content="#0A1422" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta http-equiv="Content-Security-Policy" content={csp} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="wordmark" href={withBase('')}>Vittorio Loris Simonetti</a>
+        {nav && (
+          <nav class="site-nav" aria-label="Sections">
+            <ul>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#publications">Book and patent</a></li>
+              <li><a href="#credentials">Credentials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        )}
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+    <slot name="overlay" />
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <Image src={signature} alt="Vittorio Loris Simonetti's signature" class="signature" width={352} />
+        <div>
+          {updatedOn && <p>Content updated on {updatedOn}.{credlySyncedOn && ` Badges synced from Credly on ${credlySyncedOn}.`}</p>}
+          <p>Built with Astro from plain content files. Source on <a href="https://github.com/vittoriols/newAI-Portfolio">GitHub</a>.</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // The header gets a background once the page leaves the hero.
+      const header = document.querySelector('.site-header');
+      const onScroll = () => header?.toggleAttribute('data-scrolled', window.scrollY > 24);
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    </script>
+  </body>
+</html>

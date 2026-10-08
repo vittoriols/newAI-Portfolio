@@ -1,0 +1,16 @@
+# Curated skills, without percentages. Grouped by what a client would hire you for.
+
+- group: Architecture
+  items: [Solution architecture, Enterprise architecture, Application architecture, SAP LeanIX, TOGAF and Open Group methods, Integration design]
+
+- group: AI
+  items: [Generative AI solutions, Agentic AI, IBM watsonx.ai, IBM watsonx Orchestrate, AI use-case definition]
+
+- group: SAP
+  items: [SAP Ariba Buying, SAP Ariba Sourcing, SAP Ariba SLP, SAP Ariba Contracts and Catalog, SAP S/4HANA, SAP SRM, SAP EHS, SAP Fiori and SAPUI5, SAP BTP, SAP Integration Suite]
+
+- group: Leading and delivering
+  items: [Offering design and pre-sales, People management, Project management with SAP Activate, Agile and Scrum, ITIL 4 service management]
+
+- group: Building
+  items: [ABAP and ABAP Cloud, JavaScript, Python, Flutter and Dart]

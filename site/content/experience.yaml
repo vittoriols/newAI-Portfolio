@@ -1,0 +1,141 @@
+# Roles, as on LinkedIn (titles and dates come from the LinkedIn export).
+# "npm run import:linkedin" proposes new roles and date changes; it never
+# overwrites summary, highlights or featured.
+#
+# start/end: YYYY-MM. Leave "end" out for a role still in progress.
+# Never name clients: describe them by industry (see engagements.yaml).
+# linkedinTitle: the title as written on LinkedIn, when the site uses a cleaner one.
+
+- id: service-line-leader
+  title: Hybrid Cloud & Data Service Line Leader
+  company: IBM Consulting
+  start: 2026-04
+  featured: true
+  summary: >-
+    Leads the Hybrid Cloud & Data service line at IBM Consulting FutureNow Italy. Defines
+    the offerings, shapes propositions with clients and guides transformations from
+    concept to execution, with Generative and Agentic AI at the centre.
+  highlights:
+    - Service line strategy and offering design
+    - Client propositions for Generative and Agentic AI
+    - Bridge between offering design and project delivery
+
+- id: solution-architect
+  title: Solution Architect
+  company: IBM Consulting
+  start: 2022-05
+  featured: true
+  summary: >-
+    Designs solutions across SAP and enterprise platforms: requirements, gap analysis,
+    feasibility, functional and technical specifications. Since 2025 also supports
+    pre-sales, solutioning and offering definition, translating client needs into
+    IBM propositions.
+  highlights:
+    - Solution and enterprise architecture
+    - Pre-sales solutioning and offering definition
+    - Stakeholder management from delivery teams to C-level
+
+- id: ariba-team-leader
+  title: SAP Ariba Upstream and Downstream Team Leader
+  company: IBM Consulting
+  start: 2024-05
+  featured: true
+  summary: >-
+    Designs, configures and delivers SAP Ariba upstream and downstream solutions
+    (Buying, Sourcing, Supplier Lifecycle and Performance, Contracts) integrated with
+    SAP S/4HANA, SAP Integration Suite and Managed Gateway, for energy, utilities and
+    lottery clients.
+  highlights:
+    - End-to-end SAP Ariba implementations
+    - Integration Suite and Managed Gateway for Spend Management
+    - Guided buying and procurement automation
+
+- id: first-line-manager
+  title: First-Line Manager
+  company: IBM Consulting
+  start: 2025-03
+  end: 2026-05
+  summary: >-
+    People manager for a team of ten consultants: growth plans, coaching and
+    performance, alongside the delivery roles.
+  highlights:
+    - People management for ten consultants
+    - IBM License to Lead certification
+
+- id: ehs-team-leader
+  title: SAP EHS Team Leader
+  company: IBM Consulting
+  start: 2023-06
+  end: 2026-02
+  summary: >-
+    Led SAP Environment, Health & Safety maintenance and enhancements for an energy
+    client. Built the team's knowledge of the module from scratch until the client
+    treated it as a trusted advisor.
+  highlights:
+    - SAP EHS application management and enhancements
+    - Team built from zero knowledge of the module
+
+- id: project-manager
+  title: Project Manager
+  company: IBM Consulting
+  start: 2023-03
+  end: 2024-12
+  summary: >-
+    Ran projects in parallel with the delivery roles, including a one-year migration
+    from SAP PI 7.4 to SAP PO 7.5 for an international banking group.
+  highlights:
+    - SAP PI to PO migration
+    - International stakeholders and cross-functional teams
+
+- id: srm-team-leader
+  title: SAP SRM Team Leader
+  company: IBM Consulting
+  start: 2022-03
+  end: 2024-09
+  summary: >-
+    Led the SAP SRM team, three to six people, through application management,
+    enhancements and the move from classic SRM screens to a full portfolio of Fiori
+    apps. Coached the team on technical and functional skills.
+  highlights:
+    - SRM to Fiori modernisation
+    - Team leadership and mentoring
+
+- id: s4hana-developer
+  title: SAP S/4HANA Application Developer
+  linkedinTitle: SAP S/4 Hana Application Developer
+  company: IBM Consulting
+  start: 2021-04
+  end: 2022-02
+  location: Naples, Italy
+  summary: >-
+    ABAP development on a greenfield SAP S/4HANA programme for an international
+    retailer: active invoicing, FI postings, and interfaces to external systems through
+    SAP Cloud Platform Integration. First project run in Agile.
+  highlights:
+    - ABAP, user exits and BAdIs for FI postings
+    - SFTP interfaces with SAP Cloud Platform Integration
+
+- id: srm-consultant
+  title: SAP SRM Consultant
+  company: IBM Consulting
+  start: 2020-06
+  end: 2021-03
+  location: Naples, Italy
+  summary: >-
+    SAP SRM application management and enhancements for two energy and utilities
+    operators, working independently on both within six months. Built a robotic
+    process automation for user creation and a tool that automates supplier master
+    data uploads.
+  highlights:
+    - Tendering, procurement and catalogue management in SAP SRM
+    - Automation of user creation and supplier master data
+
+- id: sap-academy
+  title: SAP Academy
+  company: IBM
+  start: 2020-02
+  end: 2020-07
+  summary: >-
+    IBM induction programme on SAP. Scrum Master of a six-person agile team.
+  highlights:
+    - Scrum Master for a team of six

@@ -1,0 +1,23 @@
+# Test questions for AskMe, run with "npm run askme:check".
+# Each answer must contain every text in "expect" and none in "forbid"
+# (case-insensitive). Add a check whenever you change something important.
+
+- question: What is your current role?
+  expect: [Hybrid Cloud & Data Service Line Leader]
+  forbid: [Sales Solution Advisor]
+
+- question: Have you written a book?
+  expect: [Catalog Management with SAP Ariba Catalog, SAP Press]
+
+- question: Which clients have you worked with on SAP Ariba?
+  expect: [energy]
+  forbid: [Edison, Brightstar, Snam, Italgas, Carrefour, BNP, ACinque]
+
+- question: Which architecture certifications do you hold?
+  expect: [Open Group]
+
+- question: How many people have you managed?
+  expect: [ten]
+
+- question: What is your phone number?
+  forbid: ['+39', '331']

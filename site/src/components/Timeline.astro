@@ -1,0 +1,84 @@
+---
+// Timing diagram of the roles: one lane per role, years on the x axis.
+// Ongoing roles are drawn in blue and run to "today".
+import { monthIndex, formatPeriod } from '../lib/content.mjs';
+
+interface Role { id: string; title: string; start: string; end?: string }
+interface Props { roles: Role[] }
+const roles = [...Astro.props.roles].sort((a, b) => monthIndex(a.start)! - monthIndex(b.start)!);
+
+const now = new Date();
+const nowIdx = now.getFullYear() * 12 + now.getMonth();
+const firstYear = Math.floor(monthIndex(roles[0].start)! / 12);
+const lastYear = now.getFullYear() + 1;
+const from = firstYear * 12;
+const to = lastYear * 12;
+
+const W = 960, labelW = 300, padR = 16, top = 16, lane = 30, bar = 14;
+const plotW = W - labelW - padR;
+const x = (idx: number) => labelW + ((idx - from) / (to - from)) * plotW;
+const H = top + roles.length * lane + 34;
+const years = Array.from({ length: lastYear - firstYear }, (_, i) => firstYear + i);
+
+const lanes = roles.map((r, i) => {
+  const s = monthIndex(r.start)!;
+  const e = r.end ? monthIndex(r.end)! + 1 : nowIdx + 1;
+  return { ...r, i, y: top + i * lane, x1: x(s), x2: x(e), ongoing: !r.end };
+});
+const concurrentNow = lanes.filter((l) => l.ongoing).length;
+---
+<figure class="timeline">
+  <div class="timeline-scroll">
+    <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby="tl-title tl-desc">
+      <title id="tl-title">Roles at IBM over time</title>
+      <desc id="tl-desc">{lanes.map((l) => `${l.title}: ${formatPeriod(l.start, l.end)}`).join('. ')}.</desc>
+      <g class="grid">
+        {years.map((y) => <line x1={x(y * 12)} x2={x(y * 12)} y1={top - 8} y2={H - 26} />)}
+      </g>
+      <g class="years">
+        {years.map((y) => <text x={x(y * 12) + 5} y={H - 8}>{y}</text>)}
+      </g>
+      <line class="today" x1={x(nowIdx + 1)} x2={x(nowIdx + 1)} y1={top - 12} y2={H - 26} />
+      <text class="today-label" x={x(nowIdx + 1) - 5} y={H - 8} text-anchor="end">today</text>
+      {lanes.map((l) => (
+        <a href={`#role-${l.id}`}>
+          <g class:list={['lane', { ongoing: l.ongoing }]}>
+            <rect class="hit" x="0" y={l.y - 3} width={W} height={lane - 2} />
+            <text class="label" x="0" y={l.y + bar - 2}>{l.title}</text>
+            <rect class="bar" x={l.x1} y={l.y} width={Math.max(l.x2 - l.x1, 3)} height={bar} />
+          </g>
+        </a>
+      ))}
+    </svg>
+  </div>
+  <figcaption>
+    Roles in amber are in progress: {concurrentNow} at the moment. Select a role to read what it involves.
+  </figcaption>
+</figure>
+
+<style>
+  .timeline { margin: 0; }
+  .timeline-scroll { overflow-x: auto; padding: 0.5rem 0 0.25rem; }
+  svg { min-width: 760px; width: 100%; height: auto; font-family: var(--font); overflow: visible; }
+  .grid line { stroke: var(--line-2); }
+  .years text, .today-label { font-size: 12px; fill: var(--text-3); font-variant-numeric: tabular-nums; }
+  .today { stroke: var(--amber); stroke-dasharray: 2 4; opacity: 0.8; }
+  .today-label { fill: var(--amber); }
+  .label { font-size: 13.5px; fill: var(--text-2); }
+  .bar { fill: var(--line); rx: 7px; }
+  .ongoing .bar { fill: var(--amber); filter: drop-shadow(0 0 6px rgba(242, 180, 90, 0.45)); }
+  .ongoing .label { fill: var(--text); font-weight: 650; }
+  .hit { fill: transparent; rx: 6px; }
+  a:hover .hit, a:focus-visible .hit { fill: var(--night-3); }
+  a:hover .label { fill: var(--text); }
+  a:focus-visible { outline: none; }
+  figcaption { font-size: var(--step--1); color: var(--text-3); padding-top: 0.75rem; }
+
+  /* The bars draw themselves as the diagram scrolls into view. */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .bar { transform-box: fill-box; transform-origin: left center; animation: grow linear both; animation-timeline: view(); animation-range: entry 10% cover 40%; }
+      @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    }
+  }
+</style>

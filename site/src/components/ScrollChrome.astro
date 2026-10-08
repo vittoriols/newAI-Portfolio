@@ -1,0 +1,97 @@
+---
+// Two quiet layers below the hero:
+//  - an ambient background: two soft light pools and a fine grain, drifting
+//    with the scroll position (never on a timer);
+//  - the spine ([data-spine] in the page): a line along the content that fills
+//    as you read, with a node on every section heading (.spine-node).
+---
+<div class="ambient" aria-hidden="true">
+  <div class="pool pool-warm"></div>
+  <div class="pool pool-cool"></div>
+  <div class="grain"></div>
+</div>
+
+<style>
+  .ambient {
+    position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden;
+    opacity: var(--ambient, 0); transition: opacity 600ms ease;
+  }
+  .pool { position: absolute; border-radius: 50%; filter: blur(90px); will-change: transform; }
+  .pool-warm {
+    width: 46vmax; height: 46vmax; left: -12vmax; top: 10vh;
+    background: radial-gradient(circle, rgba(242, 180, 90, 0.16), transparent 65%);
+    transform: translate3d(calc(var(--p, 0) * 30vw), calc(var(--p, 0) * 40vh), 0);
+  }
+  .pool-cool {
+    width: 54vmax; height: 54vmax; right: -16vmax; top: 30vh;
+    background: radial-gradient(circle, rgba(70, 120, 200, 0.22), transparent 65%);
+    transform: translate3d(calc(var(--p, 0) * -25vw), calc(var(--p, 0) * -30vh), 0);
+  }
+  .grain {
+    position: absolute; inset: -50%; opacity: 0.05; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  @media print { .ambient { display: none; } }
+</style>
+
+<script>
+  const root = document.documentElement;
+  const spine = document.querySelector<HTMLElement>('[data-spine]');
+  const track = spine?.querySelector<HTMLElement>('.spine-track');
+  const nodes = spine ? [...spine.querySelectorAll<HTMLElement>('.spine-node')] : [];
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  // Positions are measured only when the layout changes; scrolling itself
+  // does no layout reads.
+  let spineTop = 0;
+  let first = 0;
+  let last = 1;
+  let marks: number[] = [];
+  let end = 1;
+
+  function measure() {
+    if (!spine || !track || !nodes.length) return;
+    spineTop = spine.getBoundingClientRect().top + window.scrollY;
+    marks = nodes.map((n) => {
+      const r = n.getBoundingClientRect();
+      const fontSize = parseFloat(getComputedStyle(n).fontSize);
+      return r.top + window.scrollY + fontSize * 0.55;
+    });
+    first = marks[0];
+    last = marks[marks.length - 1];
+    // The line runs from the first node to the last one.
+    track.style.top = `${first - spineTop}px`;
+    track.style.bottom = 'auto';
+    track.style.height = `${last - first}px`;
+    end = document.documentElement.scrollHeight - window.innerHeight;
+    update();
+  }
+
+  function update() {
+    if (!marks.length) return;
+    // The reading point sits a little above the middle of the screen.
+    const y = window.scrollY + window.innerHeight * 0.45;
+
+    root.style.setProperty('--ambient', y > first - window.innerHeight * 0.25 ? '1' : '0');
+
+    const fill = Math.min(1, Math.max(0, (y - first) / Math.max(1, last - first)));
+    spine!.style.setProperty('--spine-fill', fill.toFixed(4));
+
+    let current = -1;
+    marks.forEach((m, k) => { if (y >= m) current = k; });
+    nodes.forEach((n, k) => {
+      n.toggleAttribute('data-reached', k <= current);
+      n.toggleAttribute('data-current', k === current);
+    });
+
+    // The light pools drift with the overall reading progress.
+    const p = Math.min(1, Math.max(0, (window.scrollY - first + window.innerHeight) / Math.max(1, end - first + window.innerHeight)));
+    root.style.setProperty('--p', reduce.matches ? '0' : p.toFixed(4));
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', measure);
+  window.addEventListener('load', measure);
+  new ResizeObserver(measure).observe(document.body);
+  measure();
+</script>

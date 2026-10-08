@@ -1,0 +1,292 @@
+---
+// AskMe drawer. Any element with [data-ask] opens it; with data-question it
+// also asks that question. A launcher stays in the corner of every screen.
+import { withBase } from '../lib/paths.mjs';
+
+interface Suggestion { question: string; anchor: string }
+interface Props {
+  sources: Record<string, { title: string; anchor: string }>;
+  suggestions: Suggestion[];
+  audio?: { file: string; duration: string; recorded: string; madeWith?: string };
+  audioRecordedLabel?: string;
+  transcript?: { speaker: string; text: string }[] | null;
+}
+const { sources, suggestions, audio, audioRecordedLabel, transcript } = Astro.props;
+const endpoint = import.meta.env.PUBLIC_ASKME_ENDPOINT ?? '';
+---
+<button class="askme-launcher" type="button" data-ask aria-haspopup="dialog">
+  <span class="dot" aria-hidden="true"></span>Ask me
+</button>
+
+<dialog class="askme-drawer" aria-labelledby="ask-title" data-endpoint={endpoint} data-sources={JSON.stringify(sources)}>
+  <div class="askme-shell">
+    <header class="askme-head">
+      <div>
+        <h2 id="ask-title" class="askme-title">AskMe</h2>
+        <p class="askme-status" data-status>{endpoint ? 'Answers from this site, with sources' : 'Not connected yet'}</p>
+      </div>
+      <button class="askme-close" type="button" data-close aria-label="Close AskMe">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </header>
+
+    <div class="askme-scroll" data-scroll>
+      <p class="askme-intro" data-intro>
+        {endpoint
+          ? 'Ask about my roles, certifications or publications. Every answer links to the part of the page it comes from.'
+          : 'The assistant is not connected yet. These questions take you to the part of the page that answers them.'}
+      </p>
+      <ul class="askme-suggestions" data-suggestions aria-label="Suggested questions">
+        {suggestions.map((s) => (
+          <li><a href={s.anchor} class="suggestion" data-question={s.question}>{s.question}</a></li>
+        ))}
+      </ul>
+      <div class="askme-log" data-log aria-live="polite"></div>
+    </div>
+
+    <form class="askme-form" data-form hidden={!endpoint}>
+      <label for="ask-input" class="visually-hidden">Your question</label>
+      <input id="ask-input" name="q" type="text" maxlength="800" autocomplete="off" required placeholder="Type your question" />
+      <button class="button" type="submit">Ask</button>
+    </form>
+
+    {audio && (
+      <div class="askme-audio">
+        <p class="askme-audio-label">
+          Prefer to listen? A {audio.duration} overview
+          <span>Recorded {audioRecordedLabel}{audio.madeWith && `, made with ${audio.madeWith}`}</span>
+        </p>
+        <audio controls preload="none" src={withBase(audio.file)}>
+          <a href={withBase(audio.file)}>Download the audio overview</a>
+        </audio>
+        {transcript && (
+          <details class="askme-transcript">
+            <summary>Read the transcript</summary>
+            {transcript.map((t) => <p><strong>{t.speaker}:</strong> {t.text}</p>)}
+          </details>
+        )}
+      </div>
+    )}
+  </div>
+</dialog>
+
+<style>
+  .askme-launcher {
+    position: fixed; right: clamp(1rem, 3vw, 2rem); bottom: clamp(1rem, 3vw, 2rem); z-index: 40;
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font: inherit; font-weight: 700; font-size: 1rem; color: var(--night);
+    background: var(--amber); border: 0; border-radius: 999px; padding: 0.85rem 1.3rem; cursor: pointer;
+    box-shadow: 0 12px 32px -12px rgba(242, 180, 90, 0.55), 0 0 0 1px rgba(10, 20, 34, 0.2);
+    transition: transform 200ms var(--ease), background-color 160ms ease;
+  }
+  .askme-launcher:hover { background: var(--amber-2); transform: translateY(-2px); }
+  .askme-launcher[data-away] { opacity: 0; transform: translateY(1rem); pointer-events: none; }
+  .askme-launcher { transition: transform 200ms var(--ease), background-color 160ms ease, opacity 240ms ease; }
+  .askme-launcher .dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--night); }
+
+  .askme-drawer {
+    margin: 0 0 0 auto; padding: 0; border: 0; height: 100dvh; max-height: 100dvh;
+    width: min(28rem, 100vw); background: var(--night-2); color: var(--text);
+    border-left: 1px solid var(--line);
+  }
+  .askme-drawer::backdrop { background: rgba(5, 10, 18, 0.62); backdrop-filter: blur(3px); }
+  .askme-drawer[open] { animation: drawer-in 320ms var(--ease); }
+  @keyframes drawer-in { from { transform: translateX(100%); } }
+
+  .askme-shell { display: flex; flex-direction: column; height: 100%; }
+  .askme-head {
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem;
+    padding: 1.25rem 1.4rem 1rem; border-bottom: 1px solid var(--line);
+  }
+  .askme-title { font-size: 1.5rem; font-variation-settings: 'wdth' 118; }
+  .askme-status { margin: 0.2rem 0 0; font-size: 0.85rem; color: var(--text-2); display: flex; align-items: center; gap: 0.45rem; }
+  .askme-status::before { content: ''; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--text-3); }
+  .askme-drawer[data-online] .askme-status::before { background: var(--amber); box-shadow: 0 0 0 4px var(--amber-wash); }
+  .askme-close {
+    background: none; border: 1px solid var(--line); color: var(--text-2); border-radius: 999px;
+    width: 2.5rem; height: 2.5rem; display: grid; place-items: center; cursor: pointer; flex: none;
+  }
+  .askme-close:hover { color: var(--text); border-color: var(--text-2); }
+
+  .askme-scroll { flex: 1; overflow-y: auto; padding: 1.25rem 1.4rem; }
+  .askme-intro { color: var(--text-2); font-size: 0.97rem; }
+  .askme-intro[hidden], .askme-suggestions[hidden] { display: none; }
+  .askme-suggestions { list-style: none; margin: 0 0 1rem; padding: 0; display: grid; gap: 0.5rem; }
+  .suggestion {
+    display: block; padding: 0.75rem 0.95rem; border: 1px solid var(--line); border-radius: 12px;
+    color: var(--text); text-decoration: none; font-size: 0.97rem; background: var(--night);
+  }
+  .suggestion:hover { border-color: var(--amber); color: var(--amber-2); background: var(--amber-wash); }
+
+  .askme-log { display: grid; gap: 1rem; }
+  .askme-log :global(.msg) { font-size: 0.98rem; line-height: 1.55; }
+  .askme-log :global(.msg p) { margin: 0 0 0.6rem; }
+  .askme-log :global(.msg p:last-child) { margin-bottom: 0; }
+  .askme-log :global(.msg-user) {
+    justify-self: end; max-width: 85%; background: var(--night-3); padding: 0.6rem 0.9rem; border-radius: 14px 14px 4px 14px;
+  }
+  .askme-log :global(.msg-assistant) { border-left: 2px solid var(--amber); padding-left: 0.9rem; }
+  .askme-log :global(.msg-error) { border-left-color: var(--error); color: var(--text-2); }
+  .askme-log :global(.msg-sources) { margin-top: 0.6rem; font-size: 0.85rem; color: var(--text-3); }
+  .askme-log :global(.msg-sources a) { margin-right: 0.7rem; }
+  .askme-log :global(.typing) { color: var(--text-3); }
+
+  .askme-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.5rem; padding: 0.9rem 1.4rem; border-top: 1px solid var(--line); }
+  .askme-form[hidden] { display: none; }
+
+  .askme-audio { border-top: 1px solid var(--line); padding: 1rem 1.4rem 1.25rem; background: var(--night); }
+  .askme-audio-label { margin: 0 0 0.6rem; font-weight: 650; font-size: 0.95rem; }
+  .askme-audio-label span { display: block; font-weight: 400; font-size: 0.82rem; color: var(--text-3); }
+  .askme-audio audio { width: 100%; height: 2.5rem; color-scheme: dark; }
+  .askme-transcript { margin-top: 0.75rem; font-size: 0.92rem; }
+  .askme-transcript summary { cursor: pointer; color: var(--amber-2); font-weight: 600; }
+  .askme-transcript[open] { max-height: 16rem; overflow-y: auto; }
+  .askme-transcript p { margin: 0.6rem 0 0; }
+
+  @media (max-width: 520px) {
+    .askme-launcher { padding: 0.75rem 1.1rem; }
+  }
+</style>
+
+<script>
+  type Source = { title: string; anchor: string };
+  type Msg = { role: 'user' | 'assistant'; content: string };
+
+  const drawer = document.querySelector<HTMLDialogElement>('.askme-drawer');
+  if (drawer) {
+    const endpoint = drawer.dataset.endpoint ?? '';
+    const sources: Record<string, Source> = JSON.parse(drawer.dataset.sources ?? '{}');
+    const log = drawer.querySelector<HTMLElement>('[data-log]')!;
+    const scroller = drawer.querySelector<HTMLElement>('[data-scroll]')!;
+    const form = drawer.querySelector<HTMLFormElement>('[data-form]')!;
+    const input = form.querySelector<HTMLInputElement>('input')!;
+    const button = form.querySelector<HTMLButtonElement>('button')!;
+    const suggestionList = drawer.querySelector<HTMLElement>('[data-suggestions]')!;
+    const intro = drawer.querySelector<HTMLElement>('[data-intro]')!;
+    const history: Msg[] = [];
+    let opener: HTMLElement | null = null;
+    if (endpoint) drawer.dataset.online = '';
+
+    // The corner launcher appears once the hero prompt is out of view: until
+    // then the prompt itself is the way in.
+    const launcher = document.querySelector<HTMLElement>('.askme-launcher');
+    const heroPrompt = document.querySelector('.hero-ask');
+    if (launcher && heroPrompt) {
+      launcher.dataset.away = '';
+      new IntersectionObserver(([entry]) => launcher.toggleAttribute('data-away', entry.isIntersecting)).observe(heroPrompt);
+    }
+
+    function open(question?: string) {
+      if (!drawer!.open) drawer!.showModal();
+      if (endpoint && question) ask(question);
+      else if (endpoint) input.focus();
+    }
+    function close() { drawer!.close(); }
+    drawer.addEventListener('close', () => opener?.focus());
+    drawer.addEventListener('click', (e) => { if (e.target === drawer) close(); });
+    drawer.querySelector('[data-close]')!.addEventListener('click', close);
+
+    document.addEventListener('click', (e) => {
+      const trigger = (e.target as HTMLElement).closest<HTMLElement>('[data-ask]');
+      if (!trigger) return;
+      e.preventDefault();
+      opener = trigger;
+      open(trigger.dataset.question);
+    });
+
+    // Without the assistant, suggestions are plain links to the sections.
+    suggestionList.querySelectorAll<HTMLAnchorElement>('.suggestion').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        if (!endpoint) { close(); return; }
+        e.preventDefault();
+        ask(a.dataset.question ?? a.textContent ?? '');
+      });
+    });
+    log.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).closest('.msg-sources a')) close();
+    });
+
+    const escape = (s: string) => s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
+    const citations = /\[\[([a-z0-9-]+)\]\]/gi;
+
+    function render(el: HTMLElement, text: string, done: boolean) {
+      const cited = new Set<string>();
+      const clean = text.replace(citations, (_, id) => { if (sources[id]) cited.add(id); return ''; }).replace(/\[\[[^\]]*$/, '');
+      el.innerHTML = clean.trim().split(/\n{2,}/).map((p) => `<p>${escape(p.trim()).replace(/\n/g, '<br>')}</p>`).join('');
+      if (done && cited.size) {
+        const links = [...cited].map((id) => `<a href="${sources[id].anchor}">${escape(sources[id].title)}</a>`).join('');
+        el.insertAdjacentHTML('beforeend', `<p class="msg-sources">Sources: ${links}</p>`);
+      }
+    }
+
+    function bubble(role: 'user' | 'assistant') {
+      const el = document.createElement('div');
+      el.className = `msg msg-${role}`;
+      log.append(el);
+      scroller.scrollTop = scroller.scrollHeight;
+      return el;
+    }
+
+    async function ask(question: string) {
+      if (!question.trim() || button.disabled) return;
+      suggestionList.hidden = true;
+      intro.hidden = true;
+      history.push({ role: 'user', content: question });
+      bubble('user').textContent = question;
+      const out = bubble('assistant');
+      out.innerHTML = '<p class="typing">Thinking…</p>';
+      button.disabled = true;
+      input.disabled = true;
+
+      let text = '';
+      try {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ messages: history }),
+        });
+        if (res.status === 429) throw new Error('Too many questions in a short time. Try again in a minute.');
+        if (!res.ok || !res.body) throw new Error('AskMe could not answer right now. Try again, or write to me with the contact form.');
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+        for (;;) {
+          const { value, done } = await reader.read();
+          if (done) break;
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split('\n');
+          buffer = lines.pop() ?? '';
+          for (const line of lines) {
+            if (!line.startsWith('data:')) continue;
+            const data = line.slice(5).trim();
+            if (!data || data === '[DONE]') continue;
+            try { text += JSON.parse(data).choices?.[0]?.delta?.content ?? ''; } catch { /* partial line */ }
+          }
+          render(out, text, false);
+          scroller.scrollTop = scroller.scrollHeight;
+        }
+        if (!text.trim()) throw new Error('AskMe returned an empty answer. Try rephrasing the question.');
+        render(out, text, true);
+        history.push({ role: 'assistant', content: text });
+      } catch (err) {
+        history.pop();
+        out.classList.add('msg-error');
+        out.textContent = err instanceof Error ? err.message : String(err);
+      } finally {
+        button.disabled = false;
+        input.disabled = false;
+        input.focus();
+        scroller.scrollTop = scroller.scrollHeight;
+      }
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const q = input.value.trim();
+      if (!q) return;
+      input.value = '';
+      ask(q);
+    });
+  }
+</script>

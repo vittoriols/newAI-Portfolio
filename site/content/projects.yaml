@@ -1,0 +1,33 @@
+# Side projects with public code.
+
+- id: fiori-event-manager
+  title: SAP Fiori Event Manager
+  summary: >-
+    Internal IBM application to manage and promote corporate events. Full stack on SAP:
+    SAPUI5 front end, ABAP back end, OData services in between.
+  stack: [SAPUI5, JavaScript, ABAP, OData]
+  url: https://github.com/vittoriols/zui5eventm
+
+- id: water-pipe-failures
+  title: Predicting water pipe failures by city
+  summary: >-
+    Regression model that predicts water pipe failures for each city, from data
+    preparation and feature engineering to model tuning.
+  stack: [Python, scikit-learn, pandas, NumPy]
+  url: https://github.com/vittoriols/Machine-Learning-Model-to-Predict-Water-Pipe-Failures-by-City
+
+- id: flutter-app
+  title: Cross-platform mobile app
+  summary: >-
+    Mobile application for iOS and Android built with Flutter and Dart, developed for
+    both platforms in parallel.
+  stack: [Flutter, Dart, Firebase]
+  url: https://github.com/vittoriols/Flutter-Mobile-App
+
+- id: sap-quiz
+  title: SAP certification quiz
+  summary: >-
+    Desktop application to prepare for SAP certification exams: question bank, scoring
+    and progress tracking.
+  stack: [Python, PyQt]
+  url: https://github.com/vittoriols/Quiz-SAP-Certification

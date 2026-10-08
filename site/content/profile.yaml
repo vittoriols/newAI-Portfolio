@@ -1,0 +1,70 @@
+# Who you are, in one place. Imported in part from LinkedIn (headline, summary).
+# Everything in /content is public: it is published on the site and read by AskMe.
+
+name: Vittorio Loris Simonetti
+role: Hybrid Cloud & Data Service Line Leader
+organization: IBM Consulting, FutureNow Italy
+location: Naples, Italy
+# As on LinkedIn: import:linkedin warns when the two differ.
+headline: Hybrid Cloud & Data Service Line Leader | Solution Architect | Book Author | Inventor @IBM
+
+# The one sentence a visitor should remember. Shown at the top of the home page.
+thesis: >-
+  I help organizations turn Generative and Agentic AI and enterprise platforms
+  into business value, from the design of the offering to the delivery of the project.
+
+# Short version of the thesis, for the preview image shown on LinkedIn.
+tagline: Generative and Agentic AI, enterprise architecture and SAP, from offering design to delivery.
+
+# Shown in the key facts at the top of the home page.
+background: Electronic engineer, then six years delivering SAP Ariba, S/4HANA, SRM and EHS
+
+summary:
+  - >-
+    As Hybrid Cloud & Data Service Line Leader and Solution Architect at IBM Consulting
+    FutureNow Italy, I lead how we position and shape advanced technology solutions for
+    clients. I define and drive the service line offerings, work with clients to understand
+    their challenges, shape tailored propositions and guide complex transformations from
+    concept to execution.
+  - >-
+    I came to this through SAP: six years across SRM, S/4HANA, EHS and SAP Ariba, first as
+    a developer and consultant, then as team leader, architect and people manager. That is
+    where I learned to connect high-level offering design with the details of delivery.
+  - >-
+    I research and teach as much as I deliver. I wrote Catalog Management with SAP Ariba
+    Catalog for SAP Press, filed a patent on a Generative AI system that supports people with
+    impairments, and train new IBM hires on Agile and Design Thinking.
+
+education:
+  - degree: Master's degree in Electronic Engineering
+    school: Università degli Studi di Napoli Federico II
+    start: 2017
+    end: 2020
+  - degree: Bachelor's degree in Electronic Engineering
+    school: Università degli Studi di Napoli Federico II
+    start: 2013
+    end: 2017
+
+languages:
+  - name: Italian
+    level: Native
+  - name: English
+    level: Full professional proficiency (Trinity GESE Grade 9, CEFR B2.3)
+
+links:
+  email: v.loris.simonetti@gmail.com
+  linkedin: https://www.linkedin.com/in/vittorio-loris-simonetti/
+  github: https://github.com/vittoriols
+  sapCommunity: https://community.sap.com/t5/user/viewprofilepage/user-id/1448043
+  credly: https://www.credly.com/users/vittorio-loris-simonetti
+
+# Username used by "npm run import:credly".
+credly: vittorio-loris-simonetti
+
+# Audio overview played next to AskMe. "recorded" lets the build warn you
+# when the audio is older than your latest change of role.
+audio:
+  file: audio/overview.mp3
+  duration: '4:49'
+  recorded: 2025-10
+  madeWith: NotebookLM

@@ -1,67 +1,92 @@
 name: Deploy to GitHub Pages
 
 on:
+  # Every push to master publishes the site.
   push:
-    branches:
-      - main  # Trigger deploy quando fai push su branch main
-  workflow_dispatch:  # Permette deploy manuale da GitHub UI
+    branches: [master]
+  # Every Monday: imports new badges from Credly and republishes.
+  schedule:
+    - cron: '17 5 * * 1'
+  # By hand: Actions > Deploy to GitHub Pages > Run workflow.
+  workflow_dispatch:
 
-# Permessi necessari per deploy su GitHub Pages
 permissions:
-  contents: read
+  contents: write   # to commit the Credly snapshot
   pages: write
   id-token: write
 
-# Evita deploy simultanei
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: site
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
     steps:
-      # 1. Checkout del repository
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      
-      # 2. Setup Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-      
-      # 3. Installa dipendenze
-      - name: Install dependencies
-        run: npm ci
-      
-      # 4. Build del progetto con variabili d'ambiente
-      - name: Build project
-        env:
-          # Inietta i secrets come variabili d'ambiente
-          REACT_APP_GROQ_TOKEN: ${{ secrets.REACT_APP_GROQ_TOKEN }}
-          REACT_APP_WEB3_TOKEN: ${{ secrets.REACT_APP_WEB3_TOKEN }}
-          # Imposta base URL per GitHub Pages
-          PUBLIC_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
-        run: npm run build
-      
-      # 5. Upload artifacts per deploy
-      - name: Upload build artifacts
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./build
+      - uses: actions/checkout@v4
 
-  # Job di deploy
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - run: npm ci
+
+      - name: Test the AskMe Worker
+        run: npm test
+
+      # On the weekly run and on manual runs, refresh the badges and commit the
+      # snapshot, so the repository keeps the history and the site never
+      # depends on Credly being up. On push, the committed snapshot is used.
+      - name: Import badges from Credly
+        if: github.event_name != 'push'
+        run: npm run import:credly
+
+      - name: Commit the Credly snapshot
+        if: github.event_name != 'push'
+        run: |
+          if git status --porcelain -- content/credly public/badges | grep -q .; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+            git add content/credly public/badges
+            git commit -m "Sync badges from Credly"
+            git push
+          else
+            echo "No new badges."
+          fi
+
+      # Optional: runs the AskMe test questions when a Groq key is configured
+      # as a repository secret. The key is only used here, never in the site.
+      - name: Check AskMe answers
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        continue-on-error: true
+        run: |
+          if [ -n "$GROQ_API_KEY" ]; then npm run askme:check; else echo "GROQ_API_KEY secret not set: skipped."; fi
+
+      - name: Build
+        env:
+          # Public values by design: the AskMe Worker URL (repository variable)
+          # and the Web3Forms key, which can only deliver messages to your inbox.
+          PUBLIC_ASKME_ENDPOINT: ${{ vars.ASKME_ENDPOINT }}
+          PUBLIC_WEB3FORMS_KEY: ${{ secrets.REACT_APP_WEB3_TOKEN }}
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
