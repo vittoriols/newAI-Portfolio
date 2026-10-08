@@ -13,7 +13,8 @@
     "audio:voice": "node scripts/audio-voice.mjs",
     "test": "node --test worker/test.mjs",
     "update": "node scripts/update.mjs",
-    "update:publish": "node scripts/update.mjs --publish"
+    "update:publish": "node scripts/update.mjs --publish",
+    "context:notebooklm": "node scripts/notebooklm.mjs"
   },
   "type": "module",
   "dependencies": {
