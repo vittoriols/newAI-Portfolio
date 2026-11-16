@@ -1,7 +1,28 @@
 {
   "username": "vittorio-loris-simonetti",
-  "syncedOn": "2026-11-09",
+  "syncedOn": "2026-11-16",
   "badges": [
+    {
+      "id": "b68a0d69-1f12-4b4e-8e00-f01ec2bdee88",
+      "name": "IBM Consulting - Core Experienced",
+      "issuer": "IBM",
+      "issuedOn": "2026-11-10",
+      "expiresOn": null,
+      "type": "Validation",
+      "level": null,
+      "url": "https://www.credly.com/badges/b68a0d69-1f12-4b4e-8e00-f01ec2bdee88",
+      "image": "https://images.credly.com/images/66f45949-d7ed-45b7-bee9-b7c361e81c7a/69eb762fc80a2549e6ede90c.png",
+      "skills": [
+        "Accountability",
+        "Building Trust",
+        "Business Case Development",
+        "Client Relationship Management",
+        "Consultative Selling",
+        "Critical Thinking",
+        "Delivery Execution",
+        "Feedback"
+      ]
+    },
     {
       "id": "4885e661-5291-4c5c-956f-309c2bb72f0a",
       "name": "Claude Certified Associate - Foundations",
@@ -1301,14 +1322,14 @@
       ]
     },
     {
-      "id": "0107ce84-5db7-425a-9a59-ced4d7a8a825",
+      "id": "5f53314e-2ed9-459c-8fa6-f0f21c0b9f81",
       "name": "watsonx.ai Practitioner Advanced",
       "issuer": "IBM",
       "issuedOn": "2024-01-22",
-      "expiresOn": "2027-01-22",
+      "expiresOn": "2028-01-22",
       "type": "Validation",
       "level": "Advanced",
-      "url": "https://www.credly.com/badges/0107ce84-5db7-425a-9a59-ced4d7a8a825",
+      "url": "https://www.credly.com/badges/5f53314e-2ed9-459c-8fa6-f0f21c0b9f81",
       "image": "https://images.credly.com/images/f744e8bd-5112-468d-ad59-da4cabc71f8c/watsonx_20ai_20Practitioner_20Advanced.png",
       "skills": [
         "Artificial Intelligence",
@@ -1788,7 +1809,7 @@
       "type": "Validation",
       "level": "Intermediate",
       "url": "https://www.credly.com/badges/8d0d58b2-762a-44e8-b15c-be48ed57ec71",
-      "image": "https://images.credly.com/images/2fbfda54-a846-4a6d-a282-dc486c719a8a/69eb775cc80a2549e6edea71.png",
+      "image": "https://images.credly.com/images/d0b3cb7d-f195-4a78-b10b-28a69a4ef49f/69eb775cc80a2549e6edea71.png",
       "skills": [
         "Courageous",
         "Growth Behaviors",
@@ -3237,7 +3258,7 @@
       "type": "Validation",
       "level": "Intermediate",
       "url": "https://www.credly.com/badges/8f618989-05aa-4ced-92b5-4de4075cc8bd",
-      "image": "https://images.credly.com/images/efc2b5ff-64e0-4f71-8490-3d4abcf67394/69e9d966becc0c6c0c5dffca.png",
+      "image": "https://images.credly.com/images/6aaef4b3-a81e-4c9e-bc85-e2715430f07e/69e9d966becc0c6c0c5dffca.png",
       "skills": [
         "Be Resilient",
         "Growth Minded",
@@ -3930,7 +3951,7 @@
       "type": "Validation",
       "level": "Intermediate",
       "url": "https://www.credly.com/badges/59a83cec-aab2-4b36-bc3f-26e34f0c51a7",
-      "image": "https://images.credly.com/images/46b5358d-e704-4a7c-a02e-c8c5d0c59c26/69e9d5aebecc0c6c0c5dfb6b.png",
+      "image": "https://images.credly.com/images/e76b1621-165a-4998-b854-f500ec3c45e1/69e9d5aebecc0c6c0c5dfb6b.png",
       "skills": [
         "Agile",
         "Collaboration",
