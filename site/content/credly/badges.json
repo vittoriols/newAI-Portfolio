@@ -1,6 +1,6 @@
 {
   "username": "vittorio-loris-simonetti",
-  "syncedOn": "2026-11-16",
+  "syncedOn": "2026-11-23",
   "badges": [
     {
       "id": "b68a0d69-1f12-4b4e-8e00-f01ec2bdee88",
@@ -763,14 +763,14 @@
       ]
     },
     {
-      "id": "8df32ac8-dff3-4cac-b270-fb1821dda977",
+      "id": "0cbb6bcb-b26b-473d-a6b0-b3bbac88b055",
       "name": "Introducing SAP Ariba Contracts - Record of Achievement",
       "issuer": "SAP",
       "issuedOn": "2025-01-13",
-      "expiresOn": null,
+      "expiresOn": "2026-11-26",
       "type": "Learning",
       "level": "Foundational",
-      "url": "https://www.credly.com/badges/8df32ac8-dff3-4cac-b270-fb1821dda977",
+      "url": "https://www.credly.com/badges/0cbb6bcb-b26b-473d-a6b0-b3bbac88b055",
       "image": "https://images.credly.com/images/c8e398b0-4c50-40e7-8fcb-fb2725cce465/blob",
       "skills": [
         "Publish SAP Ariba Contracts",
@@ -927,14 +927,14 @@
       ]
     },
     {
-      "id": "a9b87697-999e-4249-8e56-dc78d7852a05",
+      "id": "2e76d37f-143a-4a5a-acf4-87a1cf2ad419",
       "name": "Managing User Identity and Access in SAP S/4HANA Cloud - Public Edition - Record of Achievement",
       "issuer": "SAP",
       "issuedOn": "2024-09-18",
-      "expiresOn": null,
+      "expiresOn": "2026-11-14",
       "type": "Learning",
       "level": "Foundational",
-      "url": "https://www.credly.com/badges/a9b87697-999e-4249-8e56-dc78d7852a05",
+      "url": "https://www.credly.com/badges/2e76d37f-143a-4a5a-acf4-87a1cf2ad419",
       "image": "https://images.credly.com/images/91039e73-db72-4c5d-9181-d5374889ade9/image.png",
       "skills": [
         "Describing the Authorization Concept in SAP S/4HANA Cloud, Public Edition",
